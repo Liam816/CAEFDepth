@@ -1,0 +1,33 @@
+taskname: '+ FasterNet-S MDE'
+common:
+  mode: "train"
+  epochs: 40
+  lr: 0.0001
+  bs: 8
+  cuda_visible: "2"  # PConv对部分特征图采样，所以特征图必须在同一张gpu上
+  save_checkpoint: "./checkpoints/FasterNet-S_pre_EdgePCGUB_05-21"
+  eval_mode: "alhashim"
+  resolution: "full"
+  optimizer: "adam"
+  scheduler_step_size: 15
+  num_workers: 10
+dataset:
+  name: "nyu_reduced"
+  root: "/home/glw/hp/datasets/nyu_data.zip"
+  root_train: "/home/heping/MyDataset/nyu_data.zip"
+  root_val: "/home/heping/MyDataset/nyu_data.zip"
+  root_test: "/home/glw/hp/datasets/nyu_test.zip"
+model:
+  name: "FasterNetEdgePCGUB"
+  mode: "S"
+  pretrained: "/home/glw/hp/models/FasterNet/fasternet_s.pth"
+loss:
+  name: ["L1", "SSIM"]
+ema:
+  enable: false
+  momentum: 0.0005
+stats:
+  val: ["loss"]
+  train: ["loss"]
+  checkpoint_metric: "loss" 
+  checkpoint_metric_max: true

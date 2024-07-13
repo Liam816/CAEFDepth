@@ -1,0 +1,94 @@
+taskname: 'DDRNet-23-slim MDE'
+common:
+  mode: 'eval'  # train eval
+  train_edge: false
+  use_depthnorm: true
+  epochs: 20
+  lr: 0.0001  # default: 0.0001
+  bs: 32
+  cuda_visible: '0'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_Pre_HalfRes_GUB_07-12'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_Pre_GUB_07-12'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_Pre_GUB_07-17'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_kitti_GUB_08-07'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_kitti_GUB_08-27'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_kitti_GUB_08-28'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_kitti_GUB_08-28_2'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_kitti_GUB_08-29'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti_09-02'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti_09-03'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_09-03'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_09-03_2'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti_09-07'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti_09-07_2'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti_09-14'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti_09-15'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_09-18'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti_09-24'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_09-26'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_09-26_2'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti-alhashim_09-26'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti-alhashim_09-27'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti-alhashim_09-28'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti-alhashim_10-09'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti-alhashim_10-10'
+#  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti-alhashim_10-13'
+  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_240625'
+  # save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_240625_2'
+  # save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_240626'
+  # save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_240710'
+  best_checkpoint: 'checkpoint_19.pth'  # 12
+  eval_mode: 'alhashim'  # default: alhashim
+  resolution: 'full'  # full half
+  optimizer: 'adam'
+  scheduler_step_size: 15
+  num_workers: 10
+dataset:
+  name: 'nyu_reduced'
+  # root: '/home/data/glw/hp/datasets/nyu/nyu_data'
+  # root_test: '/home/data/glw/hp/datasets/nyu/nyu_test'
+  root: '/home/ping.he/projects/MDE/dataset/nyu/nyu_data'
+  root_test: '/home/ping.he/projects/MDE/dataset/nyu/nyu_test'
+  # name: 'kitti'  # alhashim借助NYU工具箱的深度补齐方法来稠密化稀疏的深度图
+  # root: '/home/data/glw/hp/datasets/kitti_eigen/train_dataset'
+  # root_test: '/home/data/glw/hp/datasets/kitti_eigen/test_dataset'
+model:
+  name: 'DDRNetGUB'
+  mode: '23-slim'
+#  pretrained: '/home/data/glw/hp/models/GuidedDecoding/KITTI_Full_GuideDepth.pth'
+#  pretrained: '/home/data/glw/hp/models/GuidedDecoding/KITTI_Half_GuideDepth.pth'
+#  pretrained: '/home/data/glw/hp/models/GuidedDecoding/NYU_Half_GuideDepth.pth'
+#  pretrained: '/home/data/glw/hp/models/GuidedDecoding/NYU_Half_GuideDepth.pth'
+#  pretrained: './checkpoints/DDRNet-23-slim_kitti_GUB_08-27/checkpoint_19.pth'
+#  pretrained: './checkpoints/DDRNet-23-slim_kitti_GUB_08-28/checkpoint_19.pth'
+loss:
+  name: ['L1', 'SSIM']
+  silog: false
+bts:
+  dataset: 'kitti'
+  use_liam_dataset: false  # true default: false
+  data_path: '/home/data/glw/hp/datasets/bts/kitti_dataset/'
+  gt_path: '/home/data/glw/hp/datasets/bts/kitti_dataset/data_depth_annotated/'
+#  gt_path: '/home/data/glw/hp/datasets/bts/data_depth_dense_filled/'
+  filenames_file: './train_test_inputs/eigen_train_files_with_gt.txt'
+  input_height: 352
+  input_width: 704
+  max_depth: 80
+  do_kb_crop: true
+  do_random_rotate: true
+  degree: 1.0
+  do_online_eval: true
+  data_path_eval: '/home/data/glw/hp/datasets/bts/kitti_dataset/'
+  gt_path_eval: '/home/data/glw/hp/datasets/bts/kitti_dataset/data_depth_annotated/'
+#  gt_path_eval: '/home/data/glw/hp/datasets/bts/data_depth_dense_filled/'
+  filenames_file_eval: './train_test_inputs/eigen_test_files_with_gt.txt'
+  distributed: false
+  use_right: false
+  min_depth_eval: 0.001
+  max_depth_eval: 80.0
+  garg_crop: true
+  eigen_crop: false
+
+
+
+

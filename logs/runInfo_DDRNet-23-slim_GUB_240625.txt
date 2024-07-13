@@ -1,0 +1,1137 @@
+nohup: ignoring input
+If for semantic segmentation, please install mmsegmentation first
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:957: UserWarning: Overwriting fastvit_t8 in registry with nets.models.FastViT_LiamEdge.fastvit_t8. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_t8(pretrained=False, **kwargs):
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:979: UserWarning: Overwriting fastvit_t12 in registry with nets.models.FastViT_LiamEdge.fastvit_t12. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_t12(pretrained=False, **kwargs):
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:1001: UserWarning: Overwriting fastvit_s12 in registry with nets.models.FastViT_LiamEdge.fastvit_s12. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_s12(pretrained=False, **kwargs):
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:1024: UserWarning: Overwriting fastvit_sa12 in registry with nets.models.FastViT_LiamEdge.fastvit_sa12. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_sa12(pretrained=False, **kwargs):
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:1048: UserWarning: Overwriting fastvit_sa24 in registry with nets.models.FastViT_LiamEdge.fastvit_sa24. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_sa24(pretrained=False, **kwargs):
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:1072: UserWarning: Overwriting fastvit_sa36 in registry with nets.models.FastViT_LiamEdge.fastvit_sa36. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_sa36(pretrained=False, **kwargs):
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:1097: UserWarning: Overwriting fastvit_ma36 in registry with nets.models.FastViT_LiamEdge.fastvit_ma36. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_ma36(pretrained=False, **kwargs):
+********** Trainer Initializing **********
+2024-06-25 15:27:11 - [34m[1mLOGS[0m - model_name:DDRNetGUB
+=== There exists unexpected keys for DDRNet model originally ===
+=== There exists missing keys for DDRNet model originally ===
+2024-06-25 15:27:12 - [34m[1mLOGS[0m - pretrained_path:None
+2024-06-25 15:27:12 - [32m[1mINFO[0m - dataset_name: nyu_reduced
+2024-06-25 15:27:12 - [32m[1mINFO[0m - model_name: DDRNetGUB
+2024-06-25 15:27:12 - [32m[1mINFO[0m - Training max epochs: 20
+2024-06-25 15:27:12 - [32m[1mINFO[0m - Maximum Depth of Dataset: 10.0
+2024-06-25 15:27:12 - [32m[1mINFO[0m - cuda_visible: 0
+2024-06-25 15:27:12 - [32m[1mINFO[0m - self.device: cuda:0
+2024-06-25 15:27:12 - [32m[1mINFO[0m - Train model: GuideDepth
+2024-06-25 15:27:12 - [32m[1mINFO[0m - self.train_edge: False
+2024-06-25 15:27:12 - [32m[1mINFO[0m - self.use_depthnorm: True
+2024-06-25 15:27:12 - [32m[1mINFO[0m - train & evaluation resolution: (480, 640)
+2024-06-25 15:27:12 - [32m[1mINFO[0m - data_path: /home/ping.he/projects/MDE/dataset/nyu/nyu_data
+2024-06-25 15:27:12 - [32m[1mINFO[0m - batch_size: 8
+2024-06-25 15:27:12 - [32m[1mINFO[0m - num_workers: 128
+2024-06-25 15:27:12 - [32m[1mINFO[0m - Number of parameter: 5.82M
+********** Train & Val Dataloader Initializing **********
+2024-06-25 15:27:13 - [32m[1mINFO[0m - learning_rate: 0.0001
+2024-06-25 15:27:13 - [32m[1mINFO[0m - optimizer: adam
+2024-06-25 15:27:13 - [32m[1mINFO[0m - lr_scheduler: cosine
+Depth Loss ------ L1:0.1 ssim:1 gradient:1
+2024-06-25 15:27:13 - [32m[1mINFO[0m - checkpoint_path: ./checkpoints/DDRNet-23-slim_GUB_240625
+********** Evaluator Initializing **********
+2024-06-25 15:27:13 - [32m[1mINFO[0m - self.crop: [20, 460, 24, 616]
+2024-06-25 15:27:13 - [32m[1mINFO[0m - self.eval_mode: alhashim
+2024-06-25 15:27:13 - [32m[1mINFO[0m - eval_results_path: ./checkpoints/DDRNet-23-slim_GUB_240625/eval_results
+2024-06-25 15:27:13 - [32m[1mINFO[0m - test_dataset_path: /home/ping.he/projects/MDE/dataset/nyu/nyu_test
+********** Test Dataloader Initializing **********
+flag1
+flag2
+flag3
+flag4
+flag5
+15:27 - Epoch 0
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:3631: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  warnings.warn(
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:3679: UserWarning: The default behavior for interpolate/upsample with float scale_factor changed in 1.6.0 to align with other frameworks/libraries, and now uses scale_factor directly, instead of relying on the computed output size. If you wish to restore the old behavior, please set recompute_scale_factor=True. See the documentation of nn.Upsample for details. 
+  warnings.warn(
+Epoch [0][0/6336]	Time 30.328 (30.328)	ETA 2 days, 5:22:39	LOSS 1.00	pred 4.6713/-1.4148	lr 0.0001	
+Epoch [0][200/6336]	Time 0.108 (52.674)	ETA 0:11:02	LOSS 0.24	pred 8.4478/1.4648	lr 0.0001	
+Epoch [0][400/6336]	Time 0.112 (74.725)	ETA 0:11:06	LOSS 0.17	pred 7.9697/1.4912	lr 0.0001	
+Epoch [0][600/6336]	Time 0.109 (96.755)	ETA 0:10:25	LOSS 0.21	pred 10.1854/1.2392	lr 0.0001	
+Epoch [0][800/6336]	Time 0.113 (118.868)	ETA 0:10:24	LOSS 0.20	pred 10.8108/1.0688	lr 0.0001	
+Epoch [0][1000/6336]	Time 0.109 (141.059)	ETA 0:09:42	LOSS 0.15	pred 10.6778/1.7042	lr 0.0001	
+Epoch [0][1200/6336]	Time 0.108 (163.130)	ETA 0:09:17	LOSS 0.19	pred 9.6989/1.6027	lr 0.0001	
+Epoch [0][1400/6336]	Time 0.111 (185.291)	ETA 0:09:07	LOSS 0.16	pred 10.5696/1.4124	lr 0.0001	
+Epoch [0][1600/6336]	Time 0.116 (207.355)	ETA 0:09:07	LOSS 0.13	pred 9.1283/1.3632	lr 0.0001	
+Epoch [0][1800/6336]	Time 0.109 (229.405)	ETA 0:08:14	LOSS 0.15	pred 12.2741/1.3973	lr 0.0001	
+Epoch [0][2000/6336]	Time 0.109 (251.472)	ETA 0:07:51	LOSS 0.19	pred 9.8800/0.9856	lr 0.0001	
+Epoch [0][2200/6336]	Time 0.108 (273.533)	ETA 0:07:27	LOSS 0.12	pred 9.8719/1.1404	lr 0.0001	
+Epoch [0][2400/6336]	Time 0.108 (295.642)	ETA 0:07:05	LOSS 0.25	pred 7.9943/1.1252	lr 0.0001	
+Epoch [0][2600/6336]	Time 0.115 (317.769)	ETA 0:07:09	LOSS 0.13	pred 11.2215/1.1733	lr 0.0001	
+Epoch [0][2800/6336]	Time 0.108 (339.799)	ETA 0:06:22	LOSS 0.13	pred 10.3619/1.3055	lr 0.0001	
+Epoch [0][3000/6336]	Time 0.108 (361.904)	ETA 0:06:01	LOSS 0.13	pred 10.8411/1.5901	lr 0.0001	
+Epoch [0][3200/6336]	Time 0.119 (383.936)	ETA 0:06:12	LOSS 0.17	pred 10.0818/1.4485	lr 0.0001	
+Epoch [0][3400/6336]	Time 0.109 (406.061)	ETA 0:05:21	LOSS 0.17	pred 9.1500/1.6967	lr 0.0001	
+Epoch [0][3600/6336]	Time 0.108 (428.247)	ETA 0:04:56	LOSS 0.15	pred 10.1554/1.4798	lr 0.0001	
+Epoch [0][3800/6336]	Time 0.109 (450.408)	ETA 0:04:35	LOSS 0.15	pred 10.3456/1.0711	lr 0.0001	
+Epoch [0][4000/6336]	Time 0.108 (472.438)	ETA 0:04:13	LOSS 0.16	pred 11.0116/1.2364	lr 0.0001	
+Epoch [0][4200/6336]	Time 0.109 (494.614)	ETA 0:03:52	LOSS 0.13	pred 11.2353/1.5310	lr 0.0001	
+Epoch [0][4400/6336]	Time 0.108 (516.783)	ETA 0:03:29	LOSS 0.16	pred 9.9957/1.3060	lr 0.0001	
+Epoch [0][4600/6336]	Time 0.108 (538.871)	ETA 0:03:08	LOSS 0.11	pred 10.8765/1.0828	lr 0.0001	
+Epoch [0][4800/6336]	Time 0.115 (561.013)	ETA 0:02:57	LOSS 0.15	pred 12.5853/1.0491	lr 0.0001	
+Epoch [0][5000/6336]	Time 0.111 (583.139)	ETA 0:02:28	LOSS 0.16	pred 10.7062/1.3321	lr 0.0001	
+Epoch [0][5200/6336]	Time 0.109 (605.272)	ETA 0:02:04	LOSS 0.10	pred 11.2390/1.2634	lr 0.0001	
+Epoch [0][5400/6336]	Time 0.112 (627.328)	ETA 0:01:44	LOSS 0.14	pred 10.5927/1.5762	lr 0.0001	
+Epoch [0][5600/6336]	Time 0.117 (649.564)	ETA 0:01:25	LOSS 0.16	pred 10.6625/1.2682	lr 0.0001	
+Epoch [0][5800/6336]	Time 0.108 (671.709)	ETA 0:00:58	LOSS 0.10	pred 11.2521/1.2152	lr 0.0001	
+Epoch [0][6000/6336]	Time 0.110 (693.824)	ETA 0:00:36	LOSS 0.09	pred 9.8302/1.4553	lr 0.0001	
+Epoch [0][6200/6336]	Time 0.108 (715.684)	ETA 0:00:14	LOSS 0.09	pred 10.4873/1.3158	lr 0.0001	
+2024-06-25 15:39:26 - [34m[1mLOGS[0m - 15:39 - Average Training Loss: 0.0193
+15:39 - Average Validation Loss: 0.0167
+
+*
+Delta1=0.773
+Delta2=0.957
+Delta3=0.991
+RMSE=0.583
+REL=0.154
+Lg10=0.066
+SqREL=0.113
+MAE=0.089
+t_GPU=0.016
+
+2024-06-25 15:39:40 - [34m[1mLOGS[0m - Train and validate this epoch took 12.44min
+15:39 - Epoch 1
+Epoch [1][0/6336]	Time 12.512 (12.512)	ETA 22:01:19	LOSS 0.14	pred 12.3510/1.0738	lr 0.0001	
+Epoch [1][200/6336]	Time 0.116 (34.735)	ETA 0:11:49	LOSS 0.11	pred 11.1197/1.1705	lr 0.0001	
+Epoch [1][400/6336]	Time 0.108 (56.812)	ETA 0:10:43	LOSS 0.10	pred 10.1018/1.1837	lr 0.0001	
+Epoch [1][600/6336]	Time 0.108 (78.864)	ETA 0:10:21	LOSS 0.12	pred 11.2695/1.2008	lr 0.0001	
+Epoch [1][800/6336]	Time 0.108 (100.920)	ETA 0:10:00	LOSS 0.13	pred 10.3434/1.4142	lr 0.0001	
+Epoch [1][1000/6336]	Time 0.116 (123.021)	ETA 0:10:17	LOSS 0.12	pred 11.5549/1.4492	lr 0.0001	
+Epoch [1][1200/6336]	Time 0.109 (145.111)	ETA 0:09:19	LOSS 0.12	pred 9.2522/1.2205	lr 0.0001	
+Epoch [1][1400/6336]	Time 0.108 (167.255)	ETA 0:08:55	LOSS 0.10	pred 11.5568/1.2200	lr 0.0001	
+Epoch [1][1600/6336]	Time 0.109 (189.357)	ETA 0:08:36	LOSS 0.10	pred 9.4946/1.5568	lr 0.0001	
+Epoch [1][1800/6336]	Time 0.109 (211.321)	ETA 0:08:13	LOSS 0.12	pred 12.7351/1.2550	lr 0.0001	
+Epoch [1][2000/6336]	Time 0.114 (233.437)	ETA 0:08:15	LOSS 0.10	pred 11.1170/1.5685	lr 0.0001	
+Epoch [1][2200/6336]	Time 0.112 (255.564)	ETA 0:07:42	LOSS 0.10	pred 12.2323/1.4669	lr 0.0001	
+Epoch [1][2400/6336]	Time 0.115 (277.654)	ETA 0:07:33	LOSS 0.10	pred 11.5608/1.9369	lr 0.0001	
+Epoch [1][2600/6336]	Time 0.109 (299.728)	ETA 0:06:45	LOSS 0.10	pred 10.8934/1.2720	lr 0.0001	
+Epoch [1][2800/6336]	Time 0.109 (321.775)	ETA 0:06:23	LOSS 0.13	pred 11.0094/1.3908	lr 0.0001	
+Epoch [1][3000/6336]	Time 0.109 (343.861)	ETA 0:06:02	LOSS 0.12	pred 12.0213/1.2553	lr 0.0001	
+Epoch [1][3200/6336]	Time 0.108 (365.937)	ETA 0:05:39	LOSS 0.11	pred 12.4790/1.2236	lr 0.0001	
+Epoch [1][3400/6336]	Time 0.108 (388.027)	ETA 0:05:18	LOSS 0.12	pred 10.6091/1.1778	lr 0.0001	
+Epoch [1][3600/6336]	Time 0.113 (410.103)	ETA 0:05:09	LOSS 0.14	pred 13.0105/1.4163	lr 0.0001	
+Epoch [1][3800/6336]	Time 0.108 (432.130)	ETA 0:04:34	LOSS 0.10	pred 10.5085/1.6510	lr 0.0001	
+Epoch [1][4000/6336]	Time 0.120 (454.157)	ETA 0:04:40	LOSS 0.11	pred 11.2711/1.2956	lr 0.0001	
+Epoch [1][4200/6336]	Time 0.108 (476.159)	ETA 0:03:51	LOSS 0.14	pred 10.1816/1.4270	lr 0.0001	
+Epoch [1][4400/6336]	Time 0.108 (498.251)	ETA 0:03:29	LOSS 0.10	pred 12.5494/1.4312	lr 0.0001	
+Epoch [1][4600/6336]	Time 0.109 (520.326)	ETA 0:03:08	LOSS 0.11	pred 12.1683/1.3708	lr 0.0001	
+Epoch [1][4800/6336]	Time 0.108 (542.383)	ETA 0:02:46	LOSS 0.12	pred 10.7662/1.0896	lr 0.0001	
+Epoch [1][5000/6336]	Time 0.108 (564.375)	ETA 0:02:24	LOSS 0.17	pred 10.7856/0.9311	lr 0.0001	
+Epoch [1][5200/6336]	Time 0.108 (586.384)	ETA 0:02:03	LOSS 0.12	pred 12.3345/1.2922	lr 0.0001	
+Epoch [1][5400/6336]	Time 0.108 (608.361)	ETA 0:01:41	LOSS 0.11	pred 11.1896/0.9837	lr 0.0001	
+Epoch [1][5600/6336]	Time 0.109 (630.389)	ETA 0:01:19	LOSS 0.11	pred 11.7864/1.2571	lr 0.0001	
+Epoch [1][5800/6336]	Time 0.109 (652.377)	ETA 0:00:58	LOSS 0.11	pred 12.6463/1.2073	lr 0.0001	
+Epoch [1][6000/6336]	Time 0.108 (674.366)	ETA 0:00:36	LOSS 0.11	pred 12.2999/1.4955	lr 0.0001	
+Epoch [1][6200/6336]	Time 0.108 (696.179)	ETA 0:00:14	LOSS 0.09	pred 14.2732/1.1363	lr 0.0001	
+2024-06-25 15:51:33 - [34m[1mLOGS[0m - 15:51 - Average Training Loss: 0.0143
+15:51 - Average Validation Loss: 0.0159
+
+*
+Delta1=0.791
+Delta2=0.958
+Delta3=0.991
+RMSE=0.565
+REL=0.151
+Lg10=0.063
+SqREL=0.108
+MAE=0.086
+t_GPU=0.017
+
+2024-06-25 15:51:49 - [34m[1mLOGS[0m - Train and validate this epoch took 12.15min
+15:51 - Epoch 2
+Epoch [2][0/6336]	Time 13.033 (13.033)	ETA 22:56:18	LOSS 0.11	pred 11.0902/1.1896	lr 0.0001	
+Epoch [2][200/6336]	Time 0.108 (35.153)	ETA 0:11:04	LOSS 0.09	pred 12.2993/1.1239	lr 0.0001	
+Epoch [2][400/6336]	Time 0.112 (57.156)	ETA 0:11:02	LOSS 0.10	pred 9.4314/1.1616	lr 0.0001	
+Epoch [2][600/6336]	Time 0.108 (79.169)	ETA 0:10:21	LOSS 0.13	pred 12.9981/1.3724	lr 0.0001	
+Epoch [2][800/6336]	Time 0.108 (101.201)	ETA 0:09:59	LOSS 0.13	pred 10.4559/1.0155	lr 0.0001	
+Epoch [2][1000/6336]	Time 0.109 (123.186)	ETA 0:09:39	LOSS 0.10	pred 13.3651/1.7954	lr 0.0001	
+Epoch [2][1200/6336]	Time 0.109 (145.235)	ETA 0:09:19	LOSS 0.10	pred 12.5888/1.0864	lr 0.0001	
+Epoch [2][1400/6336]	Time 0.108 (167.248)	ETA 0:08:54	LOSS 0.13	pred 12.5174/1.4171	lr 0.0001	
+Epoch [2][1600/6336]	Time 0.111 (189.333)	ETA 0:08:43	LOSS 0.10	pred 13.3278/1.3957	lr 0.0001	
+Epoch [2][1800/6336]	Time 0.109 (211.304)	ETA 0:08:16	LOSS 0.09	pred 11.9379/1.5359	lr 0.0001	
+Epoch [2][2000/6336]	Time 0.109 (233.294)	ETA 0:07:52	LOSS 0.10	pred 11.5085/1.0119	lr 0.0001	
+Epoch [2][2200/6336]	Time 0.111 (255.301)	ETA 0:07:39	LOSS 0.09	pred 10.3661/1.2643	lr 0.0001	
+Epoch [2][2400/6336]	Time 0.108 (277.291)	ETA 0:07:06	LOSS 0.14	pred 11.0855/1.0597	lr 0.0001	
+Epoch [2][2600/6336]	Time 0.113 (299.288)	ETA 0:07:01	LOSS 0.11	pred 14.1113/1.3292	lr 0.0001	
+Epoch [2][2800/6336]	Time 0.108 (321.267)	ETA 0:06:23	LOSS 0.12	pred 12.8875/1.0518	lr 0.0001	
+Epoch [2][3000/6336]	Time 0.109 (343.280)	ETA 0:06:02	LOSS 0.09	pred 10.0897/1.4319	lr 0.0001	
+Epoch [2][3200/6336]	Time 0.108 (365.324)	ETA 0:05:39	LOSS 0.15	pred 13.3234/1.0690	lr 0.0001	
+Epoch [2][3400/6336]	Time 0.109 (387.368)	ETA 0:05:20	LOSS 0.09	pred 10.3956/1.0465	lr 0.0001	
+Epoch [2][3600/6336]	Time 0.108 (409.404)	ETA 0:04:56	LOSS 0.09	pred 11.5121/1.7287	lr 0.0001	
+Epoch [2][3800/6336]	Time 0.109 (431.369)	ETA 0:04:35	LOSS 0.10	pred 12.2961/1.1498	lr 0.0001	
+Epoch [2][4000/6336]	Time 0.110 (453.410)	ETA 0:04:16	LOSS 0.10	pred 10.5992/1.0118	lr 0.0001	
+Epoch [2][4200/6336]	Time 0.112 (475.465)	ETA 0:03:58	LOSS 0.08	pred 13.4346/1.0974	lr 0.0001	
+Epoch [2][4400/6336]	Time 0.112 (497.593)	ETA 0:03:37	LOSS 0.08	pred 12.7233/1.6110	lr 0.0001	
+Epoch [2][4600/6336]	Time 0.108 (519.629)	ETA 0:03:08	LOSS 0.11	pred 10.1073/1.2066	lr 0.0001	
+Epoch [2][4800/6336]	Time 0.115 (541.639)	ETA 0:02:56	LOSS 0.10	pred 13.3052/1.0539	lr 0.0001	
+Epoch [2][5000/6336]	Time 0.110 (563.704)	ETA 0:02:27	LOSS 0.13	pred 11.7460/1.1383	lr 0.0001	
+Epoch [2][5200/6336]	Time 0.108 (585.705)	ETA 0:02:03	LOSS 0.10	pred 12.3565/1.7460	lr 0.0001	
+Epoch [2][5400/6336]	Time 0.110 (607.717)	ETA 0:01:42	LOSS 0.08	pred 9.1932/1.5028	lr 0.0001	
+Epoch [2][5600/6336]	Time 0.109 (629.733)	ETA 0:01:19	LOSS 0.10	pred 12.2981/1.1913	lr 0.0001	
+Epoch [2][5800/6336]	Time 0.114 (651.758)	ETA 0:01:00	LOSS 0.08	pred 11.5314/1.1082	lr 0.0001	
+Epoch [2][6000/6336]	Time 0.109 (673.786)	ETA 0:00:36	LOSS 0.08	pred 10.8110/1.3744	lr 0.0001	
+Epoch [2][6200/6336]	Time 0.108 (695.634)	ETA 0:00:14	LOSS 0.07	pred 12.7625/1.0966	lr 0.0001	
+2024-06-25 16:03:42 - [34m[1mLOGS[0m - 16:03 - Average Training Loss: 0.0128
+16:03 - Average Validation Loss: 0.0153
+
+*
+Delta1=0.810
+Delta2=0.963
+Delta3=0.991
+RMSE=0.552
+REL=0.141
+Lg10=0.060
+SqREL=0.098
+MAE=0.083
+t_GPU=0.015
+
+2024-06-25 16:03:58 - [34m[1mLOGS[0m - Train and validate this epoch took 12.15min
+16:03 - Epoch 3
+Epoch [3][0/6336]	Time 13.143 (13.143)	ETA 23:07:55	LOSS 0.13	pred 13.5739/1.5180	lr 0.0001	
+Epoch [3][200/6336]	Time 0.117 (35.406)	ETA 0:11:56	LOSS 0.10	pred 12.0503/1.0925	lr 0.0001	
+Epoch [3][400/6336]	Time 0.108 (57.497)	ETA 0:10:43	LOSS 0.11	pred 13.5684/1.0977	lr 0.0001	
+Epoch [3][600/6336]	Time 0.111 (79.610)	ETA 0:10:39	LOSS 0.07	pred 9.5047/1.2451	lr 0.0001	
+Epoch [3][800/6336]	Time 0.109 (101.610)	ETA 0:10:01	LOSS 0.13	pred 11.2383/1.3090	lr 0.0001	
+Epoch [3][1000/6336]	Time 0.109 (123.651)	ETA 0:09:39	LOSS 0.10	pred 13.0859/1.2606	lr 0.0001	
+Epoch [3][1200/6336]	Time 0.108 (145.707)	ETA 0:09:17	LOSS 0.09	pred 11.7025/1.8097	lr 0.0001	
+Epoch [3][1400/6336]	Time 0.109 (167.863)	ETA 0:08:55	LOSS 0.12	pred 11.9419/1.0816	lr 0.0001	
+Epoch [3][1600/6336]	Time 0.114 (189.886)	ETA 0:09:00	LOSS 0.10	pred 11.5951/1.0613	lr 0.0001	
+Epoch [3][1800/6336]	Time 0.108 (211.891)	ETA 0:08:11	LOSS 0.11	pred 12.9511/1.0713	lr 0.0001	
+Epoch [3][2000/6336]	Time 0.108 (233.942)	ETA 0:07:50	LOSS 0.11	pred 10.2951/1.7204	lr 0.0001	
+Epoch [3][2200/6336]	Time 0.109 (255.988)	ETA 0:07:30	LOSS 0.07	pred 8.8481/1.7828	lr 0.0001	
+Epoch [3][2400/6336]	Time 0.108 (278.078)	ETA 0:07:06	LOSS 0.08	pred 8.8144/1.0734	lr 0.0001	
+Epoch [3][2600/6336]	Time 0.112 (300.170)	ETA 0:06:58	LOSS 0.12	pred 12.7871/0.9306	lr 0.0001	
+Epoch [3][2800/6336]	Time 0.112 (322.207)	ETA 0:06:36	LOSS 0.12	pred 12.4134/1.0798	lr 0.0001	
+Epoch [3][3000/6336]	Time 0.117 (344.396)	ETA 0:06:30	LOSS 0.09	pred 11.8368/0.9265	lr 0.0001	
+Epoch [3][3200/6336]	Time 0.109 (366.522)	ETA 0:05:40	LOSS 0.08	pred 13.3558/1.4787	lr 0.0001	
+Epoch [3][3400/6336]	Time 0.109 (388.653)	ETA 0:05:18	LOSS 0.10	pred 9.3314/1.1616	lr 0.0001	
+Epoch [3][3600/6336]	Time 0.109 (410.649)	ETA 0:04:57	LOSS 0.11	pred 12.8941/1.1082	lr 0.0001	
+Epoch [3][3800/6336]	Time 0.110 (432.660)	ETA 0:04:38	LOSS 0.13	pred 11.7863/1.7684	lr 0.0001	
+Epoch [3][4000/6336]	Time 0.109 (454.722)	ETA 0:04:13	LOSS 0.13	pred 12.8701/1.0800	lr 0.0001	
+Epoch [3][4200/6336]	Time 0.116 (476.819)	ETA 0:04:08	LOSS 0.11	pred 12.6413/1.0576	lr 0.0001	
+Epoch [3][4400/6336]	Time 0.113 (498.894)	ETA 0:03:38	LOSS 0.10	pred 11.0291/1.6709	lr 0.0001	
+Epoch [3][4600/6336]	Time 0.110 (520.927)	ETA 0:03:11	LOSS 0.10	pred 11.2253/1.1219	lr 0.0001	
+Epoch [3][4800/6336]	Time 0.111 (543.033)	ETA 0:02:50	LOSS 0.08	pred 10.7200/1.0896	lr 0.0001	
+Epoch [3][5000/6336]	Time 0.112 (565.059)	ETA 0:02:29	LOSS 0.09	pred 11.5225/1.3432	lr 0.0001	
+Epoch [3][5200/6336]	Time 0.108 (587.111)	ETA 0:02:03	LOSS 0.07	pred 10.1543/1.0868	lr 0.0001	
+Epoch [3][5400/6336]	Time 0.109 (609.186)	ETA 0:01:41	LOSS 0.10	pred 13.5832/0.9484	lr 0.0001	
+Epoch [3][5600/6336]	Time 0.108 (631.190)	ETA 0:01:19	LOSS 0.08	pred 12.5798/1.1038	lr 0.0001	
+Epoch [3][5800/6336]	Time 0.109 (653.338)	ETA 0:00:58	LOSS 0.10	pred 12.4585/1.3830	lr 0.0001	
+Epoch [3][6000/6336]	Time 0.110 (675.400)	ETA 0:00:36	LOSS 0.09	pred 10.4087/1.3268	lr 0.0001	
+Epoch [3][6200/6336]	Time 0.108 (697.246)	ETA 0:00:14	LOSS 0.08	pred 11.6000/1.1340	lr 0.0001	
+2024-06-25 16:15:52 - [34m[1mLOGS[0m - 16:15 - Average Training Loss: 0.0120
+16:16 - Average Validation Loss: 0.0150
+
+*
+Delta1=0.817
+Delta2=0.965
+Delta3=0.992
+RMSE=0.543
+REL=0.136
+Lg10=0.059
+SqREL=0.095
+MAE=0.081
+t_GPU=0.015
+
+2024-06-25 16:16:08 - [34m[1mLOGS[0m - Train and validate this epoch took 12.17min
+16:16 - Epoch 4
+Epoch [4][0/6336]	Time 13.276 (13.276)	ETA 23:21:57	LOSS 0.11	pred 11.5836/0.9661	lr 0.0001	
+Epoch [4][200/6336]	Time 0.108 (35.412)	ETA 0:11:04	LOSS 0.10	pred 11.4908/1.3027	lr 0.0001	
+Epoch [4][400/6336]	Time 0.108 (57.489)	ETA 0:10:44	LOSS 0.09	pred 11.4554/1.0270	lr 0.0001	
+Epoch [4][600/6336]	Time 0.108 (79.580)	ETA 0:10:21	LOSS 0.08	pred 11.2267/1.0596	lr 0.0001	
+Epoch [4][800/6336]	Time 0.109 (101.603)	ETA 0:10:00	LOSS 0.11	pred 11.2430/0.9835	lr 0.0001	
+Epoch [4][1000/6336]	Time 0.113 (123.636)	ETA 0:10:00	LOSS 0.09	pred 11.5927/1.6697	lr 0.0001	
+Epoch [4][1200/6336]	Time 0.109 (145.694)	ETA 0:09:17	LOSS 0.09	pred 12.6415/1.1800	lr 0.0001	
+Epoch [4][1400/6336]	Time 0.108 (167.795)	ETA 0:08:55	LOSS 0.09	pred 13.4479/1.2186	lr 0.0001	
+Epoch [4][1600/6336]	Time 0.109 (189.905)	ETA 0:08:34	LOSS 0.09	pred 14.5286/1.4998	lr 0.0001	
+Epoch [4][1800/6336]	Time 0.109 (211.991)	ETA 0:08:12	LOSS 0.10	pred 12.6066/1.1440	lr 0.0001	
+Epoch [4][2000/6336]	Time 0.109 (234.104)	ETA 0:07:50	LOSS 0.08	pred 9.9700/1.3112	lr 0.0001	
+Epoch [4][2200/6336]	Time 0.116 (256.189)	ETA 0:08:01	LOSS 0.09	pred 11.8564/1.1791	lr 0.0001	
+Epoch [4][2400/6336]	Time 0.108 (278.194)	ETA 0:07:06	LOSS 0.09	pred 13.0954/1.1294	lr 0.0001	
+Epoch [4][2600/6336]	Time 0.109 (300.217)	ETA 0:06:45	LOSS 0.10	pred 11.4287/1.1874	lr 0.0001	
+Epoch [4][2800/6336]	Time 0.112 (322.201)	ETA 0:06:35	LOSS 0.08	pred 11.4485/1.0290	lr 0.0001	
+Epoch [4][3000/6336]	Time 0.108 (344.199)	ETA 0:06:01	LOSS 0.13	pred 14.6913/0.9514	lr 0.0001	
+Epoch [4][3200/6336]	Time 0.109 (366.288)	ETA 0:05:40	LOSS 0.08	pred 10.9964/1.0968	lr 0.0001	
+Epoch [4][3400/6336]	Time 0.109 (388.384)	ETA 0:05:19	LOSS 0.10	pred 12.0652/1.4023	lr 0.0001	
+Epoch [4][3600/6336]	Time 0.109 (410.438)	ETA 0:04:58	LOSS 0.09	pred 9.2551/1.4978	lr 0.0001	
+Epoch [4][3800/6336]	Time 0.108 (432.602)	ETA 0:04:35	LOSS 0.09	pred 12.8981/1.1759	lr 0.0001	
+Epoch [4][4000/6336]	Time 0.112 (454.645)	ETA 0:04:22	LOSS 0.09	pred 11.1751/1.0888	lr 0.0001	
+Epoch [4][4200/6336]	Time 0.110 (476.822)	ETA 0:03:53	LOSS 0.08	pred 9.7367/1.0611	lr 0.0001	
+Epoch [4][4400/6336]	Time 0.112 (498.893)	ETA 0:03:37	LOSS 0.08	pred 11.8876/1.2098	lr 0.0001	
+Epoch [4][4600/6336]	Time 0.108 (520.998)	ETA 0:03:08	LOSS 0.09	pred 12.4762/1.0124	lr 0.0001	
+Epoch [4][4800/6336]	Time 0.108 (543.065)	ETA 0:02:46	LOSS 0.09	pred 13.3316/1.0151	lr 0.0001	
+Epoch [4][5000/6336]	Time 0.108 (565.185)	ETA 0:02:24	LOSS 0.13	pred 12.0106/1.4602	lr 0.0001	
+Epoch [4][5200/6336]	Time 0.109 (587.331)	ETA 0:02:04	LOSS 0.11	pred 12.0748/1.3413	lr 0.0001	
+Epoch [4][5400/6336]	Time 0.108 (609.433)	ETA 0:01:41	LOSS 0.07	pred 8.8909/1.1597	lr 0.0001	
+Epoch [4][5600/6336]	Time 0.108 (631.521)	ETA 0:01:19	LOSS 0.07	pred 11.4436/1.2518	lr 0.0001	
+Epoch [4][5800/6336]	Time 0.109 (653.550)	ETA 0:00:58	LOSS 0.08	pred 11.9119/0.9073	lr 0.0001	
+Epoch [4][6000/6336]	Time 0.109 (675.674)	ETA 0:00:36	LOSS 0.07	pred 12.0904/2.0116	lr 0.0001	
+Epoch [4][6200/6336]	Time 0.108 (697.512)	ETA 0:00:14	LOSS 0.10	pred 13.9535/0.9718	lr 0.0001	
+2024-06-25 16:28:03 - [34m[1mLOGS[0m - 16:28 - Average Training Loss: 0.0114
+16:28 - Average Validation Loss: 0.0150
+
+*
+Delta1=0.818
+Delta2=0.964
+Delta3=0.991
+RMSE=0.548
+REL=0.136
+Lg10=0.059
+SqREL=0.095
+MAE=0.081
+t_GPU=0.014
+
+2024-06-25 16:28:19 - [34m[1mLOGS[0m - Train and validate this epoch took 12.18min
+16:28 - Epoch 5
+Epoch [5][0/6336]	Time 11.964 (11.964)	ETA 21:03:20	LOSS 0.10	pred 10.5880/1.1306	lr 0.0001	
+Epoch [5][200/6336]	Time 0.108 (34.693)	ETA 0:11:04	LOSS 0.10	pred 13.2611/1.0021	lr 0.0001	
+Epoch [5][400/6336]	Time 0.108 (56.811)	ETA 0:10:43	LOSS 0.08	pred 10.3356/1.3307	lr 0.0001	
+Epoch [5][600/6336]	Time 0.111 (78.948)	ETA 0:10:35	LOSS 0.09	pred 13.5636/1.0965	lr 0.0001	
+Epoch [5][800/6336]	Time 0.108 (100.929)	ETA 0:09:59	LOSS 0.09	pred 12.9635/1.4549	lr 0.0001	
+Epoch [5][1000/6336]	Time 0.115 (123.153)	ETA 0:10:14	LOSS 0.08	pred 11.9436/0.9154	lr 0.0001	
+Epoch [5][1200/6336]	Time 0.109 (145.241)	ETA 0:09:19	LOSS 0.10	pred 12.4386/1.4079	lr 0.0001	
+Epoch [5][1400/6336]	Time 0.109 (167.272)	ETA 0:08:55	LOSS 0.08	pred 10.7127/1.5013	lr 0.0001	
+Epoch [5][1600/6336]	Time 0.116 (189.380)	ETA 0:09:07	LOSS 0.07	pred 11.3321/1.1768	lr 0.0001	
+Epoch [5][1800/6336]	Time 0.109 (211.411)	ETA 0:08:14	LOSS 0.08	pred 9.8395/1.1112	lr 0.0001	
+Epoch [5][2000/6336]	Time 0.109 (233.530)	ETA 0:07:51	LOSS 0.07	pred 13.2205/1.3195	lr 0.0001	
+Epoch [5][2200/6336]	Time 0.109 (255.594)	ETA 0:07:29	LOSS 0.13	pred 12.0592/0.9729	lr 0.0001	
+Epoch [5][2400/6336]	Time 0.109 (277.699)	ETA 0:07:07	LOSS 0.08	pred 13.2866/1.3666	lr 0.0001	
+Epoch [5][2600/6336]	Time 0.112 (299.785)	ETA 0:06:58	LOSS 0.10	pred 12.3004/1.0433	lr 0.0001	
+Epoch [5][2800/6336]	Time 0.108 (321.885)	ETA 0:06:23	LOSS 0.08	pred 10.0215/1.6676	lr 0.0001	
+Epoch [5][3000/6336]	Time 0.116 (344.037)	ETA 0:06:26	LOSS 0.11	pred 12.7859/1.5966	lr 0.0001	
+Epoch [5][3200/6336]	Time 0.109 (366.152)	ETA 0:05:40	LOSS 0.07	pred 9.8775/1.1013	lr 0.0001	
+Epoch [5][3400/6336]	Time 0.110 (388.252)	ETA 0:05:22	LOSS 0.09	pred 11.2711/1.0027	lr 0.0001	
+Epoch [5][3600/6336]	Time 0.110 (410.442)	ETA 0:05:00	LOSS 0.13	pred 13.4803/1.1721	lr 0.0001	
+Epoch [5][3800/6336]	Time 0.115 (432.620)	ETA 0:04:52	LOSS 0.06	pred 9.3110/1.2528	lr 0.0001	
+Epoch [5][4000/6336]	Time 0.110 (454.752)	ETA 0:04:16	LOSS 0.09	pred 12.9519/1.5175	lr 0.0001	
+Epoch [5][4200/6336]	Time 0.108 (476.787)	ETA 0:03:51	LOSS 0.09	pred 11.5183/0.8076	lr 0.0001	
+Epoch [5][4400/6336]	Time 0.108 (498.877)	ETA 0:03:29	LOSS 0.10	pred 11.3636/0.9485	lr 0.0001	
+Epoch [5][4600/6336]	Time 0.108 (520.969)	ETA 0:03:08	LOSS 0.09	pred 12.0703/1.2870	lr 0.0001	
+Epoch [5][4800/6336]	Time 0.111 (543.086)	ETA 0:02:49	LOSS 0.09	pred 14.0706/1.0078	lr 0.0001	
+Epoch [5][5000/6336]	Time 0.112 (565.163)	ETA 0:02:29	LOSS 0.08	pred 10.2916/1.3315	lr 0.0001	
+Epoch [5][5200/6336]	Time 0.109 (587.215)	ETA 0:02:03	LOSS 0.07	pred 11.4811/1.2282	lr 0.0001	
+Epoch [5][5400/6336]	Time 0.111 (609.312)	ETA 0:01:43	LOSS 0.11	pred 11.7903/1.2225	lr 0.0001	
+Epoch [5][5600/6336]	Time 0.110 (631.429)	ETA 0:01:20	LOSS 0.12	pred 11.7565/1.5384	lr 0.0001	
+Epoch [5][5800/6336]	Time 0.109 (653.563)	ETA 0:00:58	LOSS 0.09	pred 12.4260/1.1840	lr 0.0001	
+Epoch [5][6000/6336]	Time 0.109 (675.739)	ETA 0:00:36	LOSS 0.10	pred 12.3389/1.0560	lr 0.0001	
+Epoch [5][6200/6336]	Time 0.108 (697.607)	ETA 0:00:14	LOSS 0.08	pred 14.5861/1.0829	lr 0.0001	
+2024-06-25 16:40:14 - [34m[1mLOGS[0m - 16:40 - Average Training Loss: 0.0110
+16:40 - Average Validation Loss: 0.0148
+
+*
+Delta1=0.820
+Delta2=0.965
+Delta3=0.992
+RMSE=0.539
+REL=0.136
+Lg10=0.058
+SqREL=0.093
+MAE=0.081
+t_GPU=0.013
+
+2024-06-25 16:40:27 - [34m[1mLOGS[0m - Train and validate this epoch took 12.13min
+16:40 - Epoch 6
+Epoch [6][0/6336]	Time 13.110 (13.110)	ETA 23:04:27	LOSS 0.10	pred 11.6849/1.0948	lr 0.0001	
+Epoch [6][200/6336]	Time 0.109 (35.821)	ETA 0:11:08	LOSS 0.09	pred 12.9729/1.0574	lr 0.0001	
+Epoch [6][400/6336]	Time 0.110 (57.950)	ETA 0:10:50	LOSS 0.09	pred 12.8805/1.1926	lr 0.0001	
+Epoch [6][600/6336]	Time 0.109 (80.112)	ETA 0:10:24	LOSS 0.07	pred 10.1572/1.0744	lr 0.0001	
+Epoch [6][800/6336]	Time 0.120 (102.268)	ETA 0:11:02	LOSS 0.09	pred 9.6194/1.4236	lr 0.0001	
+Epoch [6][1000/6336]	Time 0.108 (124.399)	ETA 0:09:38	LOSS 0.10	pred 12.7804/1.5281	lr 0.0001	
+Epoch [6][1200/6336]	Time 0.109 (146.411)	ETA 0:09:18	LOSS 0.08	pred 8.8208/1.0158	lr 0.0001	
+Epoch [6][1400/6336]	Time 0.117 (168.502)	ETA 0:09:35	LOSS 0.10	pred 11.0966/0.8914	lr 0.0001	
+Epoch [6][1600/6336]	Time 0.109 (190.576)	ETA 0:08:35	LOSS 0.11	pred 12.8318/1.1466	lr 0.0001	
+Epoch [6][1800/6336]	Time 0.110 (212.716)	ETA 0:08:19	LOSS 0.09	pred 10.6982/1.4736	lr 0.0001	
+Epoch [6][2000/6336]	Time 0.108 (234.864)	ETA 0:07:50	LOSS 0.11	pred 13.4168/0.8842	lr 0.0001	
+Epoch [6][2200/6336]	Time 0.110 (256.996)	ETA 0:07:35	LOSS 0.08	pred 10.8395/1.1293	lr 0.0001	
+Epoch [6][2400/6336]	Time 0.108 (279.099)	ETA 0:07:07	LOSS 0.08	pred 9.8548/1.9757	lr 0.0001	
+Epoch [6][2600/6336]	Time 0.115 (301.181)	ETA 0:07:10	LOSS 0.08	pred 11.5506/1.0989	lr 0.0001	
+Epoch [6][2800/6336]	Time 0.109 (323.251)	ETA 0:06:24	LOSS 0.12	pred 13.1843/1.1913	lr 0.0001	
+Epoch [6][3000/6336]	Time 0.116 (345.377)	ETA 0:06:28	LOSS 0.07	pred 13.4405/1.3130	lr 0.0001	
+Epoch [6][3200/6336]	Time 0.114 (367.422)	ETA 0:05:56	LOSS 0.08	pred 11.1047/1.2408	lr 0.0001	
+Epoch [6][3400/6336]	Time 0.108 (389.526)	ETA 0:05:18	LOSS 0.09	pred 10.4302/1.2739	lr 0.0001	
+Epoch [6][3600/6336]	Time 0.109 (411.688)	ETA 0:04:57	LOSS 0.08	pred 11.2182/1.1348	lr 0.0001	
+Epoch [6][3800/6336]	Time 0.109 (433.824)	ETA 0:04:36	LOSS 0.09	pred 10.9570/1.0564	lr 0.0001	
+Epoch [6][4000/6336]	Time 0.108 (455.902)	ETA 0:04:13	LOSS 0.10	pred 12.8023/1.7395	lr 0.0001	
+Epoch [6][4200/6336]	Time 0.110 (477.972)	ETA 0:03:53	LOSS 0.10	pred 12.2645/1.3273	lr 0.0001	
+Epoch [6][4400/6336]	Time 0.108 (500.084)	ETA 0:03:30	LOSS 0.07	pred 12.3243/1.0154	lr 0.0001	
+Epoch [6][4600/6336]	Time 0.111 (522.244)	ETA 0:03:12	LOSS 0.10	pred 13.0227/1.0802	lr 0.0001	
+Epoch [6][4800/6336]	Time 0.109 (544.269)	ETA 0:02:47	LOSS 0.09	pred 12.7441/1.0488	lr 0.0001	
+Epoch [6][5000/6336]	Time 0.108 (566.451)	ETA 0:02:24	LOSS 0.06	pred 9.9776/1.3621	lr 0.0001	
+Epoch [6][5200/6336]	Time 0.112 (588.664)	ETA 0:02:07	LOSS 0.07	pred 12.6562/1.6650	lr 0.0001	
+Epoch [6][5400/6336]	Time 0.121 (610.745)	ETA 0:01:52	LOSS 0.08	pred 12.5008/1.1350	lr 0.0001	
+Epoch [6][5600/6336]	Time 0.108 (632.862)	ETA 0:01:19	LOSS 0.07	pred 10.8029/1.4432	lr 0.0001	
+Epoch [6][5800/6336]	Time 0.110 (654.864)	ETA 0:00:58	LOSS 0.10	pred 12.5474/0.9524	lr 0.0001	
+Epoch [6][6000/6336]	Time 0.108 (676.989)	ETA 0:00:36	LOSS 0.09	pred 14.2537/1.0058	lr 0.0001	
+Epoch [6][6200/6336]	Time 0.108 (698.831)	ETA 0:00:14	LOSS 0.08	pred 12.4522/0.9826	lr 0.0001	
+2024-06-25 16:52:23 - [34m[1mLOGS[0m - 16:52 - Average Training Loss: 0.0106
+16:52 - Average Validation Loss: 0.0147
+
+*
+Delta1=0.827
+Delta2=0.965
+Delta3=0.991
+RMSE=0.534
+REL=0.133
+Lg10=0.058
+SqREL=0.092
+MAE=0.080
+t_GPU=0.011
+
+2024-06-25 16:52:37 - [34m[1mLOGS[0m - Train and validate this epoch took 12.16min
+16:52 - Epoch 7
+Epoch [7][0/6336]	Time 10.615 (10.615)	ETA 18:40:55	LOSS 0.07	pred 11.1646/1.2038	lr 0.0001	
+Epoch [7][200/6336]	Time 0.108 (33.152)	ETA 0:11:03	LOSS 0.09	pred 11.5291/1.0833	lr 0.0001	
+Epoch [7][400/6336]	Time 0.109 (55.305)	ETA 0:10:46	LOSS 0.09	pred 13.2328/1.0303	lr 0.0001	
+Epoch [7][600/6336]	Time 0.109 (77.513)	ETA 0:10:26	LOSS 0.07	pred 14.3382/1.0704	lr 0.0001	
+Epoch [7][800/6336]	Time 0.112 (99.705)	ETA 0:10:20	LOSS 0.08	pred 13.5944/1.0865	lr 0.0001	
+Epoch [7][1000/6336]	Time 0.115 (121.873)	ETA 0:10:11	LOSS 0.07	pred 10.1120/1.1781	lr 0.0001	
+Epoch [7][1200/6336]	Time 0.109 (143.994)	ETA 0:09:18	LOSS 0.08	pred 10.9899/1.2060	lr 0.0001	
+Epoch [7][1400/6336]	Time 0.110 (166.155)	ETA 0:09:04	LOSS 0.09	pred 13.7767/1.2350	lr 0.0001	
+Epoch [7][1600/6336]	Time 0.110 (188.226)	ETA 0:08:41	LOSS 0.10	pred 13.5442/1.6418	lr 0.0001	
+Epoch [7][1800/6336]	Time 0.110 (210.375)	ETA 0:08:19	LOSS 0.09	pred 11.4321/1.1020	lr 0.0001	
+Epoch [7][2000/6336]	Time 0.116 (232.575)	ETA 0:08:23	LOSS 0.08	pred 11.2904/1.1906	lr 0.0001	
+Epoch [7][2200/6336]	Time 0.108 (254.680)	ETA 0:07:28	LOSS 0.07	pred 14.1420/1.0861	lr 0.0001	
+Epoch [7][2400/6336]	Time 0.108 (276.765)	ETA 0:07:06	LOSS 0.07	pred 9.5871/1.2091	lr 0.0001	
+Epoch [7][2600/6336]	Time 0.108 (298.917)	ETA 0:06:45	LOSS 0.07	pred 12.5611/1.2383	lr 0.0001	
+Epoch [7][2800/6336]	Time 0.109 (320.998)	ETA 0:06:24	LOSS 0.09	pred 11.9465/1.0483	lr 0.0001	
+Epoch [7][3000/6336]	Time 0.109 (343.173)	ETA 0:06:02	LOSS 0.07	pred 13.6904/1.0762	lr 0.0001	
+Epoch [7][3200/6336]	Time 0.109 (365.260)	ETA 0:05:40	LOSS 0.08	pred 10.6663/1.2155	lr 0.0001	
+Epoch [7][3400/6336]	Time 0.116 (387.417)	ETA 0:05:42	LOSS 0.08	pred 14.0237/1.5105	lr 0.0001	
+Epoch [7][3600/6336]	Time 0.109 (409.562)	ETA 0:04:58	LOSS 0.08	pred 13.0075/1.0293	lr 0.0001	
+Epoch [7][3800/6336]	Time 0.109 (431.645)	ETA 0:04:35	LOSS 0.08	pred 11.9860/1.0405	lr 0.0001	
+Epoch [7][4000/6336]	Time 0.112 (453.731)	ETA 0:04:22	LOSS 0.07	pred 11.3865/1.2348	lr 0.0001	
+Epoch [7][4200/6336]	Time 0.109 (475.855)	ETA 0:03:52	LOSS 0.09	pred 11.9553/0.9229	lr 0.0001	
+Epoch [7][4400/6336]	Time 0.118 (498.031)	ETA 0:03:48	LOSS 0.09	pred 14.3341/0.8774	lr 0.0001	
+Epoch [7][4600/6336]	Time 0.115 (520.196)	ETA 0:03:20	LOSS 0.12	pred 13.0604/1.3909	lr 0.0001	
+Epoch [7][4800/6336]	Time 0.109 (542.449)	ETA 0:02:46	LOSS 0.06	pred 9.8730/0.9981	lr 0.0001	
+Epoch [7][5000/6336]	Time 0.110 (564.585)	ETA 0:02:26	LOSS 0.10	pred 11.5265/0.9583	lr 0.0001	
+Epoch [7][5200/6336]	Time 0.109 (586.856)	ETA 0:02:03	LOSS 0.08	pred 13.7189/1.0819	lr 0.0001	
+Epoch [7][5400/6336]	Time 0.116 (609.013)	ETA 0:01:48	LOSS 0.07	pred 9.6336/1.2862	lr 0.0001	
+Epoch [7][5600/6336]	Time 0.108 (631.190)	ETA 0:01:19	LOSS 0.10	pred 11.3242/0.9046	lr 0.0001	
+Epoch [7][5800/6336]	Time 0.108 (653.305)	ETA 0:00:58	LOSS 0.08	pred 11.1148/0.9983	lr 0.0001	
+Epoch [7][6000/6336]	Time 0.108 (675.502)	ETA 0:00:36	LOSS 0.07	pred 11.0708/1.1415	lr 0.0001	
+Epoch [7][6200/6336]	Time 0.108 (697.412)	ETA 0:00:14	LOSS 0.11	pred 13.5469/1.2765	lr 0.0001	
+2024-06-25 17:04:31 - [34m[1mLOGS[0m - 17:04 - Average Training Loss: 0.0103
+17:04 - Average Validation Loss: 0.0146
+
+*
+Delta1=0.825
+Delta2=0.966
+Delta3=0.992
+RMSE=0.530
+REL=0.139
+Lg10=0.058
+SqREL=0.096
+MAE=0.080
+t_GPU=0.015
+
+2024-06-25 17:04:45 - [34m[1mLOGS[0m - Train and validate this epoch took 12.13min
+17:04 - Epoch 8
+Epoch [8][0/6336]	Time 9.845 (9.845)	ETA 17:19:38	LOSS 0.09	pred 12.7045/1.0710	lr 0.0001	
+Epoch [8][200/6336]	Time 0.112 (32.775)	ETA 0:11:25	LOSS 0.07	pred 10.6375/0.9808	lr 0.0001	
+Epoch [8][400/6336]	Time 0.110 (54.937)	ETA 0:10:51	LOSS 0.08	pred 12.4311/1.0660	lr 0.0001	
+Epoch [8][600/6336]	Time 0.110 (77.046)	ETA 0:10:29	LOSS 0.09	pred 14.1104/2.1527	lr 0.0001	
+Epoch [8][800/6336]	Time 0.108 (99.136)	ETA 0:10:00	LOSS 0.07	pred 10.2688/1.3875	lr 0.0001	
+Epoch [8][1000/6336]	Time 0.109 (121.218)	ETA 0:09:43	LOSS 0.07	pred 11.7067/1.4586	lr 0.0001	
+Epoch [8][1200/6336]	Time 0.108 (143.317)	ETA 0:09:17	LOSS 0.10	pred 11.5248/1.1410	lr 0.0001	
+Epoch [8][1400/6336]	Time 0.112 (165.482)	ETA 0:09:14	LOSS 0.06	pred 12.4027/0.9810	lr 0.0001	
+Epoch [8][1600/6336]	Time 0.113 (187.634)	ETA 0:08:56	LOSS 0.08	pred 12.7971/1.1238	lr 0.0001	
+Epoch [8][1800/6336]	Time 0.109 (209.817)	ETA 0:08:12	LOSS 0.08	pred 13.6230/0.9382	lr 0.0001	
+Epoch [8][2000/6336]	Time 0.113 (232.102)	ETA 0:08:07	LOSS 0.08	pred 11.7283/1.0560	lr 0.0001	
+Epoch [8][2200/6336]	Time 0.109 (254.320)	ETA 0:07:31	LOSS 0.07	pred 9.7490/1.0319	lr 0.0001	
+Epoch [8][2400/6336]	Time 0.112 (276.462)	ETA 0:07:21	LOSS 0.09	pred 11.7539/0.9770	lr 0.0001	
+Epoch [8][2600/6336]	Time 0.109 (298.590)	ETA 0:06:47	LOSS 0.09	pred 12.5667/1.1480	lr 0.0001	
+Epoch [8][2800/6336]	Time 0.118 (320.772)	ETA 0:06:58	LOSS 0.09	pred 14.0478/1.7202	lr 0.0001	
+Epoch [8][3000/6336]	Time 0.110 (342.851)	ETA 0:06:05	LOSS 0.08	pred 11.1296/0.8961	lr 0.0001	
+Epoch [8][3200/6336]	Time 0.111 (364.964)	ETA 0:05:46	LOSS 0.07	pred 9.4199/1.3159	lr 0.0001	
+Epoch [8][3400/6336]	Time 0.109 (387.132)	ETA 0:05:19	LOSS 0.07	pred 12.5607/1.1165	lr 0.0001	
+Epoch [8][3600/6336]	Time 0.108 (409.287)	ETA 0:04:56	LOSS 0.08	pred 11.3323/1.1532	lr 0.0001	
+Epoch [8][3800/6336]	Time 0.110 (431.453)	ETA 0:04:39	LOSS 0.07	pred 11.5240/1.1541	lr 0.0001	
+Epoch [8][4000/6336]	Time 0.109 (453.575)	ETA 0:04:14	LOSS 0.08	pred 11.7918/0.9330	lr 0.0001	
+Epoch [8][4200/6336]	Time 0.108 (475.698)	ETA 0:03:51	LOSS 0.07	pred 10.9806/1.0261	lr 0.0001	
+Epoch [8][4400/6336]	Time 0.109 (497.811)	ETA 0:03:30	LOSS 0.06	pred 13.3727/1.2804	lr 0.0001	
+Epoch [8][4600/6336]	Time 0.114 (519.982)	ETA 0:03:17	LOSS 0.08	pred 11.5207/1.1684	lr 0.0001	
+Epoch [8][4800/6336]	Time 0.116 (542.117)	ETA 0:02:58	LOSS 0.09	pred 13.1606/1.2882	lr 0.0001	
+Epoch [8][5000/6336]	Time 0.115 (564.300)	ETA 0:02:34	LOSS 0.07	pred 13.9881/1.2067	lr 0.0001	
+Epoch [8][5200/6336]	Time 0.110 (586.443)	ETA 0:02:05	LOSS 0.08	pred 13.7987/1.0076	lr 0.0001	
+Epoch [8][5400/6336]	Time 0.109 (608.537)	ETA 0:01:42	LOSS 0.08	pred 12.5560/1.2378	lr 0.0001	
+Epoch [8][5600/6336]	Time 0.109 (630.741)	ETA 0:01:20	LOSS 0.10	pred 14.0005/1.1148	lr 0.0001	
+Epoch [8][5800/6336]	Time 0.110 (652.870)	ETA 0:00:58	LOSS 0.07	pred 9.8522/1.2712	lr 0.0001	
+Epoch [8][6000/6336]	Time 0.114 (674.954)	ETA 0:00:38	LOSS 0.09	pred 12.3270/1.1734	lr 0.0001	
+Epoch [8][6200/6336]	Time 0.108 (696.909)	ETA 0:00:14	LOSS 0.09	pred 14.1952/1.2347	lr 0.0001	
+2024-06-25 17:16:39 - [34m[1mLOGS[0m - 17:16 - Average Training Loss: 0.0101
+17:16 - Average Validation Loss: 0.0146
+
+*
+Delta1=0.829
+Delta2=0.965
+Delta3=0.992
+RMSE=0.532
+REL=0.133
+Lg10=0.057
+SqREL=0.092
+MAE=0.080
+t_GPU=0.013
+
+2024-06-25 17:16:52 - [34m[1mLOGS[0m - Train and validate this epoch took 12.12min
+17:16 - Epoch 9
+Epoch [9][0/6336]	Time 10.282 (10.282)	ETA 18:05:48	LOSS 0.07	pred 12.0455/1.1440	lr 0.0001	
+Epoch [9][200/6336]	Time 0.108 (32.808)	ETA 0:11:05	LOSS 0.08	pred 12.3539/1.0558	lr 0.0001	
+Epoch [9][400/6336]	Time 0.108 (54.964)	ETA 0:10:43	LOSS 0.08	pred 13.7747/1.5268	lr 0.0001	
+Epoch [9][600/6336]	Time 0.109 (77.061)	ETA 0:10:24	LOSS 0.09	pred 10.7379/1.2967	lr 0.0001	
+Epoch [9][800/6336]	Time 0.108 (99.215)	ETA 0:10:00	LOSS 0.07	pred 10.3722/1.2001	lr 0.0001	
+Epoch [9][1000/6336]	Time 0.108 (121.397)	ETA 0:09:38	LOSS 0.06	pred 10.8321/1.0673	lr 0.0001	
+Epoch [9][1200/6336]	Time 0.113 (143.577)	ETA 0:09:41	LOSS 0.09	pred 12.9642/1.0324	lr 0.0001	
+Epoch [9][1400/6336]	Time 0.109 (165.784)	ETA 0:08:55	LOSS 0.09	pred 13.4077/1.0869	lr 0.0001	
+Epoch [9][1600/6336]	Time 0.114 (187.963)	ETA 0:08:58	LOSS 0.06	pred 11.0801/1.2933	lr 0.0001	
+Epoch [9][1800/6336]	Time 0.115 (210.128)	ETA 0:08:43	LOSS 0.06	pred 9.0245/1.2965	lr 0.0001	
+Epoch [9][2000/6336]	Time 0.108 (232.245)	ETA 0:07:50	LOSS 0.09	pred 13.1544/1.6121	lr 0.0001	
+Epoch [9][2200/6336]	Time 0.109 (254.410)	ETA 0:07:29	LOSS 0.08	pred 13.1225/1.0770	lr 0.0001	
+Epoch [9][2400/6336]	Time 0.116 (276.555)	ETA 0:07:38	LOSS 0.08	pred 11.6854/1.2966	lr 0.0001	
+Epoch [9][2600/6336]	Time 0.108 (298.755)	ETA 0:06:44	LOSS 0.07	pred 12.4527/1.2252	lr 0.0001	
+Epoch [9][2800/6336]	Time 0.109 (321.017)	ETA 0:06:23	LOSS 0.08	pred 11.7247/1.3046	lr 0.0001	
+Epoch [9][3000/6336]	Time 0.108 (343.256)	ETA 0:06:01	LOSS 0.08	pred 12.8434/1.0860	lr 0.0001	
+Epoch [9][3200/6336]	Time 0.111 (365.419)	ETA 0:05:49	LOSS 0.07	pred 12.8746/1.1185	lr 0.0001	
+Epoch [9][3400/6336]	Time 0.109 (387.568)	ETA 0:05:18	LOSS 0.08	pred 12.7503/1.0690	lr 0.0001	
+Epoch [9][3600/6336]	Time 0.112 (409.852)	ETA 0:05:05	LOSS 0.08	pred 11.9931/1.1588	lr 0.0001	
+Epoch [9][3800/6336]	Time 0.109 (432.092)	ETA 0:04:35	LOSS 0.08	pred 12.0074/1.0870	lr 0.0001	
+Epoch [9][4000/6336]	Time 0.111 (454.218)	ETA 0:04:18	LOSS 0.08	pred 12.9068/1.1331	lr 0.0001	
+Epoch [9][4200/6336]	Time 0.108 (476.323)	ETA 0:03:51	LOSS 0.06	pred 9.3011/1.3288	lr 0.0001	
+Epoch [9][4400/6336]	Time 0.114 (498.448)	ETA 0:03:40	LOSS 0.06	pred 12.0462/1.0443	lr 0.0001	
+Epoch [9][4600/6336]	Time 0.109 (520.630)	ETA 0:03:09	LOSS 0.07	pred 10.1254/1.9388	lr 0.0001	
+Epoch [9][4800/6336]	Time 0.112 (543.371)	ETA 0:02:51	LOSS 0.08	pred 11.8492/1.0323	lr 0.0001	
+Epoch [9][5000/6336]	Time 0.113 (566.668)	ETA 0:02:30	LOSS 0.08	pred 11.8558/0.9931	lr 0.0001	
+Epoch [9][5200/6336]	Time 0.113 (589.982)	ETA 0:02:08	LOSS 0.07	pred 10.2910/1.6182	lr 0.0001	
+Epoch [9][5400/6336]	Time 0.115 (613.451)	ETA 0:01:47	LOSS 0.08	pred 10.2064/1.1873	lr 0.0001	
+Epoch [9][5600/6336]	Time 0.123 (636.912)	ETA 0:01:30	LOSS 0.08	pred 13.8118/1.0275	lr 0.0001	
+Epoch [9][5800/6336]	Time 0.108 (660.134)	ETA 0:00:58	LOSS 0.09	pred 14.6655/1.3573	lr 0.0001	
+Epoch [9][6000/6336]	Time 0.110 (682.325)	ETA 0:00:36	LOSS 0.07	pred 10.9835/0.9558	lr 0.0001	
+Epoch [9][6200/6336]	Time 0.112 (704.716)	ETA 0:00:15	LOSS 0.08	pred 12.0478/1.0839	lr 0.0001	
+2024-06-25 17:28:56 - [34m[1mLOGS[0m - 17:28 - Average Training Loss: 0.0099
+17:29 - Average Validation Loss: 0.0145
+
+*
+Delta1=0.831
+Delta2=0.966
+Delta3=0.992
+RMSE=0.528
+REL=0.133
+Lg10=0.057
+SqREL=0.090
+MAE=0.079
+t_GPU=0.015
+
+2024-06-25 17:29:11 - [34m[1mLOGS[0m - Train and validate this epoch took 12.32min
+17:29 - Epoch 10
+Epoch [10][0/6336]	Time 12.319 (12.319)	ETA 21:40:55	LOSS 0.06	pred 13.0469/1.1558	lr 0.0001	
+Epoch [10][200/6336]	Time 0.114 (38.921)	ETA 0:11:42	LOSS 0.08	pred 12.8165/1.2609	lr 0.0001	
+Epoch [10][400/6336]	Time 0.108 (61.980)	ETA 0:10:42	LOSS 0.06	pred 10.6889/1.0307	lr 0.0001	
+Epoch [10][600/6336]	Time 0.108 (84.195)	ETA 0:10:21	LOSS 0.08	pred 13.4579/0.9906	lr 0.0001	
+Epoch [10][800/6336]	Time 0.108 (106.382)	ETA 0:09:59	LOSS 0.09	pred 13.1635/1.1433	lr 0.0001	
+Epoch [10][1000/6336]	Time 0.117 (128.719)	ETA 0:10:24	LOSS 0.06	pred 10.0789/1.3164	lr 0.0001	
+Epoch [10][1200/6336]	Time 0.148 (150.992)	ETA 0:12:38	LOSS 0.09	pred 13.4434/1.0424	lr 0.0001	
+Epoch [10][1400/6336]	Time 0.115 (173.300)	ETA 0:09:28	LOSS 0.08	pred 12.3715/1.1430	lr 0.0001	
+Epoch [10][1600/6336]	Time 0.108 (195.476)	ETA 0:08:33	LOSS 0.08	pred 14.1743/1.2459	lr 0.0001	
+Epoch [10][1800/6336]	Time 0.109 (217.628)	ETA 0:08:12	LOSS 0.06	pred 12.0204/1.2160	lr 0.0001	
+Epoch [10][2000/6336]	Time 0.109 (240.026)	ETA 0:07:50	LOSS 0.07	pred 13.4085/1.5278	lr 0.0001	
+Epoch [10][2200/6336]	Time 0.110 (262.426)	ETA 0:07:34	LOSS 0.08	pred 14.3805/1.0004	lr 0.0001	
+Epoch [10][2400/6336]	Time 0.112 (284.856)	ETA 0:07:22	LOSS 0.06	pred 12.2705/1.4866	lr 0.0001	
+Epoch [10][2600/6336]	Time 0.112 (307.050)	ETA 0:06:59	LOSS 0.06	pred 11.7697/1.2906	lr 0.0001	
+Epoch [10][2800/6336]	Time 0.117 (329.290)	ETA 0:06:52	LOSS 0.08	pred 11.9059/1.0108	lr 0.0001	
+Epoch [10][3000/6336]	Time 0.108 (351.665)	ETA 0:06:01	LOSS 0.07	pred 13.9037/1.9911	lr 0.0001	
+Epoch [10][3200/6336]	Time 0.108 (373.884)	ETA 0:05:39	LOSS 0.08	pred 12.8940/0.9484	lr 0.0001	
+Epoch [10][3400/6336]	Time 0.109 (396.160)	ETA 0:05:19	LOSS 0.07	pred 12.3603/1.2879	lr 0.0001	
+Epoch [10][3600/6336]	Time 0.108 (418.338)	ETA 0:04:56	LOSS 0.08	pred 13.2966/1.5139	lr 0.0001	
+Epoch [10][3800/6336]	Time 0.109 (440.696)	ETA 0:04:35	LOSS 0.08	pred 13.1496/1.2042	lr 0.0001	
+Epoch [10][4000/6336]	Time 0.112 (462.829)	ETA 0:04:21	LOSS 0.09	pred 12.7006/2.1616	lr 0.0001	
+Epoch [10][4200/6336]	Time 0.109 (485.191)	ETA 0:03:51	LOSS 0.07	pred 12.5451/1.1317	lr 0.0001	
+Epoch [10][4400/6336]	Time 0.109 (507.490)	ETA 0:03:31	LOSS 0.07	pred 11.9020/1.0283	lr 0.0001	
+Epoch [10][4600/6336]	Time 0.113 (529.693)	ETA 0:03:16	LOSS 0.09	pred 11.0569/1.0805	lr 0.0001	
+Epoch [10][4800/6336]	Time 0.109 (551.832)	ETA 0:02:48	LOSS 0.08	pred 11.3524/0.9834	lr 0.0001	
+Epoch [10][5000/6336]	Time 0.117 (574.038)	ETA 0:02:35	LOSS 0.07	pred 13.6038/1.1724	lr 0.0001	
+Epoch [10][5200/6336]	Time 0.108 (596.255)	ETA 0:02:03	LOSS 0.09	pred 12.9736/1.0334	lr 0.0001	
+Epoch [10][5400/6336]	Time 0.108 (618.566)	ETA 0:01:41	LOSS 0.09	pred 13.1974/1.8812	lr 0.0001	
+Epoch [10][5600/6336]	Time 0.111 (640.730)	ETA 0:01:21	LOSS 0.06	pred 10.1403/1.0565	lr 0.0001	
+Epoch [10][5800/6336]	Time 0.116 (662.907)	ETA 0:01:02	LOSS 0.08	pred 10.5984/2.0956	lr 0.0001	
+Epoch [10][6000/6336]	Time 0.110 (685.204)	ETA 0:00:36	LOSS 0.07	pred 11.2020/1.1770	lr 0.0001	
+Epoch [10][6200/6336]	Time 0.109 (707.099)	ETA 0:00:14	LOSS 0.09	pred 12.7085/1.4438	lr 0.0001	
+2024-06-25 17:41:17 - [34m[1mLOGS[0m - 17:41 - Average Training Loss: 0.0097
+17:41 - Average Validation Loss: 0.0145
+
+*
+Delta1=0.829
+Delta2=0.965
+Delta3=0.992
+RMSE=0.524
+REL=0.134
+Lg10=0.057
+SqREL=0.091
+MAE=0.079
+t_GPU=0.015
+
+17:41 - Model saved
+2024-06-25 17:41:36 - [34m[1mLOGS[0m - Train and validate this epoch took 12.41min
+17:41 - Epoch 11
+Epoch [11][0/6336]	Time 14.842 (14.842)	ETA 1 day, 2:07:20	LOSS 0.06	pred 11.5418/1.4092	lr 0.0001	
+Epoch [11][200/6336]	Time 0.112 (41.346)	ETA 0:11:29	LOSS 0.08	pred 13.3163/1.0216	lr 0.0001	
+Epoch [11][400/6336]	Time 0.117 (64.802)	ETA 0:11:35	LOSS 0.08	pred 11.7477/1.1698	lr 0.0001	
+Epoch [11][600/6336]	Time 0.108 (87.596)	ETA 0:10:21	LOSS 0.07	pred 12.0120/1.3858	lr 0.0001	
+Epoch [11][800/6336]	Time 0.109 (109.902)	ETA 0:10:03	LOSS 0.07	pred 12.9990/1.0474	lr 0.0001	
+Epoch [11][1000/6336]	Time 0.109 (132.221)	ETA 0:09:43	LOSS 0.09	pred 14.2337/1.0597	lr 0.0001	
+Epoch [11][1200/6336]	Time 0.108 (154.452)	ETA 0:09:15	LOSS 0.09	pred 13.5051/1.0518	lr 0.0001	
+Epoch [11][1400/6336]	Time 0.113 (176.714)	ETA 0:09:16	LOSS 0.08	pred 12.5163/0.9806	lr 0.0001	
+Epoch [11][1600/6336]	Time 0.114 (198.912)	ETA 0:09:00	LOSS 0.07	pred 9.3352/1.0683	lr 0.0001	
+Epoch [11][1800/6336]	Time 0.109 (221.240)	ETA 0:08:12	LOSS 0.07	pred 11.9592/1.0251	lr 0.0001	
+Epoch [11][2000/6336]	Time 0.116 (243.559)	ETA 0:08:23	LOSS 0.08	pred 12.9750/0.9498	lr 0.0001	
+Epoch [11][2200/6336]	Time 0.108 (265.779)	ETA 0:07:27	LOSS 0.09	pred 14.1531/1.0470	lr 0.0001	
+Epoch [11][2400/6336]	Time 0.108 (288.023)	ETA 0:07:06	LOSS 0.08	pred 12.5673/1.2928	lr 0.0001	
+Epoch [11][2600/6336]	Time 0.112 (310.288)	ETA 0:06:56	LOSS 0.09	pred 12.4303/1.1173	lr 0.0001	
+Epoch [11][2800/6336]	Time 0.110 (332.523)	ETA 0:06:29	LOSS 0.06	pred 14.1604/1.1540	lr 0.0001	
+Epoch [11][3000/6336]	Time 0.108 (354.828)	ETA 0:06:01	LOSS 0.07	pred 10.6764/1.2561	lr 0.0001	
+Epoch [11][3200/6336]	Time 0.108 (377.091)	ETA 0:05:39	LOSS 0.07	pred 9.5942/0.9911	lr 0.0001	
+Epoch [11][3400/6336]	Time 0.111 (399.363)	ETA 0:05:25	LOSS 0.09	pred 13.3603/0.9324	lr 0.0001	
+Epoch [11][3600/6336]	Time 0.108 (421.759)	ETA 0:04:56	LOSS 0.07	pred 10.9681/1.3576	lr 0.0001	
+Epoch [11][3800/6336]	Time 0.108 (444.022)	ETA 0:04:34	LOSS 0.06	pred 9.4637/1.4355	lr 0.0001	
+Epoch [11][4000/6336]	Time 0.108 (466.269)	ETA 0:04:12	LOSS 0.07	pred 11.6342/0.8967	lr 0.0001	
+Epoch [11][4200/6336]	Time 0.117 (489.480)	ETA 0:04:10	LOSS 0.06	pred 9.7265/1.0001	lr 0.0001	
+Epoch [11][4400/6336]	Time 0.113 (512.809)	ETA 0:03:38	LOSS 0.07	pred 12.3591/1.1886	lr 0.0001	
+Epoch [11][4600/6336]	Time 0.112 (536.178)	ETA 0:03:15	LOSS 0.06	pred 9.6192/1.0302	lr 0.0001	
+Epoch [11][4800/6336]	Time 0.108 (558.434)	ETA 0:02:46	LOSS 0.08	pred 13.1732/1.6283	lr 0.0001	
+Epoch [11][5000/6336]	Time 0.113 (580.659)	ETA 0:02:30	LOSS 0.08	pred 12.0826/1.4096	lr 0.0001	
+Epoch [11][5200/6336]	Time 0.115 (602.976)	ETA 0:02:10	LOSS 0.07	pred 11.3540/1.1953	lr 0.0001	
+Epoch [11][5400/6336]	Time 0.112 (625.543)	ETA 0:01:44	LOSS 0.07	pred 12.9262/1.0820	lr 0.0001	
+Epoch [11][5600/6336]	Time 0.109 (647.957)	ETA 0:01:20	LOSS 0.08	pred 11.6608/1.3674	lr 0.0001	
+Epoch [11][5800/6336]	Time 0.111 (670.498)	ETA 0:00:59	LOSS 0.09	pred 12.9765/1.0918	lr 0.0001	
+Epoch [11][6000/6336]	Time 0.108 (692.917)	ETA 0:00:36	LOSS 0.07	pred 10.5970/1.3836	lr 0.0001	
+Epoch [11][6200/6336]	Time 0.108 (714.840)	ETA 0:00:14	LOSS 0.13	pred 13.1583/1.5143	lr 0.0001	
+2024-06-25 17:53:49 - [34m[1mLOGS[0m - 17:53 - Average Training Loss: 0.0096
+17:54 - Average Validation Loss: 0.0143
+
+*
+Delta1=0.832
+Delta2=0.966
+Delta3=0.992
+RMSE=0.526
+REL=0.132
+Lg10=0.056
+SqREL=0.090
+MAE=0.079
+t_GPU=0.015
+
+17:54 - Model saved
+2024-06-25 17:54:09 - [34m[1mLOGS[0m - Train and validate this epoch took 12.55min
+17:54 - Epoch 12
+Epoch [12][0/6336]	Time 16.109 (16.109)	ETA 1 day, 4:21:09	LOSS 0.07	pred 13.2373/1.4306	lr 0.0001	
+Epoch [12][200/6336]	Time 0.114 (41.591)	ETA 0:11:39	LOSS 0.07	pred 12.4381/1.3889	lr 0.0001	
+Epoch [12][400/6336]	Time 0.119 (65.284)	ETA 0:11:47	LOSS 0.08	pred 12.6084/1.0528	lr 0.0001	
+Epoch [12][600/6336]	Time 0.109 (88.344)	ETA 0:10:27	LOSS 0.07	pred 14.2276/1.3004	lr 0.0001	
+Epoch [12][800/6336]	Time 0.108 (110.708)	ETA 0:10:00	LOSS 0.09	pred 14.5924/1.0244	lr 0.0001	
+Epoch [12][1000/6336]	Time 0.112 (133.078)	ETA 0:09:55	LOSS 0.07	pred 11.4538/1.1179	lr 0.0001	
+Epoch [12][1200/6336]	Time 0.116 (155.368)	ETA 0:09:55	LOSS 0.07	pred 11.2743/1.0408	lr 0.0001	
+Epoch [12][1400/6336]	Time 0.108 (177.641)	ETA 0:08:54	LOSS 0.06	pred 10.5935/0.9938	lr 0.0001	
+Epoch [12][1600/6336]	Time 0.118 (200.036)	ETA 0:09:16	LOSS 0.08	pred 12.6822/1.0110	lr 0.0001	
+Epoch [12][1800/6336]	Time 0.110 (222.287)	ETA 0:08:18	LOSS 0.07	pred 14.0361/1.7575	lr 0.0001	
+Epoch [12][2000/6336]	Time 0.117 (244.527)	ETA 0:08:27	LOSS 0.09	pred 10.2291/1.0289	lr 0.0001	
+Epoch [12][2200/6336]	Time 0.111 (266.768)	ETA 0:07:40	LOSS 0.07	pred 13.8910/1.2179	lr 0.0001	
+Epoch [12][2400/6336]	Time 0.116 (289.068)	ETA 0:07:37	LOSS 0.07	pred 10.3285/1.3488	lr 0.0001	
+Epoch [12][2600/6336]	Time 0.110 (311.347)	ETA 0:06:49	LOSS 0.07	pred 11.3918/1.6038	lr 0.0001	
+Epoch [12][2800/6336]	Time 0.112 (333.791)	ETA 0:06:35	LOSS 0.07	pred 10.7351/1.0698	lr 0.0001	
+Epoch [12][3000/6336]	Time 0.108 (356.088)	ETA 0:06:01	LOSS 0.08	pred 12.0089/0.9172	lr 0.0001	
+Epoch [12][3200/6336]	Time 0.108 (378.351)	ETA 0:05:39	LOSS 0.07	pred 14.8563/1.5356	lr 0.0001	
+Epoch [12][3400/6336]	Time 0.110 (400.622)	ETA 0:05:21	LOSS 0.08	pred 11.7285/1.2022	lr 0.0001	
+Epoch [12][3600/6336]	Time 0.111 (422.857)	ETA 0:05:03	LOSS 0.08	pred 14.1220/1.0016	lr 0.0001	
+Epoch [12][3800/6336]	Time 0.113 (445.000)	ETA 0:04:47	LOSS 0.06	pred 10.2323/1.1067	lr 0.0001	
+Epoch [12][4000/6336]	Time 0.112 (467.276)	ETA 0:04:21	LOSS 0.07	pred 12.0274/1.1022	lr 0.0001	
+Epoch [12][4200/6336]	Time 0.113 (489.664)	ETA 0:04:02	LOSS 0.07	pred 12.6607/1.4795	lr 0.0001	
+Epoch [12][4400/6336]	Time 0.115 (511.935)	ETA 0:03:43	LOSS 0.06	pred 14.6830/1.7335	lr 0.0001	
+Epoch [12][4600/6336]	Time 0.114 (534.214)	ETA 0:03:17	LOSS 0.08	pred 12.9164/1.0730	lr 0.0001	
+Epoch [12][4800/6336]	Time 0.108 (556.559)	ETA 0:02:46	LOSS 0.10	pred 13.6976/1.0382	lr 0.0001	
+Epoch [12][5000/6336]	Time 0.108 (578.768)	ETA 0:02:24	LOSS 0.07	pred 11.0388/1.2857	lr 0.0001	
+Epoch [12][5200/6336]	Time 0.110 (600.859)	ETA 0:02:04	LOSS 0.06	pred 12.0200/1.3223	lr 0.0001	
+Epoch [12][5400/6336]	Time 0.109 (623.097)	ETA 0:01:42	LOSS 0.07	pred 11.9630/1.4105	lr 0.0001	
+Epoch [12][5600/6336]	Time 0.115 (645.446)	ETA 0:01:24	LOSS 0.09	pred 13.6012/0.9940	lr 0.0001	
+Epoch [12][5800/6336]	Time 0.110 (667.721)	ETA 0:00:58	LOSS 0.07	pred 13.5403/1.0319	lr 0.0001	
+Epoch [12][6000/6336]	Time 0.109 (690.092)	ETA 0:00:36	LOSS 0.07	pred 12.2287/1.1039	lr 0.0001	
+Epoch [12][6200/6336]	Time 0.108 (711.993)	ETA 0:00:14	LOSS 0.09	pred 11.9925/0.9599	lr 0.0001	
+2024-06-25 18:06:19 - [34m[1mLOGS[0m - 18:06 - Average Training Loss: 0.0094
+18:06 - Average Validation Loss: 0.0142
+
+*
+Delta1=0.838
+Delta2=0.967
+Delta3=0.992
+RMSE=0.521
+REL=0.131
+Lg10=0.056
+SqREL=0.090
+MAE=0.078
+t_GPU=0.015
+
+18:06 - Model saved
+2024-06-25 18:06:39 - [34m[1mLOGS[0m - Train and validate this epoch took 12.51min
+18:06 - Epoch 13
+Epoch [13][0/6336]	Time 17.667 (17.667)	ETA 1 day, 7:05:36	LOSS 0.08	pred 12.8606/1.1601	lr 0.0001	
+Epoch [13][200/6336]	Time 0.113 (41.987)	ETA 0:11:35	LOSS 0.07	pred 11.2594/0.9618	lr 0.0001	
+Epoch [13][400/6336]	Time 0.124 (65.716)	ETA 0:12:18	LOSS 0.09	pred 13.2672/1.0572	lr 0.0001	
+Epoch [13][600/6336]	Time 0.108 (88.807)	ETA 0:10:20	LOSS 0.08	pred 14.3553/1.1181	lr 0.0001	
+Epoch [13][800/6336]	Time 0.108 (111.268)	ETA 0:09:59	LOSS 0.06	pred 13.3661/1.2121	lr 0.0001	
+Epoch [13][1000/6336]	Time 0.120 (133.733)	ETA 0:10:38	LOSS 0.08	pred 13.0270/1.1452	lr 0.0001	
+Epoch [13][1200/6336]	Time 0.115 (156.562)	ETA 0:09:50	LOSS 0.07	pred 14.2795/1.6623	lr 0.0001	
+Epoch [13][1400/6336]	Time 0.110 (179.365)	ETA 0:09:03	LOSS 0.07	pred 10.9621/1.1449	lr 0.0001	
+Epoch [13][1600/6336]	Time 0.125 (202.068)	ETA 0:09:53	LOSS 0.09	pred 12.8778/0.9875	lr 0.0001	
+Epoch [13][1800/6336]	Time 0.118 (224.763)	ETA 0:08:55	LOSS 0.09	pred 14.0074/1.0839	lr 0.0001	
+Epoch [13][2000/6336]	Time 0.111 (247.467)	ETA 0:08:01	LOSS 0.07	pred 13.3072/1.0061	lr 0.0001	
+Epoch [13][2200/6336]	Time 0.112 (270.323)	ETA 0:07:41	LOSS 0.08	pred 12.8860/1.2491	lr 0.0001	
+Epoch [13][2400/6336]	Time 0.111 (293.048)	ETA 0:07:16	LOSS 0.08	pred 12.4006/1.1233	lr 0.0001	
+Epoch [13][2600/6336]	Time 0.114 (315.697)	ETA 0:07:05	LOSS 0.07	pred 13.5107/1.2376	lr 0.0001	
+Epoch [13][2800/6336]	Time 0.118 (338.419)	ETA 0:06:57	LOSS 0.05	pred 8.9587/1.2678	lr 0.0001	
+Epoch [13][3000/6336]	Time 0.110 (361.000)	ETA 0:06:07	LOSS 0.06	pred 10.0615/1.3176	lr 0.0001	
+Epoch [13][3200/6336]	Time 0.115 (383.805)	ETA 0:05:59	LOSS 0.08	pred 12.0426/1.0689	lr 0.0001	
+Epoch [13][3400/6336]	Time 0.115 (406.663)	ETA 0:05:36	LOSS 0.05	pred 10.0421/1.3937	lr 0.0001	
+Epoch [13][3600/6336]	Time 0.114 (429.487)	ETA 0:05:10	LOSS 0.08	pred 11.8560/1.0212	lr 0.0001	
+Epoch [13][3800/6336]	Time 0.116 (452.136)	ETA 0:04:55	LOSS 0.07	pred 12.5269/0.9882	lr 0.0001	
+Epoch [13][4000/6336]	Time 0.110 (474.690)	ETA 0:04:17	LOSS 0.06	pred 10.8693/0.8883	lr 0.0001	
+Epoch [13][4200/6336]	Time 0.118 (497.292)	ETA 0:04:11	LOSS 0.09	pred 12.8137/1.2854	lr 0.0001	
+Epoch [13][4400/6336]	Time 0.110 (519.946)	ETA 0:03:33	LOSS 0.07	pred 12.6039/0.9734	lr 0.0001	
+Epoch [13][4600/6336]	Time 0.113 (542.608)	ETA 0:03:16	LOSS 0.06	pred 14.8465/1.0888	lr 0.0001	
+Epoch [13][4800/6336]	Time 0.117 (565.203)	ETA 0:03:00	LOSS 0.07	pred 12.7272/1.0027	lr 0.0001	
+Epoch [13][5000/6336]	Time 0.126 (587.880)	ETA 0:02:47	LOSS 0.09	pred 13.2767/1.1104	lr 0.0001	
+Epoch [13][5200/6336]	Time 0.127 (610.538)	ETA 0:02:24	LOSS 0.06	pred 11.0674/1.8977	lr 0.0001	
+Epoch [13][5400/6336]	Time 0.115 (633.269)	ETA 0:01:47	LOSS 0.07	pred 15.0453/1.2815	lr 0.0001	
+Epoch [13][5600/6336]	Time 0.112 (655.814)	ETA 0:01:22	LOSS 0.06	pred 10.8491/1.0044	lr 0.0001	
+Epoch [13][5800/6336]	Time 0.110 (678.579)	ETA 0:00:59	LOSS 0.07	pred 12.5821/0.9167	lr 0.0001	
+Epoch [13][6000/6336]	Time 0.117 (701.365)	ETA 0:00:39	LOSS 0.06	pred 11.2620/1.0433	lr 0.0001	
+Epoch [13][6200/6336]	Time 0.110 (723.709)	ETA 0:00:14	LOSS 0.08	pred 12.0390/0.9583	lr 0.0001	
+2024-06-25 18:19:02 - [34m[1mLOGS[0m - 18:19 - Average Training Loss: 0.0093
+18:19 - Average Validation Loss: 0.0144
+
+*
+Delta1=0.827
+Delta2=0.966
+Delta3=0.992
+RMSE=0.538
+REL=0.133
+Lg10=0.057
+SqREL=0.091
+MAE=0.079
+t_GPU=0.017
+
+18:19 - Model saved
+2024-06-25 18:19:32 - [34m[1mLOGS[0m - Train and validate this epoch took 12.87min
+18:19 - Epoch 14
+Epoch [14][0/6336]	Time 27.693 (27.693)	ETA 2 days, 0:44:21	LOSS 0.07	pred 10.3294/1.3641	lr 0.0001	
+Epoch [14][200/6336]	Time 0.117 (53.290)	ETA 0:12:00	LOSS 0.12	pred 12.5329/1.0087	lr 0.0001	
+Epoch [14][400/6336]	Time 0.111 (77.197)	ETA 0:10:58	LOSS 0.07	pred 11.4138/0.9890	lr 0.0001	
+Epoch [14][600/6336]	Time 0.110 (99.613)	ETA 0:10:30	LOSS 0.07	pred 11.9299/0.9774	lr 0.0001	
+Epoch [14][800/6336]	Time 0.111 (122.014)	ETA 0:10:12	LOSS 0.07	pred 9.4893/1.0329	lr 0.0001	
+Epoch [14][1000/6336]	Time 0.116 (144.446)	ETA 0:10:20	LOSS 0.08	pred 13.7704/0.7177	lr 0.0001	
+Epoch [14][1200/6336]	Time 0.116 (166.997)	ETA 0:09:54	LOSS 0.11	pred 11.8314/1.0743	lr 0.0001	
+Epoch [14][1400/6336]	Time 0.110 (189.593)	ETA 0:09:02	LOSS 0.07	pred 10.6969/1.4364	lr 0.0001	
+Epoch [14][1600/6336]	Time 0.110 (212.129)	ETA 0:08:40	LOSS 0.08	pred 13.3077/1.9835	lr 0.0001	
+Epoch [14][1800/6336]	Time 0.112 (234.522)	ETA 0:08:28	LOSS 0.06	pred 11.4012/1.5150	lr 0.0001	
+Epoch [14][2000/6336]	Time 0.110 (257.019)	ETA 0:07:57	LOSS 0.07	pred 11.4208/1.1356	lr 0.0001	
+Epoch [14][2200/6336]	Time 0.115 (279.486)	ETA 0:07:55	LOSS 0.08	pred 12.8454/1.8066	lr 0.0001	
+Epoch [14][2400/6336]	Time 0.117 (301.965)	ETA 0:07:41	LOSS 0.07	pred 14.5884/1.2006	lr 0.0001	
+Epoch [14][2600/6336]	Time 0.110 (324.438)	ETA 0:06:52	LOSS 0.08	pred 12.8494/1.0246	lr 0.0001	
+Epoch [14][2800/6336]	Time 0.110 (346.984)	ETA 0:06:29	LOSS 0.07	pred 12.6552/1.0112	lr 0.0001	
+Epoch [14][3000/6336]	Time 0.110 (369.522)	ETA 0:06:06	LOSS 0.09	pred 12.2725/1.2295	lr 0.0001	
+Epoch [14][3200/6336]	Time 0.112 (392.160)	ETA 0:05:52	LOSS 0.08	pred 14.0898/1.7767	lr 0.0001	
+Epoch [14][3400/6336]	Time 0.118 (414.635)	ETA 0:05:47	LOSS 0.05	pred 13.1147/1.2639	lr 0.0001	
+Epoch [14][3600/6336]	Time 0.111 (437.201)	ETA 0:05:02	LOSS 0.09	pred 11.9150/1.3666	lr 0.0001	
+Epoch [14][3800/6336]	Time 0.113 (459.698)	ETA 0:04:45	LOSS 0.07	pred 11.7500/1.1168	lr 0.0001	
+Epoch [14][4000/6336]	Time 0.111 (482.217)	ETA 0:04:20	LOSS 0.07	pred 13.0263/0.9223	lr 0.0001	
+Epoch [14][4200/6336]	Time 0.115 (504.708)	ETA 0:04:06	LOSS 0.06	pred 9.5870/1.3039	lr 0.0001	
+Epoch [14][4400/6336]	Time 0.116 (526.862)	ETA 0:03:45	LOSS 0.06	pred 9.5642/1.4007	lr 0.0001	
+Epoch [14][4600/6336]	Time 0.109 (549.056)	ETA 0:03:08	LOSS 0.06	pred 12.1737/1.1278	lr 0.0001	
+Epoch [14][4800/6336]	Time 0.109 (571.241)	ETA 0:02:47	LOSS 0.07	pred 10.9338/1.0718	lr 0.0001	
+Epoch [14][5000/6336]	Time 0.110 (593.363)	ETA 0:02:26	LOSS 0.07	pred 11.3087/1.1101	lr 0.0001	
+Epoch [14][5200/6336]	Time 0.113 (615.536)	ETA 0:02:08	LOSS 0.07	pred 11.1393/1.7901	lr 0.0001	
+Epoch [14][5400/6336]	Time 0.111 (637.725)	ETA 0:01:43	LOSS 0.10	pred 11.4164/1.4842	lr 0.0001	
+Epoch [14][5600/6336]	Time 0.109 (659.905)	ETA 0:01:19	LOSS 0.09	pred 14.6250/1.1034	lr 0.0001	
+Epoch [14][5800/6336]	Time 0.112 (682.105)	ETA 0:01:00	LOSS 0.09	pred 14.0016/1.3923	lr 0.0001	
+Epoch [14][6000/6336]	Time 0.110 (704.322)	ETA 0:00:36	LOSS 0.07	pred 14.1742/1.3523	lr 0.0001	
+Epoch [14][6200/6336]	Time 0.108 (726.190)	ETA 0:00:14	LOSS 0.06	pred 11.1944/1.8302	lr 0.0001	
+2024-06-25 18:31:57 - [34m[1mLOGS[0m - 18:31 - Average Training Loss: 0.0092
+18:32 - Average Validation Loss: 0.0144
+
+*
+Delta1=0.832
+Delta2=0.966
+Delta3=0.992
+RMSE=0.533
+REL=0.131
+Lg10=0.057
+SqREL=0.090
+MAE=0.079
+t_GPU=0.011
+
+18:32 - Model saved
+2024-06-25 18:32:13 - [34m[1mLOGS[0m - Train and validate this epoch took 12.68min
+18:32 - Epoch 15
+Epoch [15][0/6336]	Time 12.649 (12.649)	ETA 22:15:46	LOSS 0.08	pred 13.7771/1.1633	lr 0.0001	
+Epoch [15][200/6336]	Time 0.117 (35.570)	ETA 0:12:00	LOSS 0.07	pred 14.7393/1.2020	lr 0.0001	
+Epoch [15][400/6336]	Time 0.116 (57.796)	ETA 0:11:28	LOSS 0.07	pred 13.6066/0.9246	lr 0.0001	
+Epoch [15][600/6336]	Time 0.109 (79.999)	ETA 0:10:23	LOSS 0.08	pred 12.6457/1.2646	lr 0.0001	
+Epoch [15][800/6336]	Time 0.114 (102.245)	ETA 0:10:31	LOSS 0.06	pred 13.3748/1.0776	lr 0.0001	
+Epoch [15][1000/6336]	Time 0.115 (124.458)	ETA 0:10:11	LOSS 0.07	pred 12.4424/1.6439	lr 0.0001	
+Epoch [15][1200/6336]	Time 0.109 (146.664)	ETA 0:09:20	LOSS 0.08	pred 12.3050/0.9896	lr 0.0001	
+Epoch [15][1400/6336]	Time 0.110 (168.976)	ETA 0:09:01	LOSS 0.07	pred 11.9462/0.7854	lr 0.0001	
+Epoch [15][1600/6336]	Time 0.121 (191.540)	ETA 0:09:31	LOSS 0.07	pred 12.1970/1.2266	lr 0.0001	
+Epoch [15][1800/6336]	Time 0.117 (214.098)	ETA 0:08:48	LOSS 0.06	pred 10.7358/1.3781	lr 0.0001	
+Epoch [15][2000/6336]	Time 0.108 (236.407)	ETA 0:07:50	LOSS 0.08	pred 13.8392/1.2999	lr 0.0001	
+Epoch [15][2200/6336]	Time 0.109 (258.700)	ETA 0:07:29	LOSS 0.10	pred 12.7131/1.0753	lr 0.0001	
+Epoch [15][2400/6336]	Time 0.119 (281.259)	ETA 0:07:48	LOSS 0.06	pred 12.1063/1.0167	lr 0.0001	
+Epoch [15][2600/6336]	Time 0.110 (303.919)	ETA 0:06:51	LOSS 0.08	pred 11.0186/1.0158	lr 0.0001	
+Epoch [15][2800/6336]	Time 0.119 (326.407)	ETA 0:06:59	LOSS 0.08	pred 13.6748/1.0391	lr 0.0001	
+Epoch [15][3000/6336]	Time 0.112 (348.916)	ETA 0:06:14	LOSS 0.08	pred 12.1459/1.1355	lr 0.0001	
+Epoch [15][3200/6336]	Time 0.110 (371.428)	ETA 0:05:44	LOSS 0.08	pred 10.9472/0.9035	lr 0.0001	
+Epoch [15][3400/6336]	Time 0.110 (393.949)	ETA 0:05:22	LOSS 0.06	pred 12.3580/1.0750	lr 0.0001	
+Epoch [15][3600/6336]	Time 0.110 (416.468)	ETA 0:05:00	LOSS 0.10	pred 13.6737/1.1442	lr 0.0001	
+Epoch [15][3800/6336]	Time 0.110 (439.030)	ETA 0:04:38	LOSS 0.06	pred 9.8484/1.1118	lr 0.0001	
+Epoch [15][4000/6336]	Time 0.110 (461.568)	ETA 0:04:17	LOSS 0.08	pred 11.7822/1.0232	lr 0.0001	
+Epoch [15][4200/6336]	Time 0.113 (484.160)	ETA 0:04:00	LOSS 0.07	pred 13.6349/1.0772	lr 0.0001	
+Epoch [15][4400/6336]	Time 0.110 (506.669)	ETA 0:03:32	LOSS 0.10	pred 13.4455/0.9779	lr 0.0001	
+Epoch [15][4600/6336]	Time 0.113 (529.286)	ETA 0:03:16	LOSS 0.07	pred 10.9282/0.9364	lr 0.0001	
+Epoch [15][4800/6336]	Time 0.110 (551.827)	ETA 0:02:48	LOSS 0.07	pred 13.4560/1.0267	lr 0.0001	
+Epoch [15][5000/6336]	Time 0.116 (574.342)	ETA 0:02:35	LOSS 0.09	pred 14.4215/0.9903	lr 0.0001	
+Epoch [15][5200/6336]	Time 0.111 (596.848)	ETA 0:02:05	LOSS 0.06	pred 11.2137/0.9260	lr 0.0001	
+Epoch [15][5400/6336]	Time 0.110 (619.390)	ETA 0:01:43	LOSS 0.07	pred 9.9774/1.0574	lr 0.0001	
+Epoch [15][5600/6336]	Time 0.110 (641.954)	ETA 0:01:20	LOSS 0.08	pred 11.5950/0.9956	lr 0.0001	
+Epoch [15][5800/6336]	Time 0.110 (664.439)	ETA 0:00:58	LOSS 0.07	pred 12.9454/1.4680	lr 0.0001	
+Epoch [15][6000/6336]	Time 0.110 (686.936)	ETA 0:00:36	LOSS 0.06	pred 11.0113/0.9614	lr 0.0001	
+Epoch [15][6200/6336]	Time 0.110 (709.129)	ETA 0:00:14	LOSS 0.07	pred 12.6164/1.0339	lr 0.0001	
+2024-06-25 18:44:20 - [34m[1mLOGS[0m - 18:44 - Average Training Loss: 0.0091
+18:44 - Average Validation Loss: 0.0143
+
+*
+Delta1=0.833
+Delta2=0.966
+Delta3=0.991
+RMSE=0.532
+REL=0.131
+Lg10=0.057
+SqREL=0.091
+MAE=0.079
+t_GPU=0.012
+
+18:44 - Model saved
+2024-06-25 18:44:41 - [34m[1mLOGS[0m - Train and validate this epoch took 12.47min
+18:44 - Epoch 16
+Epoch [16][0/6336]	Time 18.098 (18.098)	ETA 1 day, 7:51:08	LOSS 0.07	pred 11.8676/1.4211	lr 0.0001	
+Epoch [16][200/6336]	Time 0.120 (41.004)	ETA 0:12:17	LOSS 0.07	pred 12.0975/1.3068	lr 0.0001	
+Epoch [16][400/6336]	Time 0.110 (63.497)	ETA 0:10:54	LOSS 0.09	pred 12.1514/1.1063	lr 0.0001	
+Epoch [16][600/6336]	Time 0.119 (85.996)	ETA 0:11:22	LOSS 0.06	pred 12.6788/0.9996	lr 0.0001	
+Epoch [16][800/6336]	Time 0.110 (108.564)	ETA 0:10:09	LOSS 0.06	pred 11.3223/1.3233	lr 0.0001	
+Epoch [16][1000/6336]	Time 0.110 (130.989)	ETA 0:09:48	LOSS 0.07	pred 13.0709/0.9903	lr 0.0001	
+Epoch [16][1200/6336]	Time 0.110 (153.471)	ETA 0:09:23	LOSS 0.07	pred 12.0385/1.1322	lr 0.0001	
+Epoch [16][1400/6336]	Time 0.110 (175.874)	ETA 0:09:02	LOSS 0.08	pred 12.5707/0.9581	lr 0.0001	
+Epoch [16][1600/6336]	Time 0.114 (198.434)	ETA 0:08:59	LOSS 0.08	pred 13.6169/1.0992	lr 0.0001	
+Epoch [16][1800/6336]	Time 0.110 (220.991)	ETA 0:08:18	LOSS 0.07	pred 13.9366/1.0216	lr 0.0001	
+Epoch [16][2000/6336]	Time 0.110 (243.428)	ETA 0:07:56	LOSS 0.09	pred 12.9733/1.3793	lr 0.0001	
+Epoch [16][2200/6336]	Time 0.110 (265.816)	ETA 0:07:35	LOSS 0.08	pred 13.0153/1.0196	lr 0.0001	
+Epoch [16][2400/6336]	Time 0.110 (288.156)	ETA 0:07:12	LOSS 0.06	pred 13.6172/1.0040	lr 0.0001	
+Epoch [16][2600/6336]	Time 0.119 (310.604)	ETA 0:07:24	LOSS 0.07	pred 12.4557/1.6329	lr 0.0001	
+Epoch [16][2800/6336]	Time 0.110 (333.066)	ETA 0:06:30	LOSS 0.09	pred 11.8995/1.4264	lr 0.0001	
+Epoch [16][3000/6336]	Time 0.110 (355.539)	ETA 0:06:07	LOSS 0.08	pred 12.5673/1.0517	lr 0.0001	
+Epoch [16][3200/6336]	Time 0.110 (378.021)	ETA 0:05:44	LOSS 0.07	pred 12.9260/1.1337	lr 0.0001	
+Epoch [16][3400/6336]	Time 0.117 (400.552)	ETA 0:05:44	LOSS 0.06	pred 10.3891/1.2658	lr 0.0001	
+Epoch [16][3600/6336]	Time 0.110 (422.973)	ETA 0:05:00	LOSS 0.08	pred 14.1151/1.4352	lr 0.0001	
+Epoch [16][3800/6336]	Time 0.119 (445.374)	ETA 0:05:01	LOSS 0.07	pred 12.5140/0.9711	lr 0.0001	
+Epoch [16][4000/6336]	Time 0.114 (467.842)	ETA 0:04:27	LOSS 0.06	pred 11.7776/1.0331	lr 0.0001	
+Epoch [16][4200/6336]	Time 0.110 (490.175)	ETA 0:03:54	LOSS 0.06	pred 11.6770/1.0458	lr 0.0001	
+Epoch [16][4400/6336]	Time 0.111 (512.640)	ETA 0:03:35	LOSS 0.07	pred 10.9233/1.0644	lr 0.0001	
+Epoch [16][4600/6336]	Time 0.111 (535.105)	ETA 0:03:12	LOSS 0.08	pred 11.5358/0.9801	lr 0.0001	
+Epoch [16][4800/6336]	Time 0.110 (557.671)	ETA 0:02:49	LOSS 0.07	pred 13.4009/1.0319	lr 0.0001	
+Epoch [16][5000/6336]	Time 0.110 (580.249)	ETA 0:02:27	LOSS 0.06	pred 13.2161/1.0862	lr 0.0001	
+Epoch [16][5200/6336]	Time 0.114 (602.851)	ETA 0:02:09	LOSS 0.06	pred 10.8785/1.1406	lr 0.0001	
+Epoch [16][5400/6336]	Time 0.117 (625.508)	ETA 0:01:49	LOSS 0.08	pred 13.9285/0.9801	lr 0.0001	
+Epoch [16][5600/6336]	Time 0.109 (647.733)	ETA 0:01:19	LOSS 0.07	pred 11.7976/1.4987	lr 0.0001	
+Epoch [16][5800/6336]	Time 0.115 (669.910)	ETA 0:01:01	LOSS 0.07	pred 14.2565/1.1023	lr 0.0001	
+Epoch [16][6000/6336]	Time 0.108 (692.052)	ETA 0:00:36	LOSS 0.07	pred 11.6267/1.0902	lr 0.0001	
+Epoch [16][6200/6336]	Time 0.108 (713.890)	ETA 0:00:14	LOSS 0.07	pred 14.1904/1.3497	lr 0.0001	
+2024-06-25 18:56:54 - [34m[1mLOGS[0m - 18:56 - Average Training Loss: 0.0090
+18:57 - Average Validation Loss: 0.0143
+
+*
+Delta1=0.833
+Delta2=0.966
+Delta3=0.992
+RMSE=0.529
+REL=0.132
+Lg10=0.056
+SqREL=0.090
+MAE=0.079
+t_GPU=0.013
+
+18:57 - Model saved
+2024-06-25 18:57:09 - [34m[1mLOGS[0m - Train and validate this epoch took 12.47min
+18:57 - Epoch 17
+Epoch [17][0/6336]	Time 13.460 (13.460)	ETA 23:41:25	LOSS 0.07	pred 12.6947/1.7705	lr 0.0001	
+Epoch [17][200/6336]	Time 0.111 (35.858)	ETA 0:11:23	LOSS 0.07	pred 11.2743/1.2949	lr 0.0001	
+Epoch [17][400/6336]	Time 0.108 (58.096)	ETA 0:10:42	LOSS 0.07	pred 11.8888/1.4977	lr 0.0001	
+Epoch [17][600/6336]	Time 0.108 (80.206)	ETA 0:10:19	LOSS 0.06	pred 12.4002/1.5094	lr 0.0001	
+Epoch [17][800/6336]	Time 0.114 (102.330)	ETA 0:10:31	LOSS 0.06	pred 11.8131/1.2777	lr 0.0001	
+Epoch [17][1000/6336]	Time 0.108 (124.394)	ETA 0:09:37	LOSS 0.08	pred 12.2637/1.4503	lr 0.0001	
+Epoch [17][1200/6336]	Time 0.108 (146.425)	ETA 0:09:16	LOSS 0.07	pred 13.4354/1.8800	lr 0.0001	
+Epoch [17][1400/6336]	Time 0.109 (168.596)	ETA 0:08:57	LOSS 0.09	pred 13.9048/0.9906	lr 0.0001	
+Epoch [17][1600/6336]	Time 0.108 (190.765)	ETA 0:08:32	LOSS 0.06	pred 13.8758/1.2461	lr 0.0001	
+Epoch [17][1800/6336]	Time 0.108 (212.922)	ETA 0:08:11	LOSS 0.07	pred 13.4670/1.0610	lr 0.0001	
+Epoch [17][2000/6336]	Time 0.108 (234.968)	ETA 0:07:49	LOSS 0.06	pred 12.9454/1.0881	lr 0.0001	
+Epoch [17][2200/6336]	Time 0.110 (257.181)	ETA 0:07:33	LOSS 0.07	pred 11.3901/1.1702	lr 0.0001	
+Epoch [17][2400/6336]	Time 0.108 (279.423)	ETA 0:07:06	LOSS 0.07	pred 12.4157/0.9707	lr 0.0001	
+Epoch [17][2600/6336]	Time 0.116 (301.490)	ETA 0:07:14	LOSS 0.07	pred 13.8181/1.0329	lr 0.0001	
+Epoch [17][2800/6336]	Time 0.108 (323.645)	ETA 0:06:22	LOSS 0.07	pred 12.5335/1.3085	lr 0.0001	
+Epoch [17][3000/6336]	Time 0.108 (345.764)	ETA 0:06:00	LOSS 0.09	pred 13.3872/1.1904	lr 0.0001	
+Epoch [17][3200/6336]	Time 0.108 (367.863)	ETA 0:05:39	LOSS 0.06	pred 11.8686/1.1006	lr 0.0001	
+Epoch [17][3400/6336]	Time 0.108 (390.072)	ETA 0:05:18	LOSS 0.06	pred 12.0340/0.9790	lr 0.0001	
+Epoch [17][3600/6336]	Time 0.113 (412.249)	ETA 0:05:10	LOSS 0.07	pred 11.2526/1.7642	lr 0.0001	
+Epoch [17][3800/6336]	Time 0.115 (434.556)	ETA 0:04:50	LOSS 0.07	pred 11.7301/0.9872	lr 0.0001	
+Epoch [17][4000/6336]	Time 0.117 (456.954)	ETA 0:04:33	LOSS 0.08	pred 12.6414/1.2022	lr 0.0001	
+Epoch [17][4200/6336]	Time 0.116 (479.410)	ETA 0:04:08	LOSS 0.08	pred 13.7104/1.8535	lr 0.0001	
+Epoch [17][4400/6336]	Time 0.115 (501.624)	ETA 0:03:42	LOSS 0.07	pred 12.7829/0.9701	lr 0.0001	
+Epoch [17][4600/6336]	Time 0.110 (523.867)	ETA 0:03:10	LOSS 0.07	pred 11.6577/1.0937	lr 0.0001	
+Epoch [17][4800/6336]	Time 0.110 (546.142)	ETA 0:02:48	LOSS 0.09	pred 13.3748/1.0862	lr 0.0001	
+Epoch [17][5000/6336]	Time 0.110 (568.352)	ETA 0:02:27	LOSS 0.08	pred 14.3529/1.0976	lr 0.0001	
+Epoch [17][5200/6336]	Time 0.116 (590.650)	ETA 0:02:11	LOSS 0.08	pred 11.8396/1.0451	lr 0.0001	
+Epoch [17][5400/6336]	Time 0.108 (612.820)	ETA 0:01:41	LOSS 0.08	pred 10.3345/1.2878	lr 0.0001	
+Epoch [17][5600/6336]	Time 0.108 (634.962)	ETA 0:01:19	LOSS 0.07	pred 13.1875/1.1068	lr 0.0001	
+Epoch [17][5800/6336]	Time 0.115 (657.255)	ETA 0:01:01	LOSS 0.06	pred 12.0212/1.4368	lr 0.0001	
+Epoch [17][6000/6336]	Time 0.110 (679.398)	ETA 0:00:36	LOSS 0.08	pred 12.0924/0.8914	lr 0.0001	
+Epoch [17][6200/6336]	Time 0.108 (701.292)	ETA 0:00:14	LOSS 0.09	pred 13.3680/1.0110	lr 0.0001	
+2024-06-25 19:09:09 - [34m[1mLOGS[0m - 19:09 - Average Training Loss: 0.0089
+19:09 - Average Validation Loss: 0.0143
+
+*
+Delta1=0.834
+Delta2=0.966
+Delta3=0.991
+RMSE=0.527
+REL=0.131
+Lg10=0.056
+SqREL=0.091
+MAE=0.079
+t_GPU=0.012
+
+19:09 - Model saved
+2024-06-25 19:09:25 - [34m[1mLOGS[0m - Train and validate this epoch took 12.26min
+19:09 - Epoch 18
+Epoch [18][0/6336]	Time 13.149 (13.149)	ETA 23:08:34	LOSS 0.08	pred 11.9355/1.0479	lr 0.0001	
+Epoch [18][200/6336]	Time 0.121 (36.009)	ETA 0:12:21	LOSS 0.06	pred 12.2529/1.1660	lr 0.0001	
+Epoch [18][400/6336]	Time 0.115 (58.226)	ETA 0:11:24	LOSS 0.07	pred 11.8300/1.1064	lr 0.0001	
+Epoch [18][600/6336]	Time 0.109 (80.443)	ETA 0:10:24	LOSS 0.08	pred 12.7842/1.3339	lr 0.0001	
+Epoch [18][800/6336]	Time 0.108 (102.585)	ETA 0:09:59	LOSS 0.08	pred 14.5322/1.1567	lr 0.0001	
+Epoch [18][1000/6336]	Time 0.115 (124.702)	ETA 0:10:14	LOSS 0.07	pred 12.8309/1.1032	lr 0.0001	
+Epoch [18][1200/6336]	Time 0.108 (146.843)	ETA 0:09:16	LOSS 0.06	pred 11.0087/1.3248	lr 0.0001	
+Epoch [18][1400/6336]	Time 0.109 (168.975)	ETA 0:08:56	LOSS 0.06	pred 13.7504/1.3276	lr 0.0001	
+Epoch [18][1600/6336]	Time 0.108 (191.132)	ETA 0:08:32	LOSS 0.06	pred 9.5492/1.7238	lr 0.0001	
+Epoch [18][1800/6336]	Time 0.108 (213.330)	ETA 0:08:11	LOSS 0.07	pred 13.5407/1.1344	lr 0.0001	
+Epoch [18][2000/6336]	Time 0.110 (235.717)	ETA 0:07:55	LOSS 0.07	pred 14.0468/1.2887	lr 0.0001	
+Epoch [18][2200/6336]	Time 0.112 (258.083)	ETA 0:07:41	LOSS 0.08	pred 11.7753/0.9969	lr 0.0001	
+Epoch [18][2400/6336]	Time 0.111 (280.512)	ETA 0:07:15	LOSS 0.06	pred 10.2581/1.1175	lr 0.0001	
+Epoch [18][2600/6336]	Time 0.109 (302.727)	ETA 0:06:47	LOSS 0.07	pred 12.6116/1.0913	lr 0.0001	
+Epoch [18][2800/6336]	Time 0.111 (325.042)	ETA 0:06:31	LOSS 0.06	pred 10.9007/1.4990	lr 0.0001	
+Epoch [18][3000/6336]	Time 0.120 (347.830)	ETA 0:06:40	LOSS 0.05	pred 9.5716/0.9574	lr 0.0001	
+Epoch [18][3200/6336]	Time 0.110 (370.173)	ETA 0:05:44	LOSS 0.07	pred 10.5259/0.9946	lr 0.0001	
+Epoch [18][3400/6336]	Time 0.111 (392.448)	ETA 0:05:24	LOSS 0.07	pred 14.3524/1.0453	lr 0.0001	
+Epoch [18][3600/6336]	Time 0.111 (414.827)	ETA 0:05:02	LOSS 0.07	pred 13.0358/1.0425	lr 0.0001	
+Epoch [18][3800/6336]	Time 0.109 (437.179)	ETA 0:04:36	LOSS 0.08	pred 13.1304/1.3432	lr 0.0001	
+Epoch [18][4000/6336]	Time 0.124 (459.710)	ETA 0:04:49	LOSS 0.06	pred 11.7127/1.2557	lr 0.0001	
+Epoch [18][4200/6336]	Time 0.109 (482.052)	ETA 0:03:52	LOSS 0.08	pred 12.5495/0.9994	lr 0.0001	
+Epoch [18][4400/6336]	Time 0.118 (504.451)	ETA 0:03:47	LOSS 0.07	pred 12.1100/1.8020	lr 0.0001	
+Epoch [18][4600/6336]	Time 0.112 (527.125)	ETA 0:03:13	LOSS 0.05	pred 9.9395/1.4077	lr 0.0001	
+Epoch [18][4800/6336]	Time 0.109 (549.737)	ETA 0:02:47	LOSS 0.08	pred 12.7083/1.3706	lr 0.0001	
+Epoch [18][5000/6336]	Time 0.112 (572.344)	ETA 0:02:29	LOSS 0.06	pred 10.4503/1.1049	lr 0.0001	
+Epoch [18][5200/6336]	Time 0.111 (595.053)	ETA 0:02:06	LOSS 0.08	pred 12.8091/1.0111	lr 0.0001	
+Epoch [18][5400/6336]	Time 0.116 (617.730)	ETA 0:01:48	LOSS 0.05	pred 12.1777/1.2990	lr 0.0001	
+Epoch [18][5600/6336]	Time 0.111 (640.225)	ETA 0:01:21	LOSS 0.06	pred 13.0083/0.9767	lr 0.0001	
+Epoch [18][5800/6336]	Time 0.117 (662.720)	ETA 0:01:02	LOSS 0.05	pred 9.5426/1.2998	lr 0.0001	
+Epoch [18][6000/6336]	Time 0.110 (685.235)	ETA 0:00:36	LOSS 0.07	pred 12.2821/1.1961	lr 0.0001	
+Epoch [18][6200/6336]	Time 0.110 (707.475)	ETA 0:00:14	LOSS 0.08	pred 11.6813/1.3437	lr 0.0001	
+2024-06-25 19:21:30 - [34m[1mLOGS[0m - 19:21 - Average Training Loss: 0.0089
+19:21 - Average Validation Loss: 0.0143
+
+*
+Delta1=0.835
+Delta2=0.967
+Delta3=0.991
+RMSE=0.530
+REL=0.130
+Lg10=0.056
+SqREL=0.091
+MAE=0.079
+t_GPU=0.013
+
+19:21 - Model saved
+2024-06-25 19:21:51 - [34m[1mLOGS[0m - Train and validate this epoch took 12.45min
+19:21 - Epoch 19
+Epoch [19][0/6336]	Time 18.309 (18.309)	ETA 1 day, 8:13:25	LOSS 0.07	pred 12.9676/1.5605	lr 0.0001	
+Epoch [19][200/6336]	Time 0.110 (41.722)	ETA 0:11:12	LOSS 0.07	pred 12.5541/1.5338	lr 0.0001	
+Epoch [19][400/6336]	Time 0.110 (64.271)	ETA 0:10:54	LOSS 0.06	pred 10.3377/0.9899	lr 0.0001	
+Epoch [19][600/6336]	Time 0.114 (86.692)	ETA 0:10:51	LOSS 0.06	pred 13.8750/0.9735	lr 0.0001	
+Epoch [19][800/6336]	Time 0.115 (109.030)	ETA 0:10:37	LOSS 0.07	pred 13.8237/1.2440	lr 0.0001	
+Epoch [19][1000/6336]	Time 0.110 (131.516)	ETA 0:09:45	LOSS 0.07	pred 11.4477/1.0747	lr 0.0001	
+Epoch [19][1200/6336]	Time 0.115 (153.910)	ETA 0:09:49	LOSS 0.08	pred 13.0952/1.1172	lr 0.0001	
+Epoch [19][1400/6336]	Time 0.110 (176.414)	ETA 0:09:03	LOSS 0.07	pred 12.6877/1.1465	lr 0.0001	
+Epoch [19][1600/6336]	Time 0.117 (198.863)	ETA 0:09:15	LOSS 0.08	pred 11.7473/1.2574	lr 0.0001	
+Epoch [19][1800/6336]	Time 0.110 (221.252)	ETA 0:08:19	LOSS 0.06	pred 12.6718/1.1385	lr 0.0001	
+Epoch [19][2000/6336]	Time 0.110 (243.663)	ETA 0:07:56	LOSS 0.07	pred 13.9597/1.2682	lr 0.0001	
+Epoch [19][2200/6336]	Time 0.110 (266.173)	ETA 0:07:34	LOSS 0.07	pred 13.4886/1.4163	lr 0.0001	
+Epoch [19][2400/6336]	Time 0.120 (288.780)	ETA 0:07:53	LOSS 0.06	pred 11.6993/1.0409	lr 0.0001	
+Epoch [19][2600/6336]	Time 0.110 (311.331)	ETA 0:06:51	LOSS 0.11	pred 11.9197/1.1314	lr 0.0001	
+Epoch [19][2800/6336]	Time 0.110 (333.911)	ETA 0:06:29	LOSS 0.06	pred 9.2934/1.1588	lr 0.0001	
+Epoch [19][3000/6336]	Time 0.114 (356.504)	ETA 0:06:19	LOSS 0.06	pred 13.5790/1.3713	lr 0.0001	
+Epoch [19][3200/6336]	Time 0.113 (378.985)	ETA 0:05:54	LOSS 0.07	pred 13.7903/1.3549	lr 0.0001	
+Epoch [19][3400/6336]	Time 0.114 (401.635)	ETA 0:05:35	LOSS 0.07	pred 13.9244/1.0396	lr 0.0001	
+Epoch [19][3600/6336]	Time 0.108 (424.309)	ETA 0:04:56	LOSS 0.07	pred 12.4997/1.2581	lr 0.0001	
+Epoch [19][3800/6336]	Time 0.109 (446.505)	ETA 0:04:35	LOSS 0.08	pred 13.6513/1.3826	lr 0.0001	
+Epoch [19][4000/6336]	Time 0.108 (468.634)	ETA 0:04:13	LOSS 0.06	pred 11.3414/1.2881	lr 0.0001	
+Epoch [19][4200/6336]	Time 0.108 (490.842)	ETA 0:03:51	LOSS 0.07	pred 12.5735/1.3407	lr 0.0001	
+Epoch [19][4400/6336]	Time 0.108 (513.064)	ETA 0:03:29	LOSS 0.07	pred 13.4772/1.0353	lr 0.0001	
+Epoch [19][4600/6336]	Time 0.109 (535.151)	ETA 0:03:09	LOSS 0.07	pred 13.2035/1.1034	lr 0.0001	
+Epoch [19][4800/6336]	Time 0.108 (557.250)	ETA 0:02:46	LOSS 0.07	pred 10.8818/1.1701	lr 0.0001	
+Epoch [19][5000/6336]	Time 0.108 (579.327)	ETA 0:02:24	LOSS 0.08	pred 11.2906/1.4508	lr 0.0001	
+Epoch [19][5200/6336]	Time 0.113 (601.461)	ETA 0:02:08	LOSS 0.07	pred 12.7268/1.8375	lr 0.0001	
+Epoch [19][5400/6336]	Time 0.108 (623.460)	ETA 0:01:41	LOSS 0.05	pred 12.7360/1.0049	lr 0.0001	
+Epoch [19][5600/6336]	Time 0.108 (645.456)	ETA 0:01:19	LOSS 0.07	pred 10.5466/1.3820	lr 0.0001	
+Epoch [19][5800/6336]	Time 0.122 (667.519)	ETA 0:01:05	LOSS 0.07	pred 12.5848/1.1232	lr 0.0001	
+Epoch [19][6000/6336]	Time 0.116 (689.689)	ETA 0:00:38	LOSS 0.08	pred 13.2096/1.1348	lr 0.0001	
+Epoch [19][6200/6336]	Time 0.108 (711.531)	ETA 0:00:14	LOSS 0.06	pred 11.6237/1.0092	lr 0.0001	
+2024-06-25 19:34:02 - [34m[1mLOGS[0m - 19:34 - Average Training Loss: 0.0088
+19:34 - Average Validation Loss: 0.0142
+
+*
+Delta1=0.837
+Delta2=0.966
+Delta3=0.991
+RMSE=0.523
+REL=0.131
+Lg10=0.056
+SqREL=0.091
+MAE=0.078
+t_GPU=0.012
+
+19:34 - Model saved
+2024-06-25 19:34:17 - [34m[1mLOGS[0m - Train and validate this epoch took 12.43min
+ckpt_12: ([1, 4, 2, 1, 2, 8], 2, 3.0)
+ckpt_19: ([2, 5, 1, 2, 6, 17], 1, 5.5)
+ckpt_17: ([5, 3, 4, 4, 3, 15], 0, 5.666666666666667)
+ckpt_11: ([4, 8, 6, 7, 8, 3], 0, 6.0)
+ckpt_14: ([12, 2, 8, 8, 4, 2], 0, 6.0)
+ckpt_18: ([8, 1, 3, 3, 1, 20], 2, 6.0)
+ckpt_9: ([6, 9, 11, 9, 5, 1], 1, 6.833333333333333)
+ckpt_16: ([7, 7, 5, 6, 10, 9], 0, 7.333333333333333)
+ckpt_15: ([11, 6, 7, 5, 7, 14], 0, 8.333333333333334)
+ckpt_10: ([3, 13, 9, 11, 15, 6], 0, 9.5)
+ckpt_13: ([14, 10, 10, 12, 9, 4], 0, 9.833333333333334)
+ckpt_8: ([10, 12, 12, 10, 14, 10], 0, 11.333333333333334)
+ckpt_7: ([9, 17, 14, 14, 11, 11], 0, 12.666666666666666)
+ckpt_6: ([13, 11, 13, 13, 16, 13], 0, 13.166666666666666)
+ckpt_5: ([15, 15, 15, 15, 13, 7], 0, 13.333333333333334)
+ckpt_3: ([16, 16, 16, 17, 12, 5], 0, 13.666666666666666)
+ckpt_4: ([17, 14, 17, 16, 17, 12], 0, 15.5)
+ckpt_2: ([18, 18, 18, 18, 18, 18], 0, 18.0)
+ckpt_1: ([19, 19, 19, 19, 19, 16], 0, 18.5)
+ckpt_0: ([20, 20, 20, 20, 20, 19], 0, 19.833333333333332)
+Start evaluating these chosen best checkpoints...
+2024-06-25 19:34:17 - [34m[1mLOGS[0m - model_name:DDRNetGUB
+=== There exists unexpected keys for DDRNet model originally ===
+=== There exists missing keys for DDRNet model originally ===
+2024-06-25 19:34:17 - [34m[1mLOGS[0m - best_model_path:./checkpoints/DDRNet-23-slim_GUB_240625/checkpoint_12.pth
+2024-06-25 19:34:17 - [34m[1mLOGS[0m - The best model weights loaded w/o unexpected or missing keys.
+Evaluating checkpoint_12.pth
+
+*
+checkpoint_12.pth metrics:
+RMSE=0.4784
+MAE=0.0722
+Delta1=0.8415
+Delta2=0.9676
+Delta3=0.9917
+REL=0.1300
+Lg10=0.0554
+t_GPU=0.0591
+
+2024-06-25 19:35:14 - [34m[1mLOGS[0m - model_name:DDRNetGUB
+=== There exists unexpected keys for DDRNet model originally ===
+=== There exists missing keys for DDRNet model originally ===
+2024-06-25 19:35:14 - [34m[1mLOGS[0m - best_model_path:./checkpoints/DDRNet-23-slim_GUB_240625/checkpoint_19.pth
+2024-06-25 19:35:14 - [34m[1mLOGS[0m - The best model weights loaded w/o unexpected or missing keys.
+Evaluating checkpoint_19.pth
+
+*
+checkpoint_19.pth metrics:
+RMSE=0.4795
+MAE=0.0725
+Delta1=0.8394
+Delta2=0.9661
+Delta3=0.9909
+REL=0.1302
+Lg10=0.0552
+t_GPU=0.0598
+
+2024-06-25 19:36:11 - [34m[1mLOGS[0m - model_name:DDRNetGUB
+=== There exists unexpected keys for DDRNet model originally ===
+=== There exists missing keys for DDRNet model originally ===
+2024-06-25 19:36:11 - [34m[1mLOGS[0m - best_model_path:./checkpoints/DDRNet-23-slim_GUB_240625/checkpoint_17.pth
+2024-06-25 19:36:11 - [34m[1mLOGS[0m - The best model weights loaded w/o unexpected or missing keys.
+Evaluating checkpoint_17.pth
+
+*
+checkpoint_17.pth metrics:
+RMSE=0.4827
+MAE=0.0728
+Delta1=0.8374
+Delta2=0.9667
+Delta3=0.9913
+REL=0.1300
+Lg10=0.0558
+t_GPU=0.0611
+
+2024-06-25 19:37:08 - [34m[1mLOGS[0m - model_name:DDRNetGUB
+=== There exists unexpected keys for DDRNet model originally ===
+=== There exists missing keys for DDRNet model originally ===
+2024-06-25 19:37:08 - [34m[1mLOGS[0m - best_model_path:./checkpoints/DDRNet-23-slim_GUB_240625/checkpoint_11.pth
+2024-06-25 19:37:08 - [34m[1mLOGS[0m - The best model weights loaded w/o unexpected or missing keys.
+Evaluating checkpoint_11.pth
+
+*
+checkpoint_11.pth metrics:
+RMSE=0.4834
+MAE=0.0729
+Delta1=0.8356
+Delta2=0.9661
+Delta3=0.9917
+REL=0.1310
+Lg10=0.0559
+t_GPU=0.0586
+
+k:checkpoint_12.pth v:[0.8414884  0.96762322 0.99172306 0.4784172  0.129967   0.05537124]
+k:checkpoint_19.pth v:[0.83935217 0.96612472 0.99094968 0.47951248 0.13017368 0.05522149]
+k:checkpoint_17.pth v:[0.83740072 0.96670938 0.99128898 0.48266597 0.13001091 0.05582224]
+k:checkpoint_11.pth v:[0.83561786 0.96614457 0.99168589 0.48341168 0.13103161 0.05593081]
+Traceback (most recent call last):
+  File "main.py", line 74, in <module>
+    main()
+  File "main.py", line 61, in main
+    model_trainer.train(opts)
+  File "/home/ping.he/projects/MDE/projects/CAEFD/training.py", line 442, in train
+    self.evaluate_chosen_ckpts(opts, chosen_ckpts_list)
+  File "/home/ping.he/projects/MDE/projects/CAEFD/training.py", line 628, in evaluate_chosen_ckpts
+    self.save_results(res_dict)
+  File "/home/ping.he/projects/MDE/projects/CAEFD/training.py", line 1114, in save_results
+    data_df.index = index_list
+  File "/usr/local/lib/python3.8/dist-packages/pandas/io/excel/_openpyxl.py", line 49, in __init__
+    from openpyxl.workbook import Workbook
+ModuleNotFoundError: No module named 'openpyxl'

@@ -1,0 +1,50 @@
+nohup: ignoring input
+If for semantic segmentation, please install mmsegmentation first
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:957: UserWarning: Overwriting fastvit_t8 in registry with nets.models.FastViT_LiamEdge.fastvit_t8. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_t8(pretrained=False, **kwargs):
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:979: UserWarning: Overwriting fastvit_t12 in registry with nets.models.FastViT_LiamEdge.fastvit_t12. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_t12(pretrained=False, **kwargs):
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:1001: UserWarning: Overwriting fastvit_s12 in registry with nets.models.FastViT_LiamEdge.fastvit_s12. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_s12(pretrained=False, **kwargs):
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:1024: UserWarning: Overwriting fastvit_sa12 in registry with nets.models.FastViT_LiamEdge.fastvit_sa12. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_sa12(pretrained=False, **kwargs):
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:1048: UserWarning: Overwriting fastvit_sa24 in registry with nets.models.FastViT_LiamEdge.fastvit_sa24. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_sa24(pretrained=False, **kwargs):
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:1072: UserWarning: Overwriting fastvit_sa36 in registry with nets.models.FastViT_LiamEdge.fastvit_sa36. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_sa36(pretrained=False, **kwargs):
+/home/ping.he/projects/MDE/projects/CAEFD/nets/models/FastViT_LiamEdge.py:1097: UserWarning: Overwriting fastvit_ma36 in registry with nets.models.FastViT_LiamEdge.fastvit_ma36. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def fastvit_ma36(pretrained=False, **kwargs):
+********** Trainer Initializing **********
+2024-07-10 23:25:48 - [34m[1mLOGS[0m - model_name:DDRNetGUB
+=== There exists unexpected keys for DDRNet model originally ===
+=== There exists missing keys for DDRNet model originally ===
+2024-07-10 23:25:48 - [34m[1mLOGS[0m - pretrained_path:None
+2024-07-10 23:25:48 - [32m[1mINFO[0m - dataset_name: nyu_reduced
+2024-07-10 23:25:48 - [32m[1mINFO[0m - model_name: DDRNetGUB
+2024-07-10 23:25:48 - [32m[1mINFO[0m - Training max epochs: 20
+2024-07-10 23:25:48 - [32m[1mINFO[0m - Maximum Depth of Dataset: 10.0
+2024-07-10 23:25:48 - [32m[1mINFO[0m - cuda_visible: 0
+2024-07-10 23:25:48 - [32m[1mINFO[0m - self.device: cuda:0
+2024-07-10 23:25:48 - [32m[1mINFO[0m - Train model: GuideDepth
+2024-07-10 23:25:48 - [32m[1mINFO[0m - self.train_edge: False
+2024-07-10 23:25:48 - [32m[1mINFO[0m - self.use_depthnorm: True
+2024-07-10 23:25:48 - [32m[1mINFO[0m - train & evaluation resolution: (480, 640)
+2024-07-10 23:25:48 - [32m[1mINFO[0m - data_path: /home/ping.he/projects/MDE/dataset/nyu/nyu_data
+2024-07-10 23:25:48 - [32m[1mINFO[0m - batch_size: 32
+2024-07-10 23:25:48 - [32m[1mINFO[0m - num_workers: 128
+2024-07-10 23:25:48 - [32m[1mINFO[0m - Number of parameter: 5.82M
+********** Train & Val Dataloader Initializing **********
+2024-07-10 23:25:49 - [32m[1mINFO[0m - learning_rate: 0.0001
+2024-07-10 23:25:49 - [32m[1mINFO[0m - optimizer: adam
+2024-07-10 23:25:49 - [32m[1mINFO[0m - lr_scheduler: cosine
+Depth Loss ------ L1:0.1 ssim:1 gradient:1
+2024-07-10 23:25:49 - [32m[1mINFO[0m - checkpoint_path: ./checkpoints/DDRNet-23-slim_GUB_240710
+********** Evaluator Initializing **********
+2024-07-10 23:25:49 - [32m[1mINFO[0m - self.crop: [20, 460, 24, 616]
+2024-07-10 23:25:49 - [32m[1mINFO[0m - self.eval_mode: alhashim
+2024-07-10 23:25:49 - [32m[1mINFO[0m - eval_results_path: ./checkpoints/DDRNet-23-slim_GUB_240710/eval_results
+2024-07-10 23:25:49 - [32m[1mINFO[0m - test_dataset_path: /home/ping.he/projects/MDE/dataset/nyu/nyu_test
+********** Test Dataloader Initializing **********
+self.rgb shape: torch.Size([654, 480, 640, 3])
+self.depth shape: torch.Size([654, 480, 640])
+23:25 - Epoch 0

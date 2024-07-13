@@ -1,0 +1,42 @@
+taskname: '+ MobileNetV2-1.0 MDE'
+common:
+  mode: "train"
+  epochs: 40
+  lr: 0.0001
+  bs: 16
+  cuda_visible: "0"
+  save_checkpoint: "./checkpoints/MobileNetV2-1.0_EGN_06-06"
+  eval_mode: "alhashim"
+  resolution: "full"
+  scheduler_step_size: 15
+dataset:
+  name: "nyu_reduced"
+  root: "/home/glw/hp/datasets/nyu_data.zip"
+  root_train: "/home/heping/MyDataset/nyu_data.zip"
+  root_val: "/home/heping/MyDataset/nyu_data.zip"
+model:
+  name: "MobileNetV2EGN"
+  mobilenetv2:
+    width_multiplier: 1.0
+  normalization:
+    name: "batch_norm"
+    momentum: 0.1
+  activation:
+    name: "relu"
+    inplace: false
+  layer:
+    global_pool: "mean"
+    conv_init: "kaiming_normal"
+    linear_init: "normal"
+  gradient_checkpointing: false
+  pretrained: "/home/glw/hp/models/MobileNet/mobilenetv2-1.00.pt"
+loss:
+  name: ["L1", "SSIM"]
+ema:
+  enable: false
+  momentum: 0.0005
+stats:
+  val: ["loss"]
+  train: ["loss"]
+  checkpoint_metric: "loss" 
+  checkpoint_metric_max: true

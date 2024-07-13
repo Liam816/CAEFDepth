@@ -1,0 +1,71 @@
+#taskname: 'DDRNet PPT P42 EdgeNetV1 DecoderV1'
+#taskname: 'DDRNet PPT P43 EdgeNetV2 DecoderV2'
+#taskname: 'DDRNet PPT P44 EdgeNetV2 DecoderV2M1'
+#taskname: 'DDRNet PPT P45 EdgeNetV1M DecoderV1'
+#taskname: 'DDRNet PPT P46 EdgeNetV3 DecoderV3'
+#taskname: 'DDRNet PPT P47 EdgeNetV4 DecoderV3M1'
+#taskname: 'DDRNet PPT P50 EdgeNetV6 DecoderV4'
+#taskname: 'DDRNet PPT P51 EdgeNetV6 DecoderV3M3'
+#taskname: 'DDRNet PPT P52 EdgeNetV5Attn DecoderV3M2'
+#taskname: 'DDRNet PPT P53'
+#taskname: 'DDRNet PPT P80'
+#taskname: 'DDRNet PPT P81'
+#taskname: 'DDRNet PPT P85'
+taskname: 'DDRNet PPT P88'
+common:
+  mode: 'train'  # train eval
+  train_edge: false  # true default: false
+  use_depthnorm: true  # false default: true
+  epochs: 40
+  lr: 0.0001
+  bs: 8
+  cuda_visible: '3'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_V2_EdgeNetV1_DecoderV1_07-21'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_V2_EdgeNetV1_DecoderV1_07-22'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_V2_EdgeNetV2_DecoderV2_07-23'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_V2_EdgeNetV2_DecoderV2M1_07-24'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_V2_EdgeNetV1M_DecoderV1_07-24'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_V2_EdgeNetV3_DecoderV3_07-24'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_V2_EdgeNetV4_DecoderV3M1_07-25'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_V2_EdgeNetV6_DecoderV4_07-27'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_V2_EdgeNetV6_DecoderV3M3_07-28'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_V2_EdgeNetV5Attn_DecoderV3M2_07-28'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_V2_BMSAE3_EdgeNetV5_DecoderV3M2_07-29'
+#  save_checkpoint: './checkpoints/DDRNet_trim5_ENV4_TMV3M4_LearnableAlpha_OHV4_09-16'
+#  save_checkpoint: './checkpoints/DDRNet_slim_ENV4_TMV3M4_LearnableAlpha_OHV4_09-16'
+#  save_checkpoint: './checkpoints/DDRNet_trim6_ENV4_TMV3M4_LearnableAlpha_OHV4_09-23'
+#  save_checkpoint: './checkpoints/DDRNet_trim7_ENV4_TMV3M4_LearnableAlpha_OHV4_09-23'
+#  save_checkpoint: './checkpoints/DDRNet-slim_SGN_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_10-09'
+#  save_checkpoint: './checkpoints/DDRNet-slim_SGNV2_TMV3M4_LA_OHV4M1_kitti-alhashim_10-09'
+  save_checkpoint: './checkpoints/DDRNet-slim_SGNV3_CMTFDecoderV1_kitti-alhashim_10-13'
+  best_checkpoint: 'checkpoint_0.pth'
+  train_mode: 'alhashim'  # alhashim liam
+  eval_mode: 'alhashim'  # alhashim liam
+  resolution: 'full'  # full half
+  optimizer: 'adam'
+  scheduler_step_size: 15
+  num_workers: 10
+dataset:
+#  name: 'nyu_reduced'
+#  root: '/home/data/glw/hp/datasets/nyu/nyu_data'
+#  root_test: '/home/data/glw/hp/datasets/nyu/nyu_test'
+  name: 'kitti'  # alhashim借助NYU工具箱的深度补齐方法来稠密化稀疏的深度图
+  root: '/home/data/glw/hp/datasets/kitti_eigen/train_dataset'
+  root_test: '/home/data/glw/hp/datasets/kitti_eigen/test_dataset'
+model:
+  name: 'DDRNetEdgeV2'
+  mode: '23-slim'
+#  mode: 'trim'
+#  mode: 'trim2'
+#  mode: 'trim3'
+#  mode: 'trim4'
+#  mode: 'trim5'
+#  mode: 'trim6'
+#  mode: 'trim7'
+#  pretrained: './checkpoints/DDRNet_LiamEdge_V2_EdgeNetV1_DecoderV1_07-19/checkpoint_0.pth'
+#  pretrained: './checkpoints/DDRNet_LiamEdge_V2_EdgeNetV1_DecoderV1_07-22/checkpoint_36.pth'
+loss:
+  name: ['L1', 'SSIM']
+  silog: false
+
+

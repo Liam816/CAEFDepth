@@ -1,0 +1,70 @@
+taskname: 'PPT P79'
+common:
+  mode: 'train'  # train eval
+  train_edge: false  # true default: false
+  use_depthnorm: true  # false default: true
+  epochs: 40
+  lr: 0.0001
+  bs: 8
+  cuda_visible: '2'
+  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_kitti_09-16'
+  best_checkpoint: 'checkpoint_0.pth'
+  train_mode: 'alhashim'  # alhashim liam
+  eval_mode: 'alhashim'  # alhashim liam
+  resolution: 'full'  # full half
+  optimizer: 'adam'
+  scheduler_step_size: 15
+  num_workers: 10
+dataset:
+#  name: 'kitti'
+  name: 'nyu_reduced'
+  root: '/home/data/glw/hp/datasets/nyu/nyu_data.zip'
+  root_test: '/home/data/glw/hp/datasets/nyu/nyu_test.zip'
+model:
+  name: 'FastViTEdge'
+  mode: 's12'
+  mobilenetv2:
+    width_multiplier: 1.0
+  normalization:
+    name: 'batch_norm'
+    momentum: 0.1
+  activation:
+    name: 'relu'
+    inplace: false
+  layer:
+    global_pool: 'mean'
+    conv_init: 'kaiming_normal'
+    linear_init: 'normal'
+  gradient_checkpointing: false
+#  pretrained: '/home/glw/hp/models/MobileNet/mobilenetv2-1.00.pt'
+loss:
+  name: ['L1', 'SSIM']
+  silog: false
+bts:
+  dataset: 'kitti'
+  use_liam_dataset: false  # true default: false
+  data_path: '/home/data/glw/hp/datasets/bts/kitti_dataset/'
+  gt_path: '/home/data/glw/hp/datasets/bts/kitti_dataset/data_depth_annotated/'
+#  gt_path: '/home/data/glw/hp/datasets/bts/data_depth_dense_filled/'
+  filenames_file: './train_test_inputs/eigen_train_files_with_gt.txt'
+  input_height: 352
+  input_width: 704
+  max_depth: 80
+  do_kb_crop: true
+  do_random_rotate: true
+  degree: 1.0
+  do_online_eval: true
+  data_path_eval: '/home/data/glw/hp/datasets/bts/kitti_dataset/'
+  gt_path_eval: '/home/data/glw/hp/datasets/bts/kitti_dataset/data_depth_annotated/'
+#  gt_path_eval: '/home/data/glw/hp/datasets/bts/data_depth_dense_filled/'
+  filenames_file_eval: './train_test_inputs/eigen_test_files_with_gt.txt'
+  distributed: false
+  use_right: false
+  min_depth_eval: 0.001
+  max_depth_eval: 80.0
+  garg_crop: true
+  eigen_crop: false
+
+
+
+

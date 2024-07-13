@@ -1,0 +1,49 @@
+taskname: 'MobileOne as backbone'
+common:
+  mode: 'train'
+  epochs: 40
+  lr: 0.0001
+  bs: 8
+  cuda_visible: '3'
+  save_checkpoint: './checkpoints/MobileOne_LiamEdge'
+  best_checkpoint: 'checkpoint_0.pth'
+  train_mode: 'alhashim'  # alhashim liam
+  eval_mode: 'alhashim'  # alhashim liam
+  resolution: 'full'  # full half
+  optimizer: 'adam'
+  scheduler_step_size: 15
+  num_workers: 10
+dataset:
+  name: 'nyu_reduced'
+  root: '/home/glw/hp/datasets/nyu_data.zip'
+  root_train: '/home/heping/MyDataset/nyu_data.zip'
+  root_val: '/home/heping/MyDataset/nyu_data.zip'
+  root_test: '/home/glw/hp/datasets/nyu_test.zip'
+  root_inference: '/home/glw/hp/datasets/NYU_Testset'
+#  root: "/home/heping/MyDataset/nyu_data.zip"
+#  root_train: "/home/heping/MyDataset/nyu_data.zip"
+#  root_val: "/home/heping/MyDataset/nyu_data.zip"
+#  root_test: "/home/heping/MyDataset/nyu_test.zip"
+#  root_inference: "/home/heping/MyDataset/NYU_Testset"
+#  root: "D:/LIAM/Dataset/NYU/nyu_data.zip"
+#  root_train: "D:/LIAM/Dataset/NYU/nyu_data.zip"
+#  root_val: "D:/LIAM/Dataset/NYU/nyu_data.zip"
+#  root_test: "D:/LIAM/Dataset/NYU/nyu_test.zip"
+#  root_inference: "D:/LIAM/Dataset/NYU_Testset"
+model:
+  name: 'MobileOne'
+#  mode: 'S2'
+  mode: 'S4'
+#  pretrained: '/home/glw/hp/models/MobileOne/mobileone_s2.pth.tar'
+#  pretrained: '/home/glw/hp/models/MobileOne/mobileone_s2_unfused.pth.tar'
+  pretrained: '/home/glw/hp/models/MobileOne/mobileone_s4_unfused.pth.tar'
+loss:
+  name: ['L1', 'SSIM']
+ema:
+  enable: false
+  momentum: 0.0005
+stats:
+  val: ['loss']
+  train: ['loss']
+  checkpoint_metric: 'loss'
+  checkpoint_metric_max: true

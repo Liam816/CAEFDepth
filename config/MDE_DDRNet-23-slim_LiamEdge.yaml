@@ -1,0 +1,81 @@
+#taskname: 'DDRNet-23-slim PPT P22 EdgeNetV3+DecoderV6CBAM'
+#taskname: 'DDRNet-23-slim PPT P15 EdgeNetV1+DecoderV6CBAM Half Resolution'
+taskname: 'DDRNet-23-slim PPT P15 EdgeNetV1 DecoderV6CBAM'
+common:
+  mode: 'train'
+  epochs: 40
+  lr: 0.0001
+  bs: 8
+  cuda_visible: '2'
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1FM_DecoderV1CBAM_06-20_continued"
+#  save_checkpoint: "./checkpoints/DDRNet-23-slim_pre_LiamEdge_DecoderV1CBAM_06-14"
+#  save_checkpoint: "./checkpoints/DDRNet-23-slim_pre_LiamEdge_DecoderV1CBAM_06-18"
+#  save_checkpoint: "./checkpoints/DDRNet-23-slim_pre_LiamEdge_DecoderV1CBAM_06-19"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV5CBAM_06-19"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV5CBAM_06-21"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1FM_DecoderV5CBAM_06-24"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV5CBAM_06-25"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_06-25"  # !!! the best
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV7CBAM_06-25"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV8CBAM_06-25"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_06-26"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_06-27"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_06-27_2"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV9CBAM_06-26"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV10CBAM_06-26"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV2_DecoderV6CBAM_06-27"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV2_DecoderV6CBAM_06-27_2"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV2_DecoderV6CBAM_06-27_3"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV2_DecoderV6CBAM_06-27_4"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV3_DecoderV6CBAM_06-28"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV3_DecoderV6CBAM_06-28_2"
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_HalfRes_EdgeNetV1_DecoderV6CBAM_07-11"
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_07-12'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_07-13'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_07-14'
+#  save_checkpoint: './checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_07-15'
+#  save_checkpoint: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_07-27"
+  save_checkpoint: './checkpoints/DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_kitti_09-15'
+  best_checkpoint: 'checkpoint_0.pth'
+  train_mode: 'alhashim'  # alhashim liam
+  eval_mode: 'alhashim'  # alhashim liam
+  resolution: 'full'  # full half
+  optimizer: 'adam'
+  scheduler_step_size: 15
+  num_workers: 10
+dataset:
+  name: 'kitti'
+#  name: 'nyu_reduced'
+  root: '/home/data/glw/hp/datasets/nyu/nyu_data.zip'
+  root_test: '/home/data/glw/hp/datasets/nyu/nyu_test.zip'
+model:
+  name: 'DDRNetEdge'
+  mode: '23-slim'
+#  pretrained: "./checkpoints/DDRNet_LiamEdge_EdgeNetV1FM_DecoderV1CBAM_06-20/checkpoint_9.pth"
+loss:
+  name: ['L1', 'SSIM']
+  silog: false
+bts:
+  dataset: 'kitti'
+  use_liam_dataset: false  # true default: false
+  data_path: '/home/data/glw/hp/datasets/bts/kitti_dataset/'
+  gt_path: '/home/data/glw/hp/datasets/bts/kitti_dataset/data_depth_annotated/'
+#  gt_path: '/home/data/glw/hp/datasets/bts/data_depth_dense_filled/'
+  filenames_file: './train_test_inputs/eigen_train_files_with_gt.txt'
+  input_height: 352
+  input_width: 704
+  max_depth: 80
+  do_kb_crop: true
+  do_random_rotate: true
+  degree: 1.0
+  do_online_eval: true
+  data_path_eval: '/home/data/glw/hp/datasets/bts/kitti_dataset/'
+  gt_path_eval: '/home/data/glw/hp/datasets/bts/kitti_dataset/data_depth_annotated/'
+#  gt_path_eval: '/home/data/glw/hp/datasets/bts/data_depth_dense_filled/'
+  filenames_file_eval: './train_test_inputs/eigen_test_files_with_gt.txt'
+  distributed: false
+  use_right: false
+  min_depth_eval: 0.001
+  max_depth_eval: 80.0
+  garg_crop: true
+  eigen_crop: false

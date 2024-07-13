@@ -1,0 +1,56 @@
+taskname: '+ MobileViTv1-Small MDE'
+common:
+  mode: "train"
+  epochs: 40
+  lr: 0.0001
+  bs: 16
+  cuda_visible: "0,1,2,3"
+  num_workers: None
+  save_checkpoint: "./checkpoints/MobileViTv1-s_Pre_GUB_AdaBins_05-07"
+  eval_mode: "alhashim"
+  resolution: "full"
+  scheduler_step_size: 15
+dataset:
+  name: "nyu_reduced"
+#  root: "/home/heping/MyDataset/nyu_data.zip"
+  root: "/home/glw/hp/datasets/nyu_data.zip"
+  root_train: "/home/heping/MyDataset/nyu_data.zip"
+  root_val: "/home/heping/MyDataset/nyu_data.zip"
+model:
+  name: "MobileViTGUBAdaBins"
+  mit:
+    mode: "small"
+    ffn_dropout: 0.0
+    attn_dropout: 0.0
+    dropout: 0.1
+    number_heads: 4
+    no_fuse_local_global_features: false
+    conv_kernel_size: 3
+  activation:
+    name: "swish"
+    inplace: false
+    neg_slope: 0.1
+  normalization:
+    name: "batch_norm"
+    momentum: 0.1
+    groups: 1
+  layer:
+    global_pool: "mean"
+    conv_init: "kaiming_normal"
+    linear_init: "trunc_normal"
+    linear_init_std_dev: 0.02
+  gradient_checkpointing: false
+#  pretrained: "/home/heping/MyProj/MiT-DenseDepth-04-17/liam_models/mobilevit_e65_bs8_2023-04-23_14:19:51.pkl"
+#  pretrained: "/home/heping/MyModels/MobileViT/pretrained/MobileViTv1(Legacy)/mobilevit_s.pt"
+#  pretrained: "/home/heping/MyProj/GuidedDecoding_2023-04-23/results/mobilevit_pretrained_GUB_04-25/best_model.pth"
+  pretrained: "/home/glw/hp/models/MobileViT/mobilevit_s.pt"
+loss:
+  name: ["L1", "SSIM"]
+ema:
+  enable: false
+  momentum: 0.0005
+stats:
+  val: ["loss"]
+  train: ["loss"]
+  checkpoint_metric: "loss" 
+  checkpoint_metric_max: true

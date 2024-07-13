@@ -1,0 +1,11 @@
+tlmp submit job \
+--group=parking \
+--machine_type=3090 \
+--node=1 \
+--gpu=8 \
+--cpu=80 \
+--memory=350 \
+--docker_image="artifactory.momenta.works/docker-pl/mal:latest" \
+--priority=MID \
+--work_dir="/home/ping.he/projects/MDE/projects/CAEFD" \
+--command="./run.sh 2>&1|tee ./logs/runInfo_DDRNet-23-slim_GUB_240625_2.txt"

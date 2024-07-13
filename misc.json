@@ -1,0 +1,569 @@
+{
+    "CameraWidget": {
+        "CameraList": [
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "F195/0.jpg",
+                "ImageWidth": 1280,
+                "Name": "F195_0"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "B195/0.jpg",
+                "ImageWidth": 1280,
+                "Name": "B195_0"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "L195/0.jpg",
+                "ImageWidth": 1280,
+                "Name": "L195_0"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "R195/0.jpg",
+                "ImageWidth": 1280,
+                "Name": "R195_0"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "F195/1.jpg",
+                "ImageWidth": 1280,
+                "Name": "F195_1"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "B195/1.jpg",
+                "ImageWidth": 1280,
+                "Name": "B195_1"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "L195/1.jpg",
+                "ImageWidth": 1280,
+                "Name": "L195_1"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "R195/1.jpg",
+                "ImageWidth": 1280,
+                "Name": "R195_1"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "F195/2.jpg",
+                "ImageWidth": 1280,
+                "Name": "F195_2"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "B195/2.jpg",
+                "ImageWidth": 1280,
+                "Name": "B195_2"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "L195/2.jpg",
+                "ImageWidth": 1280,
+                "Name": "L195_2"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "R195/2.jpg",
+                "ImageWidth": 1280,
+                "Name": "R195_2"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "F195/3.jpg",
+                "ImageWidth": 1280,
+                "Name": "F195_3"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "B195/3.jpg",
+                "ImageWidth": 1280,
+                "Name": "B195_3"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "L195/3.jpg",
+                "ImageWidth": 1280,
+                "Name": "L195_3"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "R195/3.jpg",
+                "ImageWidth": 1280,
+                "Name": "R195_3"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "F195/4.jpg",
+                "ImageWidth": 1280,
+                "Name": "F195_4"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "B195/4.jpg",
+                "ImageWidth": 1280,
+                "Name": "B195_4"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "L195/4.jpg",
+                "ImageWidth": 1280,
+                "Name": "L195_4"
+            },
+            {
+                "EnableProjection": false,
+                "FOV": 195,
+                "ImageHeight": 960,
+                "ImagePath": "R195/4.jpg",
+                "ImageWidth": 1280,
+                "Name": "R195_4"
+            }
+        ],
+        "CameraNumberPerRow": 4,
+        "CameraOrder": [
+            "F195_0",
+            "B195_0",
+            "L195_0",
+            "R195_0",
+            "F195_1",
+            "B195_1",
+            "L195_1",
+            "R195_1",
+            "F195_2",
+            "B195_2",
+            "L195_2",
+            "R195_2",
+            "F195_3",
+            "B195_3",
+            "L195_3",
+            "R195_3",
+            "F195_4",
+            "B195_4",
+            "L195_4",
+            "R195_4"
+        ]
+    },
+    "Canvas": {
+        "CloudGround": -2,
+        "CloudHeightFilter": {
+            "Max": 5,
+            "Min": -5
+        },
+        "CloudPointSize": 0.005,
+        "TargetReferences": [
+            {
+                "CircleRef": "0.02m|0.05m",
+                "EnableCrossRef": false,
+                "Target": "PointCloud"
+            }
+        ]
+    },
+    "QAPopup": {
+        "DefectTypes": [
+            {
+                "Desc": "属性错误",
+                "Type": "PropError"
+            },
+            {
+                "Desc": "位置错误",
+                "Type": "LocationError"
+            }
+        ]
+    },
+    "Statusbar": {
+        "TargetFlags": [
+            {
+                "Flags": [
+                    {
+                        "Icon": {
+                            "Text": "H",
+                            "Type": "Text"
+                        },
+                        "Key": "hard",
+                        "SkipResultCheck": true
+                    }
+                ],
+                "Target": [
+                    "PointCloud"
+                ]
+            }
+        ]
+    },
+    "Task": {
+        "CloudPath": "lidar.pcd",
+        "EnableResultCheck": true,
+        "Targets": {
+            "Children": [
+                {
+                    "Target": "wall"
+                },
+                {
+                    "Target": "pillar"
+                },
+                {
+                    "Target": "vehicle"
+                },
+                {
+                    "Target": "step"
+                },
+                {
+                    "Target": "barrier"
+                },
+                {
+                    "Target": "pole"
+                },
+                {
+                    "Target": "low_step"
+                },
+                {
+                    "Target": "ignore"
+                },
+                {
+                    "MouseSelectable": false,
+                    "Movable": false,
+                    "Removable": false,
+                    "Target": "auxiliary"
+                }
+            ],
+            "Target": "PointCloud"
+        }
+    },
+    "Title": "APA障碍物标注",
+    "Toolbar": {
+        "Tools": [
+            {
+                "Desc": "墙壁",
+                "Disabled": false,
+                "Level": "FollowTarget",
+                "ShapeStyle": {
+                    "Border": {
+                        "capStyle": "",
+                        "color": {
+                            "a": 200,
+                            "b": 255,
+                            "g": 0,
+                            "r": 0
+                        },
+                        "dashPattern": [
+                            1,
+                            2.2,
+                            3,
+                            1
+                        ],
+                        "joinStyle": "",
+                        "style": "",
+                        "width": 2
+                    },
+                    "Fill": {
+                        "color": {},
+                        "style": ""
+                    },
+                    "HighlightStart": false
+                },
+                "Target": "wall",
+                "Type": "PolylineGeneric"
+            },
+            {
+                "Desc": "柱子",
+                "Disabled": false,
+                "Level": "FollowTarget",
+                "ShapeStyle": {
+                    "Border": {
+                        "capStyle": "",
+                        "color": {
+                            "a": 200,
+                            "b": 255,
+                            "g": 0,
+                            "r": 255
+                        },
+                        "dashPattern": [
+                            1,
+                            2.2,
+                            3,
+                            1
+                        ],
+                        "joinStyle": "",
+                        "style": "",
+                        "width": 2
+                    },
+                    "Fill": {
+                        "color": {},
+                        "style": ""
+                    },
+                    "HighlightStart": false
+                },
+                "Target": "pillar",
+                "Type": "PolylineGeneric"
+            },
+            {
+                "Desc": "车辆",
+                "Disabled": false,
+                "Level": "FollowTarget",
+                "ShapeStyle": {
+                    "Border": {
+                        "capStyle": "",
+                        "color": {
+                            "a": 200,
+                            "b": 0,
+                            "g": 255,
+                            "r": 0
+                        },
+                        "dashPattern": [
+                            1,
+                            2.2,
+                            3,
+                            1
+                        ],
+                        "joinStyle": "",
+                        "style": "",
+                        "width": 2
+                    },
+                    "Fill": {
+                        "color": {},
+                        "style": ""
+                    },
+                    "HighlightStart": false
+                },
+                "Target": "vehicle",
+                "Type": "PolylineGeneric"
+            },
+            {
+                "Desc": "路沿",
+                "Disabled": false,
+                "Level": "FollowTarget",
+                "ShapeStyle": {
+                    "Border": {
+                        "capStyle": "",
+                        "color": {
+                            "a": 200,
+                            "b": 0,
+                            "g": 0,
+                            "r": 255
+                        },
+                        "dashPattern": [
+                            1,
+                            2.2,
+                            3,
+                            1
+                        ],
+                        "joinStyle": "",
+                        "style": "",
+                        "width": 2
+                    },
+                    "Fill": {
+                        "color": {},
+                        "style": ""
+                    },
+                    "HighlightStart": false
+                },
+                "Target": "step",
+                "Type": "PolylineGeneric"
+            },
+            {
+                "Desc": "通用障碍物",
+                "Disabled": false,
+                "Level": "FollowTarget",
+                "ShapeStyle": {
+                    "Border": {
+                        "capStyle": "",
+                        "color": {
+                            "a": 200,
+                            "b": 128,
+                            "g": 0,
+                            "r": 128
+                        },
+                        "dashPattern": [
+                            1,
+                            2.2,
+                            3,
+                            1
+                        ],
+                        "joinStyle": "",
+                        "style": "",
+                        "width": 2
+                    },
+                    "Fill": {
+                        "color": {},
+                        "style": ""
+                    },
+                    "HighlightStart": false
+                },
+                "Target": "barrier",
+                "Type": "PolylineGeneric"
+            },
+            {
+                "Desc": "树和杆",
+                "Disabled": false,
+                "Level": "FollowTarget",
+                "ShapeStyle": {
+                    "Border": {
+                        "capStyle": "",
+                        "color": {
+                            "a": 200,
+                            "b": 255,
+                            "g": 128,
+                            "r": 0
+                        },
+                        "dashPattern": [
+                            1,
+                            2.2,
+                            3,
+                            1
+                        ],
+                        "joinStyle": "",
+                        "style": "",
+                        "width": 2
+                    },
+                    "Fill": {
+                        "color": {},
+                        "style": ""
+                    },
+                    "HighlightStart": false
+                },
+                "Target": "pole",
+                "Type": "PolylineGeneric"
+            },
+            {
+                "Desc": "低矮路沿",
+                "Disabled": false,
+                "Level": "FollowTarget",
+                "ShapeStyle": {
+                    "Border": {
+                        "capStyle": "",
+                        "color": {
+                            "a": 200,
+                            "b": 0,
+                            "g": 255,
+                            "r": 255
+                        },
+                        "dashPattern": [
+                            1,
+                            2.2,
+                            3,
+                            1
+                        ],
+                        "joinStyle": "",
+                        "style": "",
+                        "width": 2
+                    },
+                    "Fill": {
+                        "color": {},
+                        "style": ""
+                    },
+                    "HighlightStart": false
+                },
+                "Target": "low_step",
+                "Type": "PolylineGeneric"
+            },
+            {
+                "Desc": "忽略区域",
+                "Disabled": false,
+                "Level": "FollowTarget",
+                "ShapeStyle": {
+                    "Border": {
+                        "capStyle": "",
+                        "color": {
+                            "a": 200,
+                            "b": 255,
+                            "g": 255,
+                            "r": 0
+                        },
+                        "dashPattern": [
+                            1,
+                            2.2,
+                            3,
+                            1
+                        ],
+                        "joinStyle": "",
+                        "style": "",
+                        "width": 2
+                    },
+                    "Fill": {
+                        "color": {},
+                        "style": ""
+                    },
+                    "HighlightStart": false
+                },
+                "Target": "ignore",
+                "Type": "PolylineGeneric"
+            },
+            {
+                "Desc": "辅助线",
+                "Disabled": true,
+                "Level": "FollowTarget",
+                "ShapeStyle": {
+                    "Border": {
+                        "capStyle": "",
+                        "color": {
+                            "a": 255,
+                            "b": 255,
+                            "g": 255,
+                            "r": 255
+                        },
+                        "width": 1
+                    },
+                    "HighlightStart": false
+                },
+                "Target": "auxiliary",
+                "Type": "PolylineGeneric"
+            },
+            {
+                "Desc": "距离",
+                "LabelStyle": {
+                    "backgroundColor": {
+                        "a": 200,
+                        "b": 128,
+                        "g": 128,
+                        "r": 255
+                    }
+                },
+                "Type": "Distance"
+            }
+        ]
+    },
+    "Version": "20",
+    "WinType": "lidargeneric"
+}

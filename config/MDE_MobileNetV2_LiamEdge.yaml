@@ -1,0 +1,174 @@
+#taskname: 'MobileNetV2-1.0 PPT_page18 4L Extension Module DecoderV5CBAM'
+#taskname: 'PPT P54'
+#taskname: 'PPT P55'
+#taskname: 'PPT P56'
+#taskname: 'PPT P58'
+#taskname: 'PPT P59'
+#taskname: 'PPT P60'
+#taskname: 'PPT P61'
+#taskname: 'PPT P62'
+#taskname: 'PPT P63'
+#taskname: 'PPT P64'
+#taskname: 'PPT P65'
+#taskname: 'PPT P66'
+#taskname: 'PPT P67'
+#taskname: 'PPT P68'
+#taskname: 'PPT P69'
+#taskname: 'PPT P70'
+#taskname: 'PPT P71'
+#taskname: 'PPT P72'
+#taskname: 'PPT P73'
+#taskname: 'PPT P74'
+#taskname: 'PPT P75'
+#taskname: 'PPT P76'
+#taskname: 'PPT P77'
+#taskname: 'PPT P78'
+#taskname: 'PPT P79'
+#taskname: 'PPT P86'
+taskname: 'PPT P87'
+common:
+  mode: 'train'  # train eval
+  train_edge: false  # true default: false
+  use_depthnorm: true  # false default: true
+  epochs: 20
+  bs: 32  # 8 16 32
+  lr: 0.0001  # 0.0001
+  lr_scheduler: 'step'  # step cosine polynomial cyclic
+  optimizer: 'adam'
+  cuda_visible: '0'
+  train_mode: 'alhashim'  # alhashim liam
+  eval_mode: 'alhashim'  # alhashim liam
+  resolution: 'full'  # full half
+  num_workers: 10
+  best_checkpoint: 'checkpoint_30.pth'
+#  save_checkpoint: './checkpoints/MobileNetV2-1.0_LiamEdge_4L_EM_DecoderV5CBAM_06-25'
+#  save_checkpoint: './checkpoints/MobileNetV2-1.0_LiamEdge_EdgeNetV3_DecoderV6M1_07-29'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_LiamEdge_EdgeNetV3_DecoderV6M2_07-29'
+#  save_checkpoint: './checkpoints/MobileNetV2-1.0_GLPDepthDecoder_07-30'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_TopFormer_OutputHead_07-30'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_BMSAE3_ENV3_EMSAE1_OHV2_07-31'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_BMSAE3_ENV3_EMSAE1_OHV3_08-01'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_BMSAE3_ENV3_EMSAE1_OHV3_07-31'  # TBA
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV1_OHV1_08-01'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV1_OHV1M1_08-02'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV1_alpha1.0_OHV1_08-02'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_08-02'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV1M1_alpha0.5_OHV1_08-02'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV3_alpha0.5_OHV4_08-03'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV3M1_alpha0.5_OHV4_08-04'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV3M2_alpha0.5_OHV4_08-05'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_kitti_ENV3M1_TMV2_alpha0.5_OHV1_08-07'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_TST_OHV5_08-10'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_TST_OHV5_DepthNorm_08-10'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_SideRT_OHV6_08-11'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_08-26'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_EPV1_TMV3M1_alpha0.5_OHV4_08-27'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_EPV2_TMV3M1_alpha0.5_OHV4_08-29'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_kitti_08-02'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_kitti_08-02_test'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_kitti_08-30'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_EHV1_TMV2_OHV1_08-30'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_TST_OHV5_09-02'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M1_OHV4_kitti_09-02'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4M1_TMV3M1_OHV7_09-03'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_kitti_09-03'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_09-03'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_09-03'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_kitti_09-04'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M3_alpha0.5_OHV4_09-04'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_kitti_09-04_2'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_09-04'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M5_alpha0.5_OHV4_09-04'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_09-04'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti_09-05'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_kitti_09-05'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_kitti_09-06'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_BMSAE3_ENV3_EMSAE1_OHV3_kitti_09-06'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M6_LearnableAlpha_OHV4_09-06'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_TopFormer_OutputHead_kitti_09-14'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV3M1_EHV1_TMV2_OHV1_kitti_09-15'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_kitti_09-16'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_09-26'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_bs16_09-26'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_SGN_TMV3M4_LearnableAlpha_OHV4_09-26'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_SGN_TMV3M4_ConstAlpha_OHV4_09-27'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_09-27'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_09-28'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_SGN_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_09-28'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_10-09'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_SGN_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_10-09'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_10-10'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_10-13'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-bts_10-16'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_cosineLR_10-16'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_cosineLR_10-17'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_ssim_kitti-bts_10-17'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_cosineLR_kitti-bts_10-17'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_cosineLR_10-18'
+#  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_stepLR_10-18'
+#  save_checkpoint: './checkpoints/test'
+  # save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_240625'
+  # save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_240626'
+  # save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_240627'
+  # save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_240627_2'
+  save_checkpoint: './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_240628_1'
+dataset:
+  name: 'nyu_reduced'
+  # root: '/home/data/glw/hp/datasets/nyu/nyu_data'
+  # root_test: '/home/data/glw/hp/datasets/nyu/nyu_test'
+  root: '/home/ping.he/projects/MDE/dataset/nyu/nyu_data'
+  root_test: '/home/ping.he/projects/MDE/dataset/nyu/nyu_test'
+#  name: 'kitti'  # alhashim借助NYU工具箱的深度补齐方法将稀疏的深度图变成稠密且光滑的深度图
+#  root: '/home/data/glw/hp/datasets/kitti_eigen/train_dataset'
+#  root_test: '/home/data/glw/hp/datasets/kitti_eigen/test_dataset'
+model:
+  name: 'MobileNetV2Edge'
+#  mode: '1.0'
+  mode: 'TokenPyramid'
+  mobilenetv2:
+    width_multiplier: 1.0
+  normalization:
+    name: 'batch_norm'
+    momentum: 0.1
+  activation:
+    name: 'relu'
+    inplace: false
+  layer:
+    global_pool: 'mean'
+    conv_init: 'kaiming_normal'
+    linear_init: 'normal'
+  gradient_checkpointing: false
+#  pretrained: '/home/glw/hp/models/MobileNet/mobilenetv2-1.00.pt'
+  # pretrained: '/home/glw/hp/models/TopFormer/TopFormer-B_512x512_2x8_160k-38.3.pth'  # TokenPyramid
+  pretrained: '/home/ping.he/projects/MDE/projects/CAEFD/model/weights/TopFormer-B_512x512_2x8_160k-38.3.pth'
+loss:
+  name: ['L1', 'SSIM']
+  silog: false
+bts:
+  dataset: 'kitti'
+  use_liam_dataset: false  # true default: false
+  data_path: '/home/data/glw/hp/datasets/bts/kitti_dataset/'
+  gt_path: '/home/data/glw/hp/datasets/bts/kitti_dataset/data_depth_annotated/'
+#  gt_path: '/home/data/glw/hp/datasets/bts/data_depth_dense_filled/'
+  filenames_file: './train_test_inputs/eigen_train_files_with_gt.txt'
+  input_height: 352
+  input_width: 704
+  max_depth: 80
+  do_kb_crop: true
+  do_random_rotate: true
+  degree: 1.0
+  do_online_eval: true
+  data_path_eval: '/home/data/glw/hp/datasets/bts/kitti_dataset/'
+  gt_path_eval: '/home/data/glw/hp/datasets/bts/kitti_dataset/data_depth_annotated/'
+#  gt_path_eval: '/home/data/glw/hp/datasets/bts/data_depth_dense_filled/'
+  filenames_file_eval: './train_test_inputs/eigen_test_files_with_gt.txt'
+  distributed: false
+  use_right: false
+  min_depth_eval: 0.001
+  max_depth_eval: 80.0
+  garg_crop: true
+  eigen_crop: false
+
+
+
+

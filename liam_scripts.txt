@@ -1,0 +1,265 @@
+#------------- train
+python main.py --train --dataset nyu_reduced --resolution full --model GuideDepth --data_path /home/heping/MyDataset/nyu_data.zip
+python main.py --train --resolution full --data_path /home/heping/MyDataset/nyu_data.zip --save_checkpoint ./checkpoints/mobilevit_GUB_04-25 --save_results ./results/mobilevit_GUB_04-25
+python main.py --train --resolution full --data_path /home/heping/MyDataset/nyu_data.zip --save_checkpoint ./checkpoints/MobileViTv1-s_Pre_GUB_Bin_05-06 --save_results ./results/MobileViTv1-s_Pre_GUB_Bin_05-06
+python main.py
+
+nohup python -u main.py --train --resolution full --data_path /home/heping/MyDataset/nyu_data.zip --save_checkpoint ./checkpoints/mobilevit_GUB_04-25 --save_results ./results/mobilevit_GUB_04-25 > runInfo-04-25.txt 2>&1 &
+nohup python -u main.py --train --resolution full --data_path /home/heping/MyDataset/nyu_data.zip --save_checkpoint ./checkpoints/mobilevit_pretrained_GUB_04-26 --save_results ./results/mobilevit_pretrained_GUB_04-26 > runInfo-pretrained-04-26.txt 2>&1 &
+nohup python -u main.py --train --resolution full --data_path /home/heping/MyDataset/nyu_data.zip --save_checkpoint ./checkpoints/MobileViTv1-s_Pre_GUB_Bin_05-06 --save_results ./results/MobileViTv1-s_Pre_GUB_Bin_05-06 > runInfo_MobileViTv1-s_Pre_GUB_Bin_05-06.txt 2>&1 &
+nohup python -u main.py > runInfo_MobileViTv1-s_Pre_GUB_Bin_05-06.txt 2>&1 &
+nohup python -u main.py > runInfo_MobileViTv1-s_Pre_GUB_AdaBins_05-07.txt 2>&1 &
+nohup python -u main.py > runInfo_MobileViTv3-s_Pre_GUB_05-08.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-T2_Pre_GUB_05-11.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_GUB_05-16.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_Pre_GUB_05-16.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_Pre_PCGUB_05-17.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_Pre_EdgePCGUB_05-20.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_Pre_EdgePCGUB_05-21.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_GUB_06-05.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_06-06.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_06-13.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_06-14.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_KS(DDRNet+EdgeNet)_06-14.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_DecoderKS_06-15.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_GUB_06-15.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_DecoderKSV2_06-15.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_DecoderV3_06-16.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_DecoderV4_06-16.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_DecoderV1CBAM_06-17.txt 2>&1 &
+nohup python -u main.py > runInfo_MobileNetV2-1.0_LiamEdge_DecoderV1_06-17.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_DecoderV1CBAM_PConv_06-17.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_DecoderV1_06-17.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_DecoderV1CBAM_PConv_06-18.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_DecoderV1_06-18.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_LiamEdge_DecoderV1CBAM_06-19.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV5CBAM_06-19.txt 2>&1 &
+nohup python -u main.py > runInfo_MobileViTv1-s_EdgeNetV1_DecoderV1CBAM_06-20.txt 2>&1 &
+nohup python -u main.py > runInfo_MobileViTv1-s_EdgeNetV1_DecoderV1CBAM_06-20_continued.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1FM_DecoderV1CBAM_06-20.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1FM_DecoderV1CBAM_06-20_continued.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV5CBAM_06-21.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1FM_DecoderV5CBAM_06-24.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1FM_DecoderV5CBAM_06-25.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_pre_GUB_06-25.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_06-25.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV7CBAM_06-25.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV8CBAM_06-25.txt 2>&1 &
+nohup python -u main.py > runInfo_MobileNetV2-1.0_LiamEdge_4L_EM_DecoderV5CBAM_06-25.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_06-26.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_06-27.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_06-27_2.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV9CBAM_06-26.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV10CBAM_06-26.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV2_DecoderV6CBAM_06-27.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV2_DecoderV6CBAM_06-27_2.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV2_DecoderV6CBAM_06-27_3.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV2_DecoderV6CBAM_06-27_4.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV3_DecoderV6CBAM_06-28.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV3_DecoderV6CBAM_06-28_2.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-X_LiamEdge_06-28.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-X-V2_EdgeNetV1_4L_DecoderV6_4L_06-29.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-X-V2_EdgeNetV1_4L_N_DecoderV6_4L_N_06-29.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-X-V2_EdgeNetV1_4L_N_DecoderV6_4L_N_woRGBFeats_06-29.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-X-V2_EdgeNetV1_4L_DecoderV6_4L_woRGBFeats_06-29.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_DecoderV7_06-29.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_DecoderV7_06-29_2.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_DecoderV7_06-29_3.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_DecoderV7_07-01.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_DecoderV7_07-01_2.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV3_DecoderV8_07-01.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV4_DecoderV9_07-09.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_DecoderV7_ECA_07-10.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_DecoderV7_SE_07-11.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2N_DecoderV7N_CBAM_07-11.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_CBAMS_DecoderV7_CBAMC_07-11.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_HalfRes_EdgeNetV1_DecoderV6CBAM_07-11.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_Pre_GUB_07-12.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet-23-slim_Pre_HalfRes_GUB_07-12.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_07-12.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV5_DecoderV7_07-12.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_07-13.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_07-14.txt 2>&1 &
+nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_07-15.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_TopFormer_07-16.txt 2>&1 &
+nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_TopFormer_07-16_continued.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-17.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-17_continued.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-18.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-19.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet_LiamEdge_V2_EdgeNetV1_DecoderV1_07-21.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet_LiamEdge_V2_EdgeNetV1_DecoderV1_07-22.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet_LiamEdge_V2_EdgeNetV2_DecoderV2_07-23.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet_LiamEdge_V2_EdgeNetV2_DecoderV2M1_07-24.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet_LiamEdge_V2_EdgeNetV1M_DecoderV1_07-24.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_DDRNet_LiamEdge_V2_EdgeNetV3_DecoderV3_07-24.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=0 nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-24.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet_LiamEdge_V2_EdgeNetV4_DecoderV3M1_07-25.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-25.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_07-27.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet_LiamEdge_V2_EdgeNetV6_DecoderV4_07-27.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet_LiamEdge_V2_EdgeNetV6_DecoderV3M3_07-28.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet_LiamEdge_V2_EdgeNetV5Attn_DecoderV3M2_07-28.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet_LiamEdge_V2_BMSAE3_EdgeNetV5_DecoderV3M2_07-29.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_MobileNetV2-1.0_LiamEdge_EdgeNetV3_DecoderV6M1_07-29.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=0 nohup python -u main.py > runInfo_MobileNetV2-TP_LiamEdge_EdgeNetV3_DecoderV6M2_07-29.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-1.0_GLPDepthDecoder_07-30.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileViTv1-s-3L_EdgeNetV1_DecoderV6_07-30.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_MobileNetV2-TP_TopFormer_OutputHead_07-30.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_BMSAE3_ENV3_EMSAE1_OHV2_07-31.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_BMSAE3_ENV3_EMSAE1_OHV3_07-31.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV1_OHV1_08-01.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV1_OHV1M1_08-02.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV1_alpha1.0_OHV1_08-02.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_08-02.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=0 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV1M1_alpha0.5_OHV1_08-02.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV3_alpha0.5_OHV4_08-03.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV3M1_alpha0.5_OHV4_08-04.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV3M2_alpha0.5_OHV4_08-05.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet-23-slim_kitti_GUB_08-07.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_kitti_ENV3M1_TMV2_alpha0.5_OHV1_08-07.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_TST_OHV5_08-10.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_TST_OHV5_DepthNorm_08-10.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_SideRT_OHV6_08-11.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_08-26.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_EPV1_TMV3M1_alpha0.5_OHV4_08-27.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet-23-slim_kitti_GUB_08-27.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet-23-slim_kitti_GUB_08-28.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet-23-slim_kitti_GUB_08-28_2.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_DDRNet-23-slim_kitti_GUB_08-29.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=0 nohup python -u main.py > runInfo_MobileNetV2-TP_EPV2_TMV3M1_alpha0.5_OHV4_08-29.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_kitti_08-02.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_kitti_08-30.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_EHV1_TMV2_OHV1_08-30.txt 2>&1 &
+                                                 runInfo_MobileNetV2-TP_ENV3M1_EHV1_TMV2_OHV1_08-30.txt
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_TST_OHV5_09-02.txt 2>&1 &
+
+#--------------- /home/data/glw/hp/projects/GuidedDecoding_2023-09-02
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M1_OHV4_kitti_09-02.txt 2>&1 & 出现nan值
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti_09-02.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_kitti_09-03.txt 2>&1 & 出现nan值
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti_09-03.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_09-03.txt 2>&1 &
+
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_09-03.txt 2>&1 &  无结果
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_09-03_2.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_09-03.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4M1_TMV3M1_OHV7_09-03.txt 2>&1 &
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_kitti_09-04.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M3_alpha0.5_OHV4_09-04.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_kitti_09-04_2.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_M、obileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_09-04.txt 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M5_alpha0.5_OHV4_09-04.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_09-04.txt 2>&1 &  测试edge_extractor_torch中卷积层是不是因为参数含梯度
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti_09-05.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_kitti_09-05.txt 2>&1 &  出现nan值
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_TMV2_alpha0.5_OHV1_kitgti_09-06.txt 2>&1 &  在sobel中使用self.normalize_to_01 出现nan值
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_BMSAE3_ENV3_EMSAE1_OHV3_kitti_09-06.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M6_LearnableAlpha_OHV4_09-06.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti_09-07.txt 2>&1 &  # 仅使用L1深度损失 使用DataLoadPreprocess 网络预测出现nan值
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti_09-07_2.txt 2>&1 &  # 仅使用L1深度损失 网络的预测出现nan值 使用DataLoadPreprocessLIAM
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti_09-07_3.txt 2>&1 &  # 使用L1 + ssim + gradient损失
+
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti_09-14.txt 2>&1 &  # 使用DataLoadPreprocess
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_TopFormer_OutputHead_kitti_09-14.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti_09-15.txt 2>&1 &  # 使用DataLoadPreprocessLIAM
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet_LiamEdge_EdgeNetV1_DecoderV6CBAM_kitti_09-15.txt 2>&1 &  # 使用DataLoadPreprocess
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV3M1_EHV1_TMV2_OHV1_kitti_09-15.txt 2>&1 &  # 默认使用DataLoadPreprocess
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet_trim5_ENV4_TMV3M4_LearnableAlpha_OHV4_09-16.txt 2>&1 &  # pid: 23597
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M1_alpha0.5_OHV4_kitti_09-16.txt 2>&1 &  # 参照bts训练时分辨率为352×704 pid: 48551
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet_slim_ENV4_TMV3M4_LearnableAlpha_OHV4_09-16.txt 2>&1 &  # pid: 29147
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_FasterNet-T0_ENV4_TMV3M4_LearnableAlpha_OHV4_09-18.txt 2>&1 &  # pid: 51773
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_09-18.txt 2>&1 &  # pid: 44501
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet_trim6_ENV4_TMV3M4_LearnableAlpha_OHV4_09-23.txt 2>&1 &  # pid: 60192
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet_trim7_ENV4_TMV3M4_LearnableAlpha_OHV4_09-23.txt 2>&1 &  # pid: 21199
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_FastDepth-MN_09-24.txt 2>&1 &  # pid: 57345  # 假设模型输出的是depthnorm
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_FastDepth-MN_kitti_09-24.txt 2>&1 &  # pid: 45010  # 假设模型输出的是depthnorm
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_FastDepth-MN_09-24_2.txt 2>&1 &  # pid: 55645  # 假设模型输出的是直接深度
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_FastDepth-MN_kitti_09-24_2.txt 2>&1 &  # pid: 2526  # 假设模型输出的是直接深度
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti_09-24.txt 2>&1 &  # pid: 9564  # LIAM处理的kitti数据集使用alhashim方法
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_09-26.txt 2>&1 &  # pid: 35468
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_09-26.txt 2>&1 &  # pid: 31734
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_bs16_09-26.txt 2>&1 &  # pid: 41031
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_SGN_TMV3M4_LearnableAlpha_OHV4_09-26.txt 2>&1 &  # pid: 24953
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_09-26_2.txt 2>&1 &  # pid: 28792
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti-alhashim_09-26.txt 2>&1 &  # pid: 23186
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_SGN_TMV3M4_ConstAlpha_OHV4_09-27.txt 2>&1 &  # pid: 39273
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_09-27.txt 2>&1 &  # pid: 60061  在稠密的kitti上训练之前的模型 看看是不是error map是不是集中在阴影边缘处了
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti-alhashim_09-27.txt 2>&1 &  # pid: 33406  ToTensor中对val验证集也做了DepthNorm处理 导致val效果不对
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_09-27.txt 2>&1 &  # ToTensor中对val验证集也做了DepthNorm处理 导致val效果不对
+
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti-alhashim_09-28.txt 2>&1 &  # pid: 2078
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_09-28.txt 2>&1 &  # pid: 52368
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_SGN_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_09-28.txt 2>&1 &  # pid:
+# NOTE：注意上面这俩模型在val的时候指标优于DDRNet-GUB
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti-alhashim_10-09.txt 2>&1 &  # pid: 51062
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_10-09.txt 2>&1 &  # pid: 62028
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_MobileNetV2-TP_SGN_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_10-09.txt 2>&1 &  # pid: 4415
+CUDA_VISIBLE_DEVICES=0 nohup python -u main.py > runInfo_DDRNet-slim_SGN_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_10-09.txt 2>&1 &  # pid: 17456
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet-slim_SGNV2_TMV3M4_LA_OHV4M1_kitti-alhashim_10-09.txt 2>&1 &  # pid: 62346
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti-alhashim_10-10.txt 2>&1 &  # pid: 52024  互换了val和test
+CUDA_VISIBLE_DEVICES=0 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_10-10.txt 2>&1 &  # pid: 12340  互换了val和test
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_DDRNet-slim_SGNV3_CMTFDecoderV1_kitti-alhashim_10-13.txt 2>&1 &  # pid: 57153
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet-23-slim_GUB_kitti-alhashim_10-13.txt 2>&1 &  # pid: 1335
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_DDRNet-slim_SGNV3_CMTFDecoderV1_10-13.txt 2>&1 &  # pid:
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-alhashim_10-13.txt 2>&1 &  # 14293  在训练集中加入了整个测试集
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_kitti-bts_10-16.txt 2>&1 &  # pid: 6658
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_cosineLR_10-16.txt 2>&1 &  # pid: 20326  忘记对lr做step()了 实际上用的还是常数lr
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_cosineLR_10-17.txt 2>&1 &  # pid: 30161  效果很一般
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_ssim_kitti-bts_10-17.txt 2>&1 &  # pid: 61018  因为loss计算的原因 导致第一次梯度更新以后的网络输出nan值
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_cosineLR_kitti-bts_10-17.txt 2>&1 &   # pid: 812  效果just soso
+
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_cosineLR_10-18.txt 2>&1 &  # pid: 39798
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py > runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_stepLR_10-18.txt 2>&1 &  # pid:
+
+
+
+
+
+
+nohup python -u main.py > eval1.txt 2>&1 &
+
+nohup pip install torch_tensorrt > runInfo_install_torch_tensorrt.txt 2>&1 &
+
+
+#------------- evaluation
+python main.py --eval --dataset nyu_reduced --resolution full --model GuideDepth --test_path /home/heping/MyDataset/nyu_test.zip  --weights_path ./results/best_model.pth --save_results ./eval_results
+python main.py --eval --resolution full --test_path /home/heping/MyDataset/nyu_test.zip  --weights_path ./results/best_model.pth --save_results ./eval_results
+
+
+
+
+
+python main.py --eval --dataset nyu_reduced --resolution full --model GuideDepth --test_path D:\Liam\Dataset\NYU\nyu_test.zip  --weights_path ./results/best_model.pth --save_results ./eval_results 
+
+
+
+
+
+# ===================== 迁移到momenta =====================
+nohup python -u main.py > ./logs/runInfo_DDRNet-23-slim_GUB_240625.txt 2>&1 &  # 38392
+nohup python -u main.py > ./logs/runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_240625.txt 2>&1 &  # 181503
+nohup python -u main.py > ./logs/runInfo_DDRNet-23-slim_GUB_240626.txt 2>&1 &  # 788
+nohup python -u main.py > ./logs/runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_240626.txt 2>&1 &  # 151143
+nohup python -u main.py > ./logs/runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_240627.txt 2>&1 &  # 503
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py > ./logs/runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_240627_2.txt 2>&1 &  # 75126
+nohup python -u main.py > ./logs/runInfo_MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_240628_1.txt 2>&1 &  # 535
+nohup python -u main.py > ./logs/runInfo_DDRNet-23-slim_GUB_240710.txt 2>&1 &  # 306544
+
+
+
+

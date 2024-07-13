@@ -1,0 +1,59 @@
+taskname: 'FastDepth'
+common:
+  mode: 'train'
+  train_edge: false
+  use_depthnorm: false  # false default: true 默认模型输出的是depthnorm
+  epochs: 20
+  lr: 0.0001  # default: 0.0001
+  bs: 8
+  cuda_visible: '2'
+#  save_checkpoint: './checkpoints/FastDepth-MN_09-24'
+#  save_checkpoint: './checkpoints/FastDepth-MN_kitti_09-24'
+#  save_checkpoint: './checkpoints/FastDepth-MN_09-24_2'
+  save_checkpoint: './checkpoints/FastDepth-MN_kitti_09-24_2'
+  best_checkpoint: 'checkpoint_0.pth'
+  eval_mode: 'alhashim'  # default: alhashim
+  resolution: 'full'  # full half
+  optimizer: 'adam'
+  scheduler_step_size: 15
+  num_workers: 10
+dataset:
+  name: 'kitti'
+#  name: 'nyu_reduced'
+  root: '/home/data/glw/hp/datasets/nyu/nyu_data'
+  root_test: '/home/data/glw/hp/datasets/nyu/nyu_test.zip'
+model:
+  name: 'FastDepth'
+  mode: 'MN'  # MN MNSkipAdd MNSkipConcat
+#  pretrained: '/home/data/glw/hp/models/GuidedDecoding/KITTI_Full_GuideDepth.pth'
+loss:
+  name: ['L1', 'SSIM']
+  silog: false
+bts:
+  dataset: 'kitti'
+  use_liam_dataset: false  # true default: false
+  data_path: '/home/data/glw/hp/datasets/bts/kitti_dataset/'
+  gt_path: '/home/data/glw/hp/datasets/bts/kitti_dataset/data_depth_annotated/'
+#  gt_path: '/home/data/glw/hp/datasets/bts/data_depth_dense_filled/'
+  filenames_file: './train_test_inputs/eigen_train_files_with_gt.txt'
+  input_height: 352
+  input_width: 704
+  max_depth: 80
+  do_kb_crop: true
+  do_random_rotate: true
+  degree: 1.0
+  do_online_eval: true
+  data_path_eval: '/home/data/glw/hp/datasets/bts/kitti_dataset/'
+  gt_path_eval: '/home/data/glw/hp/datasets/bts/kitti_dataset/data_depth_annotated/'
+#  gt_path_eval: '/home/data/glw/hp/datasets/bts/data_depth_dense_filled/'
+  filenames_file_eval: './train_test_inputs/eigen_test_files_with_gt.txt'
+  distributed: false
+  use_right: false
+  min_depth_eval: 0.001
+  max_depth_eval: 80.0
+  garg_crop: true
+  eigen_crop: false
+
+
+
+

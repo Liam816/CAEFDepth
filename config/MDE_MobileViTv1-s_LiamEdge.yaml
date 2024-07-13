@@ -1,0 +1,56 @@
+#taskname: 'MobileViTv1-Small PPT P12 EdgeNetV1+DecoderV1(CBAM)'
+taskname: 'MobileViTv1-Small PPT P57'
+common:
+  mode: 'train'
+  epochs: 40
+  lr: 0.0001
+  bs: 8
+  cuda_visible: '2'
+#  save_checkpoint: './checkpoints/MobileViTv1-s_EdgeNetV1_DecoderV1CBAM_06-20_continued'
+  save_checkpoint: './checkpoints/MobileViTv1-s-3L_EdgeNetV1_DecoderV6_07-30'
+  eval_mode: 'alhashim'
+  resolution: 'full'
+  scheduler_step_size: 15
+dataset:
+  name: 'nyu_reduced'
+#  root: '/home/glw/hp/datasets/nyu_data.zip'
+#  root_test: '/home/glw/hp/datasets/nyu_test.zip'
+  root: '/home/data/glw/hp/nyu_data.zip'
+  root_test: '/home/data/glw/hp/nyu_test.zip'
+  root_inference: '/home/glw/hp/datasets/NYU_Testset'
+model:
+  name: 'MobileViTv1Edge'
+  mit:
+    mode: 'small'
+    ffn_dropout: 0.0
+    attn_dropout: 0.0
+    dropout: 0.1
+    number_heads: 4
+    no_fuse_local_global_features: false
+    conv_kernel_size: 3
+  activation:
+    name: 'swish'
+    inplace: false
+    neg_slope: 0.1
+  normalization:
+    name: 'batch_norm'
+    momentum: 0.1
+    groups: 1
+  layer:
+    global_pool: 'mean'
+    conv_init: 'kaiming_normal'
+    linear_init: 'trunc_normal'
+    linear_init_std_dev: 0.02
+  gradient_checkpointing: false
+#  pretrained: './checkpoints/MobileViTv1-s_EdgeNetV1_DecoderV1CBAM_06-20/checkpoint_8.pth'
+  pretrained: '/home/glw/hp/models/MobileViT/mobilevit_s.pt'
+loss:
+  name: ['L1', 'SSIM']
+ema:
+  enable: false
+  momentum: 0.0005
+stats:
+  val: ['loss']
+  train: ['loss']
+  checkpoint_metric: '"loss" '
+  checkpoint_metric_max: true

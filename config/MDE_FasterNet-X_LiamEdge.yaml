@@ -1,0 +1,68 @@
+#taskname: 'FasterNet-S PPT P29'
+#taskname: 'FasterNet-S PPT P30'
+#taskname: 'FasterNet-S PPT P31'
+#taskname: 'FasterNet-S PPT P32'
+#taskname: 'FasterNet-S PPT P34'
+#taskname: 'FasterNet-S PPT P35'
+#taskname: 'FasterNet-S PPT P36'
+#taskname: 'FasterNet-S PPT P37'
+#taskname: 'FasterNet-S PPT P39'
+#taskname: 'FasterNet-S PPT P40'
+common:
+  mode: 'train'
+  train_edge: false  # true default: false
+  use_depthnorm: true  # false default: true
+  epochs: 40
+  lr: 0.0001
+  bs: 8
+  cuda_visible: '3'  # PConv对部分特征图采样，所以特征图必须在同一张gpu上
+#  save_checkpoint: "./checkpoints/FasterNet-X-V2_EdgeNetV1_4L_DecoderV6_4L_06-29"
+#  save_checkpoint: "./checkpoints/FasterNet-X-V2_EdgeNetV1_4L_N_DecoderV6_4L_N_06-29"
+#  save_checkpoint: "./checkpoints/FasterNet-X-V2_EdgeNetV1_4L_N_DecoderV6_4L_N_woRGBFeats_06-29"
+#  save_checkpoint: "./checkpoints/FasterNet-X-V2_EdgeNetV1_4L_DecoderV6_4L_woRGBFeats_06-29"
+#  save_checkpoint: "./checkpoints/FasterNet-S_EdgeNetV2_DecoderV7_06-29"
+#  save_checkpoint: "./checkpoints/FasterNet-S_EdgeNetV2_DecoderV7_06-29_2"
+#  save_checkpoint: "./checkpoints/FasterNet-S_EdgeNetV2_DecoderV7_06-29_3"
+#  save_checkpoint: "./checkpoints/FasterNet-S_EdgeNetV2_DecoderV7_07-01"
+#  save_checkpoint: "./checkpoints/FasterNet-S_EdgeNetV3_DecoderV8_07-01"
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV4_DecoderV9_07-09'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2_DecoderV7_ECA_07-10'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2_DecoderV7_SRM_07-11'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2_DecoderV7_SE_07-11'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2N_DecoderV7N_CBAM_07-11'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2_CBAMS_DecoderV7_CBAMC_07-11'
+#  save_checkpoint: './checkpoints/FasterNet-S_HalfRes_EdgeNetV2_DecoderV7_07-12'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV5_DecoderV7_07-12'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2_TF_DecoderV7_07-14'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2_TopFormer_07-16'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2_TopFormer_07-16_continued'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-17'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-17_continued'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-18'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-24'
+#  save_checkpoint: './checkpoints/FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-25'
+  save_checkpoint: './checkpoints/FasterNet-T0_ENV4_TMV3M4_LearnableAlpha_OHV4_09-18'
+  best_checkpoint: 'checkpoint_0.pth'
+  eval_mode: 'alhashim'
+  resolution: 'full'  # full half
+  optimizer: 'adam'
+  scheduler_step_size: 15
+  num_workers: 10
+dataset:
+#  name: 'kitti'
+  name: 'nyu_reduced'
+  root: '/home/data/glw/hp/datasets/nyu/nyu_data.zip'
+  root_test: '/home/data/glw/hp/datasets/nyu/nyu_test.zip'
+model:
+  name: 'FasterNetEdge'
+  mode: 'T0'  # S T2 T1 T0
+  pretrained: '/home/data/glw/hp/models/FasterNet/fasternet_t0.pth'
+#  pretrained: '/home/data/glw/hp/models/FasterNet/fasternet_s.pth'
+#  pretrained: './checkpoints/FasterNet-S_EdgeNetV2_DecoderV7_06-29/checkpoint_24.pth'
+#  pretrained: './checkpoints/FasterNet-S_EdgeNetV2_TopFormer_07-16/checkpoint_39.pth'
+#  pretrained: './checkpoints/FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-17/checkpoint_11.pth'
+#  pretrained: './checkpoints/FasterNet-S_EdgeNetV2_TF_DecoderV7M_07-18/checkpoint_26.pth'
+loss:
+  name: ['L1', 'SSIM']
+  silog: false
+
