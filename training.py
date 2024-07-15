@@ -84,22 +84,6 @@ class Trainer():
         print('********** Trainer Initializing **********')
         self.debug = False  # True
 
-        # self.checkpoint_path = getattr(args, "common.save_checkpoint", "./checkpoints")
-        # # self.results_path = self.checkpoint_path + "/best_model"
-        # self.results_path = os.path.join(self.checkpoint_path, "best_model")
-        # self.config_path = os.path.join(self.checkpoint_path, "config")
-        # logger.info("checkpoint_path:{}".format(self.checkpoint_path))
-        #
-        # if not os.path.isdir(self.checkpoint_path):
-        #     os.mkdir(self.checkpoint_path)
-        # if not os.path.isdir(self.results_path):
-        #     os.mkdir(self.results_path)
-        # if not os.path.isdir(self.config_path):
-        #     os.mkdir(self.config_path)
-        #
-        # config_file_path = getattr(args, "--common.config_file_path")
-        # shutil.copy(config_file_path, os.path.join(self.config_path, config_file_path.split('/')[-1]))
-
         dataset_name = getattr(args, "dataset.name", "nyu_reduced")
         model_name = getattr(args, "model.name", "GuideDepth")
 
@@ -137,6 +121,7 @@ class Trainer():
             device_ids = [i for i in range(gpu_nums)]
             self.model = nn.DataParallel(model, device_ids=device_ids)
         else:
+            logger.info("using single gpu to train")
             self.model = model
 
         # res = cal_gpu(self.model)
@@ -164,10 +149,10 @@ class Trainer():
         # exit()
 
         # NOTE: 计算模型的参数量 MACs(G)
-        # x = torch.randn(size=(1, 3, 480, 640))
-        # macs, params = profile(model, inputs=(x,))  # ,verbose=False
-        # print("MACs:{:.2f}".format(macs / 1024 / 1024 / 1024))  # b -> kb -> M -> G
-        # print("Params:{:.2f}".format(params / 1024 / 1024))  # b -> kb -> M
+        x = torch.randn(size=(1, 3, 480, 640))
+        macs, params = profile(model, inputs=(x,))  # ,verbose=False
+        logger.info("MACs:{:.2f}".format(macs / 1024 / 1024 / 1024))  # b -> kb -> M -> G
+        logger.info("Params:{:.2f}".format(params / 1024 / 1024))  # b -> kb -> M
         # exit()
 
         self.model.to(self.device)
@@ -661,11 +646,17 @@ class Trainer():
         # batch_nums = len(self.train_loader)
         end = time.time()
 
+        logger.log('start iterating in train_loop()')
         for i, data in enumerate(self.train_loader):
+            print('inside enumerate !!!!!!!!!!!!!!!!!!!!!!!!!')
             if self.train_edge is False:
+                print('unpack_and_move()')
                 image, gt = self.unpack_and_move(data)  # 将样本数据放到gpu上
+                print('unpack_and_move() done')
                 self.optimizer.zero_grad()
+                print('model()')
                 prediction = self.model(image)
+                print('model() done')
                 a, b = torch.max(prediction), torch.min(prediction)
 
                 # gt = gt.detach().cpu().numpy()
@@ -747,7 +738,7 @@ class Trainer():
                               self.optimizer.param_groups[0]['lr'],
                               batch_time=batch_time_meter, eta=eta))
 
-        self.lr_scheduler.step()  # 每个epoch之后对lr进行迭代
+        self.lr_scheduler.step()  # LIAM 每个epoch之后对lr进行迭代
 
         # Report
         current_time = time.strftime('%H:%M', time.localtime())

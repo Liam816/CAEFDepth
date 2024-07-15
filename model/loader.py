@@ -175,7 +175,7 @@ def load_model(opts):
     model_name = getattr(opts, "model.name", "GuideDepth")
     model_mode = getattr(opts, 'model.mode')
 
-    # logger.log("mode:{}".format(mode))
+    logger.log("mode:{}".format(mode))
     logger.log("model_name:{}".format(model_name))
 
     if model_name == "GuideDepth":
@@ -295,6 +295,9 @@ def load_model(opts):
         best_checkpoint = getattr(opts, "common.best_checkpoint", None)
         best_model_path = os.path.join(checkpoint_path, best_checkpoint)
 
+        # for name, _ in model.named_parameters():
+        #     print(f"Layer: {name}")
+
         # NOTE: 需要测试官方的模型权重文件 直接指定路径
         # best_model_path = '/home/data/glw/hp/models/GuidedDecoding/KITTI_Full_GuideDepth.pth'
         # best_model_path = './checkpoints/MobileNetV2-TP_ENV4_TMV3M4_LearnableAlpha_OHV4_240628_1/checkpoint_19.pth'
@@ -302,6 +305,7 @@ def load_model(opts):
 
         weights = torch.load(best_model_path)
         weights = weights["model"]  # NOTE: 测试GuidedDecoding的kitti模型需要注释掉该行
+        # weights_dict = weights
         # print('=== weight keys ===')
         # for k, v in weights.items():
         #     print(k)
@@ -312,6 +316,12 @@ def load_model(opts):
         for k, v in weights.items():
             new_k = k.replace('module.', '') if 'module' in k else k
             weights_dict[new_k] = v
+
+        # weights_dict_ = {}
+        # for k, v in weights_dict.items():  # 在mmt的多卡debug机的单卡训练的权重带了total_ops total_params这俩权重 是不需要的
+        #     if 'total' not in k:
+        #         weights_dict_[k] = v
+        # weights_dict = weights_dict_
 
         # NOTE: MobileNetV2_LiamEdge.py中的MobileNetV2Edge模型需要做以下操作
         if getattr(opts, "model.name", None) == 'MobileNetV2Edge':

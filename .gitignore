@@ -1,4 +1,5 @@
 # dav
 checkpoints/
+logs/
 *.pth
 *.pyc

@@ -1,3 +1,4 @@
+from venv import logger
 import pandas as pd
 import numpy as np
 import torch
@@ -351,6 +352,8 @@ def val_transform(resolution):
 def get_NYU_dataset(root, split, resolution='full', uncompressed=False, train_edge=False, use_depthnorm=True):
     resolution = resolution_dict[resolution]
 
+    print('LIAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+
     if split != 'test':  # 训练集和验证集
         if split == 'train':
             transform = train_transform(resolution)
@@ -358,6 +361,8 @@ def get_NYU_dataset(root, split, resolution='full', uncompressed=False, train_ed
             transform = val_transform(resolution)
 
         dataset_list = getDatasetsExtracted(root, split)
+        # logger.info('found {} samples in {} set'.format(len(dataset_list), split))
+        print('found {} samples in {} set'.format(len(dataset_list), split))
         dataset = depthDatasetExtracted(dataset_list, split, transform=transform, train_edge=train_edge)
 
     else:  # 测试集

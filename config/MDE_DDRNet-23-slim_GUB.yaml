@@ -1,11 +1,11 @@
 taskname: 'DDRNet-23-slim MDE'
 common:
-  mode: 'eval'  # train eval
+  mode: 'train'  # train eval
   train_edge: false
   use_depthnorm: true
   epochs: 20
   lr: 0.0001  # default: 0.0001
-  bs: 32
+  bs: 16
   cuda_visible: '0'
 #  save_checkpoint: './checkpoints/DDRNet-23-slim_Pre_HalfRes_GUB_07-12'
 #  save_checkpoint: './checkpoints/DDRNet-23-slim_Pre_GUB_07-12'
@@ -33,10 +33,12 @@ common:
 #  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti-alhashim_10-09'
 #  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti-alhashim_10-10'
 #  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_kitti-alhashim_10-13'
-  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_240625'
+  # save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_240625'
   # save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_240625_2'
   # save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_240626'
   # save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_240710'
+  # save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_240713'
+  save_checkpoint: './checkpoints/DDRNet-23-slim_GUB_240714'
   best_checkpoint: 'checkpoint_19.pth'  # 12
   eval_mode: 'alhashim'  # default: alhashim
   resolution: 'full'  # full half
